@@ -1,5 +1,5 @@
 {
-  "mongo_url": "mongodb://mongo:iWRSaQcfnLXOGRjyfbIdeXCWNguLjDxv@mongodb-0kym.railway.internal:27017",
+  "mongo_url": "mongodb://mongo:iWRSaQcfnLXOGRjyfbIdeXCWNguLjDxv@mongodb-0kym-production.up.railway.app:27017",
   "db_name": "test",
   "user_id": "68527a64ebe020183134aab4",
   "test_strava_id": "14794668630"
