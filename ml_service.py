@@ -13,6 +13,8 @@ def run_analysis(strava_id):
     """
     Analyze a specific activity by Strava ID.
     """
+    print(f"🔍 Running analysis for stravaId: {strava_id}")
+
     activity = fetch_activity_by_strava_id(db, strava_id)
 
     if not activity:
