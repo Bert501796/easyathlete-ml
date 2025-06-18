@@ -2,11 +2,12 @@ import json
 from mongo_utils import get_db_connection, fetch_activity_by_strava_id
 from segment_analysis import parse_streams, detect_segments
 
-# Load config for Mongo only once
+# Load config
 with open("config.json") as f:
     config = json.load(f)
 
-db = get_db_connection(config["mongo_uri"], config["db_name"])
+# Use the correct key name
+db = get_db_connection(config["mongo_url"], config["db_name"])
 
 def run_analysis(strava_id):
     """
