@@ -2,6 +2,14 @@ import json
 from mongo_utils import get_db_connection, fetch_activity_by_strava_id
 from segment_analysis import parse_streams, detect_segments
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Loads variables from .env
+
+MONGO_URL = os.getenv("MONGO_URL")
+DB_NAME = os.getenv("DB_NAME")
+
 # Load config
 with open("config.json") as f:
     config = json.load(f)
