@@ -9,15 +9,25 @@ def parse_streams(activity):
     cad = activity.get("cadenceStream", [])
     speed = activity.get("speedStream", [])
     watts = activity.get("wattsStream", [])
-    length = min(len(hr), len(alt), len(dist), len(cad), len(speed), len(watts))
-    return pd.DataFrame({
-        "heart_rate": hr[:length],
-        "altitude": alt[:length],
-        "distance": dist[:length],
-        "cadence": cad[:length],
-        "speed": speed[:length],
-        "watts": watts[:length]
-    })
+
+    # Only include streams that are non-empty
+    data = {
+        "heart_rate": hr,
+        "altitude": alt,
+        "distance": dist,
+        "cadence": cad,
+        "speed": speed,
+        "watts": watts
+    }
+    min_length = min(len(v) for v in data.values() if len(v) > 0)
+
+    # Pad missing/empty streams with NaNs
+    for k in data:
+        if len(data[k]) < min_length:
+            data[k] = data[k] + [np.nan] * (min_length - len(data[k]))
+        data[k] = data[k][:min_length]
+
+    return pd.DataFrame(data)
 
 def detect_segments(df, min_hr_rise=15, min_hr_drop=10):
     segments = []
@@ -30,7 +40,7 @@ def detect_segments(df, min_hr_rise=15, min_hr_drop=10):
     df["gradient"] = df["altitude"].diff() / df["distance"].diff().replace(0, 1)
 
     # --- ACCELERATION SEGMENTS ---
-    accel_peaks, _ = find_peaks(df["speed"], height=np.percentile(df["speed"], 90))
+    accel_peaks, _ = find_peaks(df["speed"].fillna(0), height=np.percentile(df["speed"].dropna(), 90))
     for i in accel_peaks:
         if i + 10 < len(df):
             segment = df.iloc[i:i+10]
@@ -45,7 +55,7 @@ def detect_segments(df, min_hr_rise=15, min_hr_drop=10):
                     "avg_cadence": float(segment["cadence"].mean()),
                     "elevation_gain": float(segment["altitude_gain"].sum()),
                     "avg_gradient": float(segment["gradient"].mean()),
-                    "avg_watts": float(segment["watts"].mean())
+                    "avg_watts": float(segment["watts"].mean()) if "watts" in segment else None
                 })
 
     # --- RECOVERY SEGMENTS ---
@@ -61,7 +71,7 @@ def detect_segments(df, min_hr_rise=15, min_hr_drop=10):
                 "slope": float(hr_drop / 10.0),
                 "cadence": float(df["cadence"].iloc[i]),
                 "gradient": float(df["gradient"].iloc[i]),
-                "watts": float(df["watts"].iloc[i])
+                "watts": float(df["watts"].iloc[i]) if "watts" in df else None
             })
 
     # --- CLIMB SEGMENTS ---
@@ -78,7 +88,7 @@ def detect_segments(df, min_hr_rise=15, min_hr_drop=10):
                 "avg_hr": float(segment["heart_rate"].mean()),
                 "avg_speed": float(segment["speed"].mean()),
                 "avg_cadence": float(segment["cadence"].mean()),
-                "avg_watts": float(segment["watts"].mean())
+                "avg_watts": float(segment["watts"].mean()) if "watts" in segment else None
             })
 
     return {
@@ -89,6 +99,6 @@ def detect_segments(df, min_hr_rise=15, min_hr_drop=10):
             "max_speed": float(df["speed"].max()),
             "total_elevation": float(df["altitude_gain"].sum()),
             "avg_cadence": float(df["cadence"].mean()),
-            "avg_watts": float(df["watts"].mean())
+            "avg_watts": float(df["watts"].mean()) if "watts" in df else None
         }
     }
