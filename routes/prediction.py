@@ -82,18 +82,17 @@ async def predict_user(payload: PredictRequest):
         dfs = []
         for doc in docs:
             stream = doc.get("stream_data_full")
-            if isinstance(stream, dict):
+            if isinstance(stream, (dict, list)):
                 df = pd.DataFrame(stream)
-            elif isinstance(stream, list):
-                df = pd.DataFrame(stream)
-            else:
-                continue
+                # Only append if valid structure
+                if not df.empty and "time_sec" in df and "distance" in df:
+                    dfs.append(df)
 
-            if not df.empty and "time_sec" in df and "distance" in df:
-                dfs.append(df)
+        # ✅ Filter and check again before concat
+        dfs = [df for df in dfs if not df.empty and "time_sec" in df.columns and "distance" in df.columns]
 
         if not dfs:
-            return {"error": "No stream data found."}
+            return {"error": "No valid stream data found for prediction."}
 
         full_df = pd.concat(dfs, ignore_index=True).sort_values("time_sec")
         best_efforts = detect_best_efforts(full_df)
@@ -116,3 +115,4 @@ async def predict_user(payload: PredictRequest):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
