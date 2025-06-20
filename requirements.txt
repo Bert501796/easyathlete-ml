@@ -1,6 +1,8 @@
 fastapi
 uvicorn
 pymongo
-pandas
-scipy
 python-dotenv
+pydantic
+pandas
+numpy
+scikit-learn
