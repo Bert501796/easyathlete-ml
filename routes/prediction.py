@@ -6,17 +6,21 @@ import os
 import pandas as pd
 from typing import Dict
 
+# ✅ Load environment variables
 load_dotenv()
 
-router = APIRouter()
-
+# ✅ Get MongoDB config from .env
 mongo_url = os.getenv("MONGO_URL")
-if not mongo_url:
-    raise RuntimeError("❌ MONGO_URL not set in environment")
+db_name = os.getenv("DB_NAME")
+
+if not mongo_url or not mongo_url.startswith("mongodb"):
+    raise RuntimeError(f"❌ Invalid or missing MONGO_URL: {mongo_url}")
 
 client = MongoClient(mongo_url)
-db = client[os.getenv("DB_NAME", "test")]
+db = client[db_name]
 collection = db["stravaactivities"]
+
+router = APIRouter()
 
 class PredictRequest(BaseModel):
     user_id: str

@@ -13,21 +13,27 @@ from utils.enrichment_helpers import (
     convert_numpy_types
 )
 
+# ✅ Load environment variables
 load_dotenv()
 
-router = APIRouter()
+# ✅ Get MongoDB configuration
 mongo_url = os.getenv("MONGO_URL")
-if not mongo_url:
-    raise RuntimeError("❌ MONGO_URL not set in environment")
+db_name = os.getenv("DB_NAME", "test")
 
+if not mongo_url or not mongo_url.startswith("mongodb"):
+    raise ValueError(f"❌ Invalid or missing MONGO_URL: {mongo_url}")
+
+# ✅ Set up MongoDB client
 client = MongoClient(mongo_url)
-db = client["test"]
+db = client[db_name]
 collection = db["stravaactivities"]
+
+# ✅ FastAPI router
+router = APIRouter()
 
 class EnrichmentRequest(BaseModel):
     activity_id: str
     user_id: str
-
 
 @router.post("/ml/enrich-activity")
 async def enrich_activity(request: EnrichmentRequest):
