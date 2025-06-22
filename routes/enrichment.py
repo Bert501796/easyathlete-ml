@@ -63,15 +63,8 @@ async def enrich_activity(request: EnrichmentRequest):
             "segments": convert_numpy_types(segments_result["segments"]),
             "segmentSummary": convert_numpy_types(segments_result["summary"]),
             "mlWindows": convert_numpy_types(ml_windows),
-            "stream_data_full": convert_numpy_types({
-                "time_sec": df["time_sec"].tolist(),
-                "heart_rate": df["heart_rate"].tolist(),
-                "watts": df["watts"].tolist(),
-                "speed": df["speed"].tolist(),
-                "cadence": df["cadence"].tolist(),
-                "altitude": df["altitude"].tolist(),
-                "distance": df["distance"].tolist(),
-            }),
+            "stream_data_full": convert_numpy_types(df.to_dict(orient="list")),
+
             "enriched": True,
             "enrichmentVersion": 1.4
         }

@@ -7,6 +7,24 @@ def parse_streams(activity):
         return pd.DataFrame()
 
     df = pd.DataFrame(streams)
+
+    # Compute deltas for all available streams
+    for col in df.columns:
+        if col != "time_sec":
+            df[f"delta_{col}"] = df[col].diff()
+
+    # Compute rolling metrics over a 30-second window
+    window = 30
+    for col in df.columns:
+        if col.startswith("delta_"):
+            base_col = col.replace("delta_", "")
+            if base_col in df:
+                df[f"rolling_{base_col}_trend"] = df[col].rolling(window, min_periods=1).mean()
+        elif col not in df.columns or col == "time_sec":
+            continue
+        else:
+            df[f"rolling_{col}_mean"] = df[col].rolling(window, min_periods=1).mean()
+
     return df
 
 def extract_aggregated_features(activity):
