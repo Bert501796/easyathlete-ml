@@ -5,6 +5,9 @@ from dotenv import load_dotenv
 import time
 import os
 
+ML_API_URL = os.getenv("ML_API_URL", "https://easyathlete-ml-production.up.railway.app")
+
+
 # Load environment variables
 load_dotenv()
 MONGO_URL = os.getenv("MONGO_URL")
