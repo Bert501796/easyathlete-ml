@@ -156,3 +156,36 @@ def convert_numpy_types(data):
         return data.item()
     else:
         return data
+    
+def trim_stream_df(df: pd.DataFrame) -> pd.DataFrame:
+    """Keep only raw streams (e.g., no delta_ or rolling_ columns)"""
+    return df[[col for col in df.columns if not col.startswith("delta_") and not col.startswith("rolling_")]]
+
+
+def prepare_activity_for_storage(activity: dict, df: pd.DataFrame) -> dict:
+    """
+    Prepare the enriched activity for MongoDB storage.
+    Drops legacy fields and stores only necessary raw stream data.
+    """
+    trimmed = trim_stream_df(df).round(3)
+
+    # Store only raw stream data
+    activity["stream_data_full"] = trimmed.to_dict(orient="list")
+
+    # Remove raw legacy streams
+    for key in [
+        "wattsStream", "heartRateStream", "cadenceStream", "altitudeStream",
+        "distanceStream", "timeStream", "speedStream"
+    ]:
+        activity.pop(key, None)
+
+    # Optional: add lightweight summary
+    activity["stream_summary"] = {
+        "duration_sec": float(trimmed["time_sec"].iloc[-1]) if "time_sec" in trimmed else None,
+        "avg_hr": float(trimmed["heart_rate"].mean()) if "heart_rate" in trimmed else None,
+        "avg_speed": float(trimmed["speed"].mean()) if "speed" in trimmed else None,
+        "avg_watts": float(trimmed["watts"].mean()) if "watts" in trimmed else None,
+    }
+
+    return activity
+

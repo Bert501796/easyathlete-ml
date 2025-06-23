@@ -10,7 +10,9 @@ from utils.enrichment_helpers import (
     extract_aggregated_features,
     detect_segments,
     generate_ml_windows,
-    convert_numpy_types
+    convert_numpy_types,
+    prepare_activity_for_storage
+
 )
 
 # ✅ Load environment variables
@@ -57,20 +59,20 @@ async def enrich_activity(request: EnrichmentRequest):
 
         aggregated = extract_aggregated_features(activity)
         segments_result = detect_segments(df, activity)
-        ml_windows = generate_ml_windows(df, segments_result["segments"])
 
-        update_fields = {
+        # ✅ Apply final cleanup to remove delta_, rolling_, and legacy stream fields
+        activity = prepare_activity_for_storage(activity, df)
+
+        # ✅ Add enriched metadata fields
+        activity.update({
             "aggregatedFeatures": convert_numpy_types(aggregated),
             "segments": convert_numpy_types(segments_result["segments"]),
             "segmentSummary": convert_numpy_types(segments_result["summary"]),
-            "mlWindows": convert_numpy_types(ml_windows),
-            "stream_data_full": convert_numpy_types(df.to_dict(orient="list")),
-
             "enriched": True,
             "enrichmentVersion": 1.4
-        }
+        })
 
-        collection.update_one({"_id": activity["_id"]}, {"$set": update_fields})
+        collection.update_one({"_id": activity["_id"]}, {"$set": activity})
         return {"success": True, "stravaId": strava_id}
 
     except Exception as e:

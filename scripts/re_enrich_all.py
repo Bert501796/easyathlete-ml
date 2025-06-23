@@ -4,6 +4,8 @@ from bson import ObjectId
 from dotenv import load_dotenv
 import time
 import os
+from utils.enrichment_helpers import (parse_streams, detect_segments, prepare_activity_for_storage)
+
 
 # ✅ Load environment variables
 load_dotenv()
