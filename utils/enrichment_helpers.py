@@ -3,10 +3,30 @@ import numpy as np
 
 def parse_streams(activity):
     streams = activity.get("stream_data_full", {})
-    if not streams or not isinstance(streams, dict):
-        return pd.DataFrame()
 
-    df = pd.DataFrame(streams)
+    if not isinstance(streams, dict):
+        # Fallback: rebuild from individual raw streams if stream_data_full is malformed
+        print("⚠️ stream_data_full is malformed or missing, rebuilding from raw streams...")
+        fallback_keys = [
+            ("watts", "wattsStream"),
+            ("heart_rate", "heartRateStream"),
+            ("cadence", "cadenceStream"),
+            ("altitude", "altitudeStream"),
+            ("distance", "distanceStream"),
+            ("time_sec", "timeStream"),
+            ("speed", "speedStream")
+        ]
+        rebuilt = {
+            alias: activity.get(orig)
+            for alias, orig in fallback_keys
+            if isinstance(activity.get(orig), list)
+        }
+        if len(rebuilt) >= 2:
+            df = pd.DataFrame(rebuilt)
+        else:
+            return pd.DataFrame()
+    else:
+        df = pd.DataFrame(streams)
 
     # Compute deltas for all available streams
     for col in df.columns:
