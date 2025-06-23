@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 def detect_warmup(df):
     if "time_sec" not in df or df.shape[0] < 30:
@@ -22,15 +23,18 @@ def detect_warmup(df):
         "duration_sec": int(duration)
     }]
 
-
-
 def detect_intervals(df):
     if "rolling_speed_mean" not in df:
         return []
 
-    intervals = []
-    threshold = df["rolling_speed_mean"].mean() + df["rolling_speed_mean"].std()
+    df["rolling_speed_mean"] = pd.to_numeric(df["rolling_speed_mean"], errors="coerce")
+    mean_speed = df["rolling_speed_mean"].mean()
+    std_speed = df["rolling_speed_mean"].std()
+    if pd.isna(mean_speed) or pd.isna(std_speed):
+        return []
 
+    threshold = mean_speed + std_speed
+    intervals = []
     in_interval = False
     start_idx = 0
 
@@ -41,7 +45,7 @@ def detect_intervals(df):
         elif val <= threshold and in_interval:
             end_idx = i
             duration = df["time_sec"].iloc[end_idx] - df["time_sec"].iloc[start_idx]
-            if duration >= 30:  # only count meaningful intervals
+            if duration >= 30:
                 intervals.append({
                     "type": "interval",
                     "start_index": start_idx,
@@ -52,13 +56,18 @@ def detect_intervals(df):
 
     return intervals
 
-
 def detect_acceleration_blocks(df):
     if "delta_speed" not in df:
         return []
 
+    df["delta_speed"] = pd.to_numeric(df["delta_speed"], errors="coerce")
+    mean_delta = df["delta_speed"].mean()
+    std_delta = df["delta_speed"].std()
+    if pd.isna(mean_delta) or pd.isna(std_delta):
+        return []
+
+    acc_threshold = mean_delta + std_delta
     acc_blocks = []
-    acc_threshold = df["delta_speed"].mean() + df["delta_speed"].std()
 
     for i in range(1, len(df)):
         if df["delta_speed"].iloc[i] > acc_threshold:
@@ -75,16 +84,23 @@ def detect_acceleration_blocks(df):
 
     return acc_blocks
 
-
-
 def detect_steady_state_blocks(df):
     if "rolling_speed_mean" not in df or "rolling_heart_rate_mean" not in df:
         return []
 
-    rolling_speed = df["rolling_speed_mean"]
-    rolling_hr = df["rolling_heart_rate_mean"]
-    mask = (rolling_speed > rolling_speed.mean() * 0.9) & (rolling_speed < rolling_speed.mean() * 1.1) & \
-           (rolling_hr > rolling_hr.mean() * 0.9) & (rolling_hr < rolling_hr.mean() * 1.1)
+    df["rolling_speed_mean"] = pd.to_numeric(df["rolling_speed_mean"], errors="coerce")
+    df["rolling_heart_rate_mean"] = pd.to_numeric(df["rolling_heart_rate_mean"], errors="coerce")
+    mean_speed = df["rolling_speed_mean"].mean()
+    mean_hr = df["rolling_heart_rate_mean"].mean()
+    if pd.isna(mean_speed) or pd.isna(mean_hr):
+        return []
+
+    mask = (
+        (df["rolling_speed_mean"] > mean_speed * 0.9) &
+        (df["rolling_speed_mean"] < mean_speed * 1.1) &
+        (df["rolling_heart_rate_mean"] > mean_hr * 0.9) &
+        (df["rolling_heart_rate_mean"] < mean_hr * 1.1)
+    )
 
     steady_blocks = []
     current_block = []
@@ -103,13 +119,17 @@ def detect_steady_state_blocks(df):
 
     return steady_blocks
 
-
 def detect_recovery_blocks(df):
     if "rolling_heart_rate_mean" not in df:
         return []
 
+    df["rolling_heart_rate_mean"] = pd.to_numeric(df["rolling_heart_rate_mean"], errors="coerce")
+    mean_hr = df["rolling_heart_rate_mean"].mean()
+    if pd.isna(mean_hr):
+        return []
+
+    recovery_threshold = mean_hr * 0.85
     recovery_blocks = []
-    recovery_threshold = df["rolling_heart_rate_mean"].mean() * 0.85
     in_recovery = False
     start_idx = 0
 
@@ -130,7 +150,6 @@ def detect_recovery_blocks(df):
             in_recovery = False
 
     return recovery_blocks
-
 
 def detect_cooldown(df):
     if "time_sec" not in df or df.shape[0] < 30:
@@ -167,6 +186,6 @@ def detect_swimming_blocks(df):
     }
     for col in df.columns:
         if not col.startswith("delta_") and not col.startswith("rolling_"):
-            segment[f"avg_{col}"] = float(df[col].mean())
+            segment[f"avg_{col}"] = float(pd.to_numeric(df[col], errors="coerce").mean())
 
     return [segment]
