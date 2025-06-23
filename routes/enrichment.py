@@ -42,6 +42,8 @@ class EnrichmentRequest(BaseModel):
 @router.post("/ml/enrich-activity")
 async def enrich_activity(request: EnrichmentRequest):
     print(f"🚀 Starting enrichment for activity_id={request.activity_id}, user_id={request.user_id}")
+    strava_id = None  # Ensure strava_id is defined in case of early exception
+
     try:
         activity = collection.find_one({
             "_id": ObjectId(request.activity_id),
@@ -57,7 +59,9 @@ async def enrich_activity(request: EnrichmentRequest):
 
         df = parse_streams(activity)
         if df.empty or df.shape[0] < 30:
+            print(f"⏭ Skipping {strava_id}: insufficient stream data.")
             return {"skipped": True, "reason": "Insufficient stream data"}
+            
 
         aggregated = extract_aggregated_features(activity)
         segments_result = detect_segments(df, activity)
@@ -74,9 +78,17 @@ async def enrich_activity(request: EnrichmentRequest):
             "enrichmentVersion": 1.4,
             "updatedAt": datetime.now(UTC)  # ✅ Modern and timezone-safe
         })
+        
+        print("📝 Attempting to write updated activity to MongoDB...")
+        result = collection.update_one({"_id": activity["_id"]}, {"$set": activity})
 
-        collection.update_one({"_id": activity["_id"]}, {"$set": activity})
+        if result.modified_count == 0:
+            print(f"⚠️ MongoDB update failed or document unchanged for stravaId={strava_id}")
+        else:
+            print(f"✅ MongoDB update complete for stravaId={strava_id}")
+
         return {"success": True, "stravaId": strava_id}
 
     except Exception as e:
+        print(f"❌ Error processing activity {strava_id}: {e}")
         raise HTTPException(status_code=500, detail=str(e))
