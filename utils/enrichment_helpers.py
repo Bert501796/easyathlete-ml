@@ -38,7 +38,36 @@ def parse_streams(activity):
             return pd.DataFrame()
     else:
         df = pd.DataFrame(streams)
+        if df.empty or df.shape[0] < 30:
+            print("⚠️ stream_data_full was present but empty or insufficient — falling back to raw streams.")
+            return parse_streams_from_raw(activity)
         print(f"✅ stream_data_full used directly: {len(df)} rows, columns: {list(df.columns)}")
+
+def parse_streams_from_raw(activity):
+    fallback_keys = [
+        ("watts", "wattsStream"),
+        ("heart_rate", "heartRateStream"),
+        ("cadence", "cadenceStream"),
+        ("altitude", "altitudeStream"),
+        ("distance", "distanceStream"),
+        ("time_sec", "timeStream"),
+        ("speed", "speedStream")
+    ]
+    rebuilt = {
+        alias: activity.get(orig)
+        for alias, orig in fallback_keys
+        if isinstance(activity.get(orig), list) and len(activity.get(orig)) > 0
+    }
+    print(f"🧪 Fallback stream keys found: {list(rebuilt.keys())}")
+    if len(rebuilt) >= 2:
+        min_len = min(len(v) for v in rebuilt.values())
+        rebuilt = {k: v[:min_len] for k, v in rebuilt.items()}
+        df = pd.DataFrame(rebuilt)
+        print(f"✅ Fallback rebuilt stream shape: {len(df)} rows")
+        return df
+    else:
+        print("❌ Not enough fallback data to rebuild streams.")
+        return pd.DataFrame()
 
 
     # Continue processing
