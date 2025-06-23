@@ -165,8 +165,17 @@ def detect_segments(df, activity):
 
         seg_df = df.iloc[seg["start_index"]:seg["end_index"] + 1]
         for col in df.columns:
-            if not col.startswith("delta_") and not col.startswith("rolling_") and col in seg_df:
-                seg[f"avg_{col}"] = float(seg_df[col].mean())
+            if col.startswith("delta_") or col.startswith("rolling_"):
+                continue
+
+            if col in seg_df:
+                try:
+                    avg_val = pd.to_numeric(seg_df[col], errors="coerce").mean()
+                    if pd.notna(avg_val):
+                        seg[f"avg_{col}"] = float(avg_val)
+                except Exception as e:
+                    print(f"⚠️ Failed to compute avg for {col}: {e}")
+
 
     return {"segments": segments, "summary": summary}
 def extract_aggregated_features(activity):
