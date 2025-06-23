@@ -51,6 +51,13 @@ def parse_streams(activity):
             return parse_streams_from_raw(activity)
         print(f"✅ stream_data_full used directly: {len(df)} rows, columns: {list(df.columns)}")
 
+    # 🔐 Ensure all data is numeric
+    for col in df.columns:
+        df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    # 🧹 Drop rows with any NaNs (optional, but safe)
+    df.dropna(inplace=True)
+
     window = 30
     delta_cols = {}
     rolling_means = {}
@@ -68,6 +75,7 @@ def parse_streams(activity):
     df = pd.concat([df, pd.DataFrame(delta_cols), pd.DataFrame(rolling_means), pd.DataFrame(rolling_deltas)], axis=1)
 
     return df
+
 
 def merge_close_segments(segments, min_gap_sec=10):
     """
