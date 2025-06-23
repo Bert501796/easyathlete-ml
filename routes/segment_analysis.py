@@ -1,37 +1,37 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from bson import ObjectId
-from pymongo import MongoClient
+from typing import Optional
 import os
+from pymongo import MongoClient
 from dotenv import load_dotenv
-
 from utils.segment_trends import analyze_segment_trends
 
 load_dotenv()
+
 router = APIRouter()
 
-mongo_url = os.getenv("MONGO_URL")
-db_name = os.getenv("DB_NAME", "test")
-client = MongoClient(mongo_url)
-db = client[db_name]
+class TrendAnalysisRequest(BaseModel):
+    user_id: str
+    activity_type: Optional[str] = None
+
+# Connect to MongoDB
+client = MongoClient(os.getenv("MONGO_URL"))
+db = client[os.getenv("DB_NAME", "test")]
 collection = db["stravaactivities"]
 
-class TrendRequest(BaseModel):
-    user_id: str
-
 @router.post("/ml/analyze-trends")
-async def analyze_trends(request: TrendRequest):
-    try:
-        activities = list(collection.find({
-            "userId": request.user_id,
-            "segments": {"$exists": True, "$ne": []}
-        }))
+async def analyze_trends(request: TrendAnalysisRequest):
+    query = {
+        "userId": request.user_id,
+        "segments": {"$exists": True, "$ne": []}
+    }
+    if request.activity_type:
+        query["type"] = request.activity_type
 
-        if not activities:
-            raise HTTPException(status_code=404, detail="No enriched activities found for this user")
+    activities = list(collection.find(query))
 
-        trends = analyze_segment_trends(activities)
-        return {"user_id": request.user_id, "trend_count": len(trends), "trends": trends}
+    if not activities:
+        raise HTTPException(status_code=404, detail="No activities with segments found for this user.")
 
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    trends = analyze_segment_trends(activities)
+    return {"user_id": request.user_id, "activity_type": request.activity_type, "trend_summary": trends}
