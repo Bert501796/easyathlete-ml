@@ -69,6 +69,26 @@ def parse_streams(activity):
 
     return df
 
+def merge_close_segments(segments, min_gap_sec=10):
+    """
+    Merge segments of the same type that are very close to each other (within min_gap_sec).
+    """
+    merged = []
+    segments = sorted(segments, key=lambda s: s["start_index"])
+
+    for seg in segments:
+        if not merged:
+            merged.append(seg)
+        else:
+            last = merged[-1]
+            if seg["type"] == last["type"] and seg["start_index"] - last["end_index"] <= min_gap_sec:
+                last["end_index"] = seg["end_index"]
+                last["duration_sec"] = seg["end_index"] - last["start_index"]
+            else:
+                merged.append(seg)
+
+    return merged
+
 
 def parse_streams_from_raw(activity):
     fallback_keys = [
@@ -107,6 +127,10 @@ def detect_segments(df, activity):
     segments += detect_recovery_blocks(df)
     segments += detect_steady_state_blocks(df)
     segments += detect_cooldown(df)
+
+    segments = merge_close_segments(segments, min_gap_sec=10)
+    segments = [s for s in segments if s.get("duration_sec", 0) >= 30]
+
 
     segments.sort(key=lambda seg: df["time_sec"].iloc[seg["start_index"]] if "start_index" in seg else 0)
 

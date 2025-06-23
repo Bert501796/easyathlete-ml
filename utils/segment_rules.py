@@ -8,12 +8,20 @@ def detect_warmup(df):
     warmup_duration = int(0.1 * max_time)
     warmup_end = df[df["time_sec"] <= warmup_duration].index.max()
 
+    if warmup_end is None or warmup_end <= 0:
+        return []
+
+    duration = df["time_sec"].iloc[warmup_end] - df["time_sec"].iloc[0]
+    if duration <= 0:
+        return []
+
     return [{
         "type": "warmup",
         "start_index": 0,
         "end_index": int(warmup_end),
-        "duration_sec": int(df["time_sec"].iloc[warmup_end] - df["time_sec"].iloc[0])
-    }] if warmup_end and warmup_end > 0 else []
+        "duration_sec": int(duration)
+    }]
+
 
 
 def detect_intervals(df):
@@ -54,14 +62,19 @@ def detect_acceleration_blocks(df):
 
     for i in range(1, len(df)):
         if df["delta_speed"].iloc[i] > acc_threshold:
-            acc_blocks.append({
-                "type": "acceleration",
-                "start_index": max(0, i - 5),
-                "end_index": min(len(df) - 1, i + 5),
-                "duration_sec": int(df["time_sec"].iloc[i + 5] - df["time_sec"].iloc[i - 5])
-            })
+            start_idx = max(0, i - 5)
+            end_idx = min(len(df) - 1, i + 5)
+            duration = df["time_sec"].iloc[end_idx] - df["time_sec"].iloc[start_idx]
+            if duration > 0:
+                acc_blocks.append({
+                    "type": "acceleration",
+                    "start_index": start_idx,
+                    "end_index": end_idx,
+                    "duration_sec": int(duration)
+                })
 
     return acc_blocks
+
 
 
 def detect_steady_state_blocks(df):
@@ -127,13 +140,19 @@ def detect_cooldown(df):
     cooldown_duration = int(0.1 * end_time)
     cooldown_start = df[df["time_sec"] >= (end_time - cooldown_duration)].index.min()
 
+    if cooldown_start is None or cooldown_start >= len(df):
+        return []
+
+    duration = df["time_sec"].iloc[-1] - df["time_sec"].iloc[cooldown_start]
+    if duration <= 0:
+        return []
+
     return [{
         "type": "cooldown",
         "start_index": int(cooldown_start),
         "end_index": len(df) - 1,
-        "duration_sec": int(df["time_sec"].iloc[-1] - df["time_sec"].iloc[cooldown_start])
-    }] if cooldown_start and cooldown_start < len(df) else []
-
+        "duration_sec": int(duration)
+    }]
 
 def detect_swimming_blocks(df):
     if "time_sec" not in df or df.shape[0] < 30:
