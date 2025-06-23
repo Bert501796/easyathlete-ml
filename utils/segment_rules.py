@@ -5,108 +5,124 @@ def detect_warmup(df):
     if "time_sec" not in df or df.shape[0] < 30:
         return []
 
-    max_time = df["time_sec"].max()
-    warmup_duration = int(0.1 * max_time)
-    warmup_end = df[df["time_sec"] <= warmup_duration].index.max()
+    try:
+        max_time = df["time_sec"].max()
+        warmup_duration = int(0.1 * max_time)
+        warmup_end = df[df["time_sec"] <= warmup_duration].index.max()
 
-    if warmup_end is None or warmup_end <= 0:
+        if warmup_end is None or warmup_end <= 0:
+            return []
+
+        duration = df["time_sec"].iloc[warmup_end] - df["time_sec"].iloc[0]
+        if duration <= 0:
+            return []
+
+        return [{
+            "type": "warmup",
+            "start_index": 0,
+            "end_index": int(warmup_end),
+            "duration_sec": int(duration)
+        }]
+    except Exception as e:
+        print("⚠️ Error in detect_warmup:", e)
         return []
-
-    duration = df["time_sec"].iloc[warmup_end] - df["time_sec"].iloc[0]
-    if duration <= 0:
-        return []
-
-    return [{
-        "type": "warmup",
-        "start_index": 0,
-        "end_index": int(warmup_end),
-        "duration_sec": int(duration)
-    }]
 
 def detect_intervals(df):
+    print("🔍 Running detect_intervals")
     if "rolling_speed_mean" not in df:
         return []
 
-    df["rolling_speed_mean"] = pd.to_numeric(df["rolling_speed_mean"], errors="coerce")
-    mean_speed = df["rolling_speed_mean"].mean()
-    std_speed = df["rolling_speed_mean"].std()
-    if pd.isna(mean_speed) or pd.isna(std_speed):
+    try:
+        speeds = pd.to_numeric(df["rolling_speed_mean"], errors="coerce")
+        if speeds.dropna().empty:
+            return []
+
+        mean_speed = speeds.mean()
+        std_speed = speeds.std()
+        if pd.isna(mean_speed) or pd.isna(std_speed):
+            return []
+
+        threshold = mean_speed + std_speed
+        intervals = []
+        in_interval = False
+        start_idx = 0
+
+        for i, val in enumerate(speeds):
+            if val > threshold and not in_interval:
+                start_idx = i
+                in_interval = True
+            elif val <= threshold and in_interval:
+                end_idx = i
+                duration = df["time_sec"].iloc[end_idx] - df["time_sec"].iloc[start_idx]
+                if duration >= 30:
+                    intervals.append({
+                        "type": "interval",
+                        "start_index": start_idx,
+                        "end_index": end_idx,
+                        "duration_sec": int(duration)
+                    })
+                in_interval = False
+
+        return intervals
+    except Exception as e:
+        print("⚠️ Error in detect_intervals:", e)
         return []
 
-    threshold = mean_speed + std_speed
-    intervals = []
-    in_interval = False
-    start_idx = 0
-
-    for i, val in enumerate(df["rolling_speed_mean"]):
-        if val > threshold and not in_interval:
-            start_idx = i
-            in_interval = True
-        elif val <= threshold and in_interval:
-            end_idx = i
-            duration = df["time_sec"].iloc[end_idx] - df["time_sec"].iloc[start_idx]
-            if duration >= 30:
-                intervals.append({
-                    "type": "interval",
-                    "start_index": start_idx,
-                    "end_index": end_idx,
-                    "duration_sec": int(duration)
-                })
-            in_interval = False
-
-    return intervals
-
 def detect_acceleration_blocks(df):
+    print("🔍 Running detect_acceleration_blocks")
     if "delta_speed" not in df:
         return []
 
-    df["delta_speed"] = pd.to_numeric(df["delta_speed"], errors="coerce")
-    mean_delta = df["delta_speed"].mean()
-    std_delta = df["delta_speed"].std()
-    if pd.isna(mean_delta) or pd.isna(std_delta):
+    try:
+        delta = pd.to_numeric(df["delta_speed"], errors="coerce")
+        if delta.dropna().empty:
+            return []
+
+        mean_delta = delta.mean()
+        std_delta = delta.std()
+        if pd.isna(mean_delta) or pd.isna(std_delta):
+            return []
+
+        acc_threshold = mean_delta + std_delta
+        acc_blocks = []
+
+        for i in range(1, len(df)):
+            if delta.iloc[i] > acc_threshold:
+                start_idx = max(0, i - 5)
+                end_idx = min(len(df) - 1, i + 5)
+                duration = df["time_sec"].iloc[end_idx] - df["time_sec"].iloc[start_idx]
+                if duration > 0:
+                    acc_blocks.append({
+                        "type": "acceleration",
+                        "start_index": start_idx,
+                        "end_index": end_idx,
+                        "duration_sec": int(duration)
+                    })
+
+        return acc_blocks
+    except Exception as e:
+        print("⚠️ Error in detect_acceleration_blocks:", e)
         return []
 
-    acc_threshold = mean_delta + std_delta
-    acc_blocks = []
-
-    for i in range(1, len(df)):
-        if df["delta_speed"].iloc[i] > acc_threshold:
-            start_idx = max(0, i - 5)
-            end_idx = min(len(df) - 1, i + 5)
-            duration = df["time_sec"].iloc[end_idx] - df["time_sec"].iloc[start_idx]
-            if duration > 0:
-                acc_blocks.append({
-                    "type": "acceleration",
-                    "start_index": start_idx,
-                    "end_index": end_idx,
-                    "duration_sec": int(duration)
-                })
-
-    return acc_blocks
-
 def detect_steady_state_blocks(df):
+    print("🔍 Running detect_steady_state_blocks")
     if "rolling_speed_mean" not in df or "rolling_heart_rate_mean" not in df:
         return []
 
     try:
-        rolling_speed = pd.to_numeric(df["rolling_speed_mean"], errors="coerce")
-        rolling_hr = pd.to_numeric(df["rolling_heart_rate_mean"], errors="coerce")
+        speed = pd.to_numeric(df["rolling_speed_mean"], errors="coerce")
+        hr = pd.to_numeric(df["rolling_heart_rate_mean"], errors="coerce")
 
-        # ✅ Drop full-NaN or invalid cases early
-        if rolling_speed.dropna().empty or rolling_hr.dropna().empty:
-            print("⚠️ rolling_speed or rolling_hr is fully NaN or empty.")
+        if speed.dropna().empty or hr.dropna().empty:
             return []
 
-        speed_mean = rolling_speed.mean()
-        hr_mean = rolling_hr.mean()
-
-        # ✅ Check for NaN results
-        if pd.isna(speed_mean) or pd.isna(hr_mean):
-            print("⚠️ Mean speed or HR is NaN.")
+        mean_speed = speed.mean()
+        mean_hr = hr.mean()
+        if pd.isna(mean_speed) or pd.isna(mean_hr):
             return []
 
-        mask = (rolling_speed > speed_mean * 0.9) & (rolling_speed < speed_mean * 1.1) & \
-               (rolling_hr > hr_mean * 0.9) & (rolling_hr < hr_mean * 1.1)
+        mask = (speed > mean_speed * 0.9) & (speed < mean_speed * 1.1) & \
+               (hr > mean_hr * 0.9) & (hr < mean_hr * 1.1)
 
         steady_blocks = []
         current_block = []
@@ -128,85 +144,95 @@ def detect_steady_state_blocks(df):
         print("⚠️ Error in detect_steady_state_blocks:", e)
         return []
 
-
 def detect_recovery_blocks(df):
+    print("🔍 Running detect_recovery_blocks")
     if "rolling_heart_rate_mean" not in df:
         return []
 
-    df["rolling_heart_rate_mean"] = pd.to_numeric(df["rolling_heart_rate_mean"], errors="coerce")
-    mean_hr = df["rolling_heart_rate_mean"].mean()
-    if pd.isna(mean_hr):
+    try:
+        hr = pd.to_numeric(df["rolling_heart_rate_mean"], errors="coerce")
+        if hr.dropna().empty:
+            return []
+
+        mean_hr = hr.mean()
+        if pd.isna(mean_hr):
+            return []
+
+        threshold = mean_hr * 0.85
+        recovery_blocks = []
+        in_recovery = False
+        start_idx = 0
+
+        for i, val in enumerate(hr):
+            if val < threshold and not in_recovery:
+                start_idx = i
+                in_recovery = True
+            elif val >= threshold and in_recovery:
+                end_idx = i
+                duration = df["time_sec"].iloc[end_idx] - df["time_sec"].iloc[start_idx]
+                if duration >= 30:
+                    recovery_blocks.append({
+                        "type": "recovery",
+                        "start_index": start_idx,
+                        "end_index": end_idx,
+                        "duration_sec": int(duration)
+                    })
+                in_recovery = False
+
+        return recovery_blocks
+    except Exception as e:
+        print("⚠️ Error in detect_recovery_blocks:", e)
         return []
-
-    recovery_threshold = mean_hr * 0.85
-    recovery_blocks = []
-    in_recovery = False
-    start_idx = 0
-
-    for i, val in enumerate(df["rolling_heart_rate_mean"]):
-        if val < recovery_threshold and not in_recovery:
-            start_idx = i
-            in_recovery = True
-        elif val >= recovery_threshold and in_recovery:
-            end_idx = i
-            duration = df["time_sec"].iloc[end_idx] - df["time_sec"].iloc[start_idx]
-            if duration >= 30:
-                recovery_blocks.append({
-                    "type": "recovery",
-                    "start_index": start_idx,
-                    "end_index": end_idx,
-                    "duration_sec": int(duration)
-                })
-            in_recovery = False
-
-    return recovery_blocks
 
 def detect_cooldown(df):
+    print("🔍 Running detect_cooldown")
     if "time_sec" not in df or df.shape[0] < 30:
         return []
 
-    end_time = df["time_sec"].iloc[-1]
-    cooldown_duration = int(0.1 * end_time)
-    cooldown_start = df[df["time_sec"] >= (end_time - cooldown_duration)].index.min()
+    try:
+        end_time = df["time_sec"].iloc[-1]
+        cooldown_duration = int(0.1 * end_time)
+        cooldown_start = df[df["time_sec"] >= (end_time - cooldown_duration)].index.min()
 
-    if cooldown_start is None or cooldown_start >= len(df):
+        if cooldown_start is None or cooldown_start >= len(df):
+            return []
+
+        duration = df["time_sec"].iloc[-1] - df["time_sec"].iloc[cooldown_start]
+        if duration <= 0:
+            return []
+
+        return [{
+            "type": "cooldown",
+            "start_index": int(cooldown_start),
+            "end_index": len(df) - 1,
+            "duration_sec": int(duration)
+        }]
+    except Exception as e:
+        print("⚠️ Error in detect_cooldown:", e)
         return []
-
-    duration = df["time_sec"].iloc[-1] - df["time_sec"].iloc[cooldown_start]
-    if duration <= 0:
-        return []
-
-    return [{
-        "type": "cooldown",
-        "start_index": int(cooldown_start),
-        "end_index": len(df) - 1,
-        "duration_sec": int(duration)
-    }]
 
 def detect_swimming_blocks(df):
+    print("🔍 Running detect_swimming_blocks")
     if "time_sec" not in df or df.shape[0] < 30:
         return []
 
-    duration = df["time_sec"].iloc[-1] - df["time_sec"].iloc[0]
-    segment = {
-        "type": "steady_swim",
-        "start_index": 0,
-        "end_index": len(df) - 1,
-        "duration_sec": int(duration),
-    }
+    try:
+        duration = df["time_sec"].iloc[-1] - df["time_sec"].iloc[0]
+        segment = {
+            "type": "steady_swim",
+            "start_index": 0,
+            "end_index": len(df) - 1,
+            "duration_sec": int(duration),
+        }
 
-    seg_df = df.copy()
-
-    for col in seg_df.columns:
-        if col.startswith("delta_") or col.startswith("rolling_"):
-            continue
-
-        try:
-            numeric_col = pd.to_numeric(seg_df[col], errors="coerce")
-            if numeric_col.isna().all():
+        for col in df.columns:
+            if col.startswith("delta_") or col.startswith("rolling_"):
                 continue
-            segment[f"avg_{col}"] = float(numeric_col.mean())
-        except Exception as e:
-            print(f"⚠️ Failed to process {col}: {e}")
+            numeric = pd.to_numeric(df[col], errors="coerce")
+            if not numeric.dropna().empty:
+                segment[f"avg_{col}"] = float(numeric.mean())
 
-    return [segment]
+        return [segment]
+    except Exception as e:
+        print("⚠️ Error in detect_swimming_blocks:", e)
+        return []
