@@ -70,6 +70,9 @@ def compute_metric_trend(df: pd.DataFrame, metric: str, time_col: str = "activit
     x = df[time_col].astype("int64") // 10**9  # UNIX timestamps
     y = df[metric]
 
+    if x.nunique() < 2:
+        return None  # 🚫 All timestamps are the same — skip this metric
+
     slope, intercept, r_value, p_value, std_err = linregress(x, y)
     return {
         "slope": round(slope, 5),
