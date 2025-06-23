@@ -230,11 +230,24 @@ def detect_segments(df, activity):
     # ✅ Sort segments chronologically by time_sec of start_index
     segments.sort(key=lambda seg: df["time_sec"].iloc[seg["start_index"]] if "start_index" in seg else 0)
 
-
     summary = {
         "count": len(segments),
         "avg_duration_sec": int(np.mean([s["duration_sec"] for s in segments])) if segments else 0
     }
+    # Add effort context to each segment
+    for seg in segments:
+        if "start_index" in seg and seg["start_index"] > 0:
+            prior_block = df.iloc[:seg["start_index"]]
+            seg["effort_before"] = {
+                "duration_sec": float(prior_block["time_sec"].iloc[-1]) if not prior_block.empty else 0,
+                "distance_m": float(prior_block["distance"].iloc[-1]) if "distance" in prior_block and not prior_block.empty else 0,
+                "altitude_m": float(prior_block["altitude"].iloc[-1]) if "altitude" in prior_block and not prior_block.empty else 0,
+                "avg_hr": float(prior_block["heart_rate"].mean()) if "heart_rate" in prior_block else None,
+                "avg_speed": float(prior_block["speed"].mean()) if "speed" in prior_block else None,
+                "avg_cadence": float(prior_block["cadence"].mean()) if "cadence" in prior_block else None,
+                "avg_watts": float(prior_block["watts"].mean()) if "watts" in prior_block else None
+            }
+
     return {"segments": segments, "summary": summary}
 
 def extract_aggregated_features(activity):
