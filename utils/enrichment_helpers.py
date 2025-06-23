@@ -73,6 +73,8 @@ def parse_streams(activity):
         rolling_deltas[f"rolling_{col}_trend"] = delta.rolling(window, min_periods=1).mean()
 
     df = pd.concat([df, pd.DataFrame(delta_cols), pd.DataFrame(rolling_means), pd.DataFrame(rolling_deltas)], axis=1)
+    df = df.apply(pd.to_numeric, errors="coerce")
+
 
     return df
 

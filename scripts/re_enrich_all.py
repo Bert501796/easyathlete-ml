@@ -18,18 +18,18 @@ client = MongoClient(MONGO_URL)
 db = client[DB_NAME]
 collection = db["stravaactivities"]
 
-#✅ Query: activities that needs enrichment
-query = {
-    #"enrichmentVersion": {"$ne": 1.4},
-    "type": {"$ne": "WeightTraining"},
-    #"stream_data_full": {"$exists": True}
-}
-
-# #Query only one specific activity
+# #✅ Query: activities that needs enrichment
 # query = {
-#     "stravaId": 13023679203,  # ✅ or whichever activity ID you want to test
-#     #"type": "Swim"
+#     #"enrichmentVersion": {"$ne": 1.4},
+#     "type": {"$ne": "WeightTraining"},
+#     #"stream_data_full": {"$exists": True}
 # }
+
+#Query only one specific activity
+query = {
+    "stravaId": 14794668630,  # ✅ or whichever activity ID you want to test
+    #"type": "Swim"
+}
 
 
 activities = list(collection.find(query))
