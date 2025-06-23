@@ -187,11 +187,18 @@ def detect_swimming_blocks(df):
         "duration_sec": int(duration),
     }
 
-    for col in df.columns:
-        if not col.startswith("delta_") and not col.startswith("rolling_") and pd.api.types.is_numeric_dtype(df[col]):
-            try:
-                segment[f"avg_{col}"] = float(df[col].mean())
-            except Exception as e:
-                print(f"⚠️ Failed to compute mean for {col}: {e}")
+    seg_df = df.copy()
+
+    for col in seg_df.columns:
+        if col.startswith("delta_") or col.startswith("rolling_"):
+            continue
+
+        try:
+            numeric_col = pd.to_numeric(seg_df[col], errors="coerce")
+            if numeric_col.isna().all():
+                continue
+            segment[f"avg_{col}"] = float(numeric_col.mean())
+        except Exception as e:
+            print(f"⚠️ Failed to process {col}: {e}")
 
     return [segment]
