@@ -92,11 +92,18 @@ def detect_steady_state_blocks(df):
         rolling_speed = pd.to_numeric(df["rolling_speed_mean"], errors="coerce")
         rolling_hr = pd.to_numeric(df["rolling_heart_rate_mean"], errors="coerce")
 
-        if rolling_speed.isna().all() or rolling_hr.isna().all():
+        # ✅ Drop full-NaN or invalid cases early
+        if rolling_speed.dropna().empty or rolling_hr.dropna().empty:
+            print("⚠️ rolling_speed or rolling_hr is fully NaN or empty.")
             return []
 
         speed_mean = rolling_speed.mean()
         hr_mean = rolling_hr.mean()
+
+        # ✅ Check for NaN results
+        if pd.isna(speed_mean) or pd.isna(hr_mean):
+            print("⚠️ Mean speed or HR is NaN.")
+            return []
 
         mask = (rolling_speed > speed_mean * 0.9) & (rolling_speed < speed_mean * 1.1) & \
                (rolling_hr > hr_mean * 0.9) & (rolling_hr < hr_mean * 1.1)
@@ -120,6 +127,7 @@ def detect_steady_state_blocks(df):
     except Exception as e:
         print("⚠️ Error in detect_steady_state_blocks:", e)
         return []
+
 
 def detect_recovery_blocks(df):
     if "rolling_heart_rate_mean" not in df:

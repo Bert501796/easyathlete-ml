@@ -126,6 +126,7 @@ def parse_streams_from_raw(activity):
         print("❌ Not enough fallback data to rebuild streams.")
         return pd.DataFrame()
 
+
 def detect_segments(df, activity):
     if activity.get("type") == "Swim":
         return {"segments": detect_swimming_blocks(df), "summary": {"swim_mode": True}}
