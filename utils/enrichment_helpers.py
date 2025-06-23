@@ -37,7 +37,7 @@ def parse_streams(activity):
 
         if len(rebuilt) >= 2:
             min_len = min(len(v) for v in rebuilt.values())
-            print(f"🧚 Trimming all streams to min length: {min_len}")
+            print(f"💫 Trimming all streams to min length: {min_len}")
             rebuilt = {k: v[:min_len] for k, v in rebuilt.items()}
             df = pd.DataFrame(rebuilt)
             print(f"✅ Rebuilt stream shape: {len(df)} rows, columns: {list(df.columns)}")
@@ -107,7 +107,7 @@ def parse_streams_from_raw(activity):
         for alias, orig in fallback_keys
         if isinstance(activity.get(orig), list) and len(activity.get(orig)) > 0
     }
-    print(f"🧚 Fallback stream keys found: {list(rebuilt.keys())}")
+    print(f"💫 Fallback stream keys found: {list(rebuilt.keys())}")
     if len(rebuilt) >= 2:
         min_len = min(len(v) for v in rebuilt.values())
         rebuilt = {k: v[:min_len] for k, v in rebuilt.items()}
@@ -151,7 +151,7 @@ def detect_segments(df, activity):
             for key in ["heart_rate", "speed", "cadence", "watts"]:
                 if key in prior_block:
                     numeric = pd.to_numeric(prior_block[key], errors="coerce")
-                    if not numeric.isna().all():
+                    if not numeric.dropna().empty:
                         effort[f"avg_{key}"] = float(numeric.mean())
             seg["effort_before"] = effort
 
@@ -208,9 +208,9 @@ def prepare_activity_for_storage(activity: dict, df: pd.DataFrame) -> dict:
 
     activity["stream_summary"] = {
         "duration_sec": float(trimmed["time_sec"].iloc[-1]) if "time_sec" in trimmed else None,
-        "avg_hr": float(trimmed["heart_rate"].mean()) if "heart_rate" in trimmed else None,
-        "avg_speed": float(trimmed["speed"].mean()) if "speed" in trimmed else None,
-        "avg_watts": float(trimmed["watts"].mean()) if "watts" in trimmed and not pd.isna(trimmed["watts"].mean()) else None,
+        "avg_hr": float(trimmed["heart_rate"].mean()) if "heart_rate" in trimmed and not trimmed["heart_rate"].dropna().empty else None,
+        "avg_speed": float(trimmed["speed"].mean()) if "speed" in trimmed and not trimmed["speed"].dropna().empty else None,
+        "avg_watts": float(trimmed["watts"].mean()) if "watts" in trimmed and not trimmed["watts"].dropna().empty else None,
     }
 
     return activity
