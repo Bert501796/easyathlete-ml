@@ -19,9 +19,11 @@ def parse_streams(activity):
         rebuilt = {
             alias: activity.get(orig)
             for alias, orig in fallback_keys
-            if isinstance(activity.get(orig), list)
+            if isinstance(activity.get(orig), list) and len(activity.get(orig)) > 0
         }
         if len(rebuilt) >= 2:
+            min_len = min(len(v) for v in rebuilt.values())
+            rebuilt = {k: v[:min_len] for k, v in rebuilt.items()}
             df = pd.DataFrame(rebuilt)
         else:
             return pd.DataFrame()
