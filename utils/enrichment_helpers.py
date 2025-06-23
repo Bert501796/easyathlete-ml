@@ -151,9 +151,10 @@ def detect_segments(df, activity):
             for key in ["heart_rate", "speed", "cadence", "watts"]:
                 if key in prior_block:
                     numeric = pd.to_numeric(prior_block[key], errors="coerce")
-                    mean_val = numeric.mean()
-                    if not pd.isna(mean_val):
-                        effort[f"avg_{key}"] = float(mean_val)
+                    if not numeric.dropna().empty:
+                        mean_val = numeric.mean()
+                        if not pd.isna(mean_val):
+                            effort[f"avg_{key}"] = float(mean_val)
             seg["effort_before"] = effort
 
         seg_df = df.iloc[seg["start_index"]:seg["end_index"] + 1]
@@ -163,9 +164,8 @@ def detect_segments(df, activity):
             if col in seg_df:
                 try:
                     numeric_col = pd.to_numeric(seg_df[col], errors="coerce")
-                    mean_val = numeric_col.mean()
-                    if not pd.isna(mean_val):
-                        seg[f"avg_{col}"] = float(mean_val)
+                    if not numeric_col.dropna().empty:
+                        seg[f"avg_{col}"] = float(numeric_col.mean())
                 except Exception as e:
                     print(f"⚠️ Failed to compute avg for {col}: {e}")
 
