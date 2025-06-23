@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 
 def parse_streams(activity):
+    print("🔍 parse_streams() was called")
     streams = activity.get("stream_data_full", {})
 
     if not isinstance(streams, dict):

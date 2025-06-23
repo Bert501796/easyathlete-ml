@@ -37,6 +37,7 @@ class EnrichmentRequest(BaseModel):
 
 @router.post("/ml/enrich-activity")
 async def enrich_activity(request: EnrichmentRequest):
+    print(f"🚀 Starting enrichment for activity_id={request.activity_id}, user_id={request.user_id}")
     try:
         activity = collection.find_one({
             "_id": ObjectId(request.activity_id),
