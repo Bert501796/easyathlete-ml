@@ -121,7 +121,6 @@ def detect_steady_state_blocks(df):
         print("⚠️ Error in detect_steady_state_blocks:", e)
         return []
 
-
 def detect_recovery_blocks(df):
     if "rolling_heart_rate_mean" not in df:
         return []
@@ -187,8 +186,17 @@ def detect_swimming_blocks(df):
         "end_index": len(df) - 1,
         "duration_sec": int(duration),
     }
+
+    # ✅ Safely compute means for numeric columns
     for col in df.columns:
-        if not col.startswith("delta_") and not col.startswith("rolling_"):
-            segment[f"avg_{col}"] = float(pd.to_numeric(df[col], errors="coerce").mean())
+        if (
+            not col.startswith("delta_") and
+            not col.startswith("rolling_") and
+            pd.api.types.is_numeric_dtype(df[col])
+        ):
+            try:
+                segment[f"avg_{col}"] = float(df[col].mean())
+            except Exception as e:
+                print(f"⚠️ Failed to compute mean for {col}: {e}")
 
     return [segment]
