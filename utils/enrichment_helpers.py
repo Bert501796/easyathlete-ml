@@ -213,11 +213,27 @@ def prepare_activity_for_storage(activity: dict, df: pd.DataFrame) -> dict:
         activity.pop(key, None)
 
     activity["stream_summary"] = {
-        "duration_sec": float(trimmed["time_sec"].iloc[-1]) if "time_sec" in trimmed else None,
-        "avg_hr": float(trimmed["heart_rate"].mean()) if "heart_rate" in trimmed and isinstance(trimmed["heart_rate"], (pd.Series, np.ndarray)) and not trimmed["heart_rate"].dropna().empty else None,
-        "avg_speed": float(trimmed["speed"].mean()) if "speed" in trimmed and isinstance(trimmed["speed"], (pd.Series, np.ndarray)) and not trimmed["speed"].dropna().empty else None,
-        "avg_watts": float(trimmed["watts"].mean()) if "watts" in trimmed and isinstance(trimmed["watts"], (pd.Series, np.ndarray)) and not trimmed["watts"].dropna().empty else None,
-    }
+    "duration_sec": (
+        float(trimmed["time_sec"].iloc[-1])
+        if "time_sec" in trimmed and isinstance(trimmed["time_sec"], (pd.Series, np.ndarray)) and not trimmed["time_sec"].dropna().empty
+        else None
+    ),
+    "avg_hr": (
+        float(trimmed["heart_rate"].mean())
+        if "heart_rate" in trimmed and isinstance(trimmed["heart_rate"], (pd.Series, np.ndarray)) and not trimmed["heart_rate"].dropna().empty
+        else None
+    ),
+    "avg_speed": (
+        float(trimmed["speed"].mean())
+        if "speed" in trimmed and isinstance(trimmed["speed"], (pd.Series, np.ndarray)) and not trimmed["speed"].dropna().empty
+        else None
+    ),
+    "avg_watts": (
+        float(trimmed["watts"].mean())
+        if "watts" in trimmed and isinstance(trimmed["watts"], (pd.Series, np.ndarray)) and not trimmed["watts"].dropna().empty
+        else None
+    ),
+}
 
     return activity
 
