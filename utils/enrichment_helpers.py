@@ -150,11 +150,14 @@ def detect_segments(df, activity):
             }
             for key in ["heart_rate", "speed", "cadence", "watts"]:
                 if key in prior_block:
-                    numeric = pd.to_numeric(prior_block[key], errors="coerce")
-                    if isinstance(numeric, (pd.Series, np.ndarray)) and not numeric.dropna().empty:
-                        mean_val = numeric.mean()
-                        if not pd.isna(mean_val):
-                            effort[f"avg_{key}"] = float(mean_val)
+                    try:
+                        numeric = pd.to_numeric(prior_block[key], errors="coerce")
+                        if isinstance(numeric, (pd.Series, np.ndarray)) and hasattr(numeric, "dropna") and not numeric.dropna().empty:
+                            mean_val = numeric.mean()
+                            if not pd.isna(mean_val):
+                                effort[f"avg_{key}"] = float(mean_val)
+                    except Exception as e:
+                        print(f"⚠️ Failed to compute avg for prior_block[{key}]: {e}")
             seg["effort_before"] = effort
 
         seg_df = df.iloc[seg["start_index"]:seg["end_index"] + 1]
@@ -164,12 +167,13 @@ def detect_segments(df, activity):
             if col in seg_df:
                 try:
                     numeric_col = pd.to_numeric(seg_df[col], errors="coerce")
-                    if isinstance(numeric_col, (pd.Series, np.ndarray)) and not numeric_col.dropna().empty:
+                    if isinstance(numeric_col, (pd.Series, np.ndarray)) and hasattr(numeric_col, "dropna") and not numeric_col.dropna().empty:
                         seg[f"avg_{col}"] = float(numeric_col.mean())
                 except Exception as e:
                     print(f"⚠️ Failed to compute avg for {col}: {e}")
 
     return {"segments": segments, "summary": summary}
+
 
 def extract_aggregated_features(activity):
     return {
@@ -210,9 +214,10 @@ def prepare_activity_for_storage(activity: dict, df: pd.DataFrame) -> dict:
 
     activity["stream_summary"] = {
         "duration_sec": float(trimmed["time_sec"].iloc[-1]) if "time_sec" in trimmed else None,
-        "avg_hr": float(trimmed["heart_rate"].mean()) if "heart_rate" in trimmed and not trimmed["heart_rate"].dropna().empty else None,
-        "avg_speed": float(trimmed["speed"].mean()) if "speed" in trimmed and not trimmed["speed"].dropna().empty else None,
-        "avg_watts": float(trimmed["watts"].mean()) if "watts" in trimmed and not trimmed["watts"].dropna().empty else None,
+        "avg_hr": float(trimmed["heart_rate"].mean()) if "heart_rate" in trimmed and isinstance(trimmed["heart_rate"], (pd.Series, np.ndarray)) and not trimmed["heart_rate"].dropna().empty else None,
+        "avg_speed": float(trimmed["speed"].mean()) if "speed" in trimmed and isinstance(trimmed["speed"], (pd.Series, np.ndarray)) and not trimmed["speed"].dropna().empty else None,
+        "avg_watts": float(trimmed["watts"].mean()) if "watts" in trimmed and isinstance(trimmed["watts"], (pd.Series, np.ndarray)) and not trimmed["watts"].dropna().empty else None,
     }
 
     return activity
+
