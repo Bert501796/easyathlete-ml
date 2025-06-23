@@ -23,18 +23,19 @@ query = {
     #"stream_data_full": {"$exists": True}
 }
 
-activity = collection.find_one(query)
+activities = list(collection.find(query))
+total = len(activities)
 
-if not activity:
-    print("⚠️ No activity found that matches the enrichment criteria.")
-else:
+print(f"🔄 Found {total} activities to re-enrich.\n")
+
+for idx, activity in enumerate(activities, 1):
     try:
         res = requests.post(f"{ML_API_URL}/ml/enrich-activity", json={
             "activity_id": str(activity["_id"]),
             "user_id": activity["userId"]
         })
-        print(f"✅ {activity['stravaId']} enriched →", res.json())
+        print(f"✅ [{idx}/{total}] {activity['stravaId']} enriched →", res.json())
     except Exception as e:
-        print(f"❌ Failed to enrich {activity['stravaId']} →", str(e))
+        print(f"❌ [{idx}/{total}] Failed to enrich {activity['stravaId']} →", str(e))
 
-    time.sleep(0.2)
+    time.sleep(0.2)  # protect your server
