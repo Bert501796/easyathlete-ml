@@ -226,6 +226,11 @@ def detect_segments(df, activity):
     segments += detect_recovery_blocks(df)
     segments += detect_steady_state_blocks(df)
     segments += detect_cooldown(df)
+
+    # ✅ Sort segments chronologically by time_sec of start_index
+    segments.sort(key=lambda seg: df["time_sec"].iloc[seg["start_index"]] if "start_index" in seg else 0)
+
+
     summary = {
         "count": len(segments),
         "avg_duration_sec": int(np.mean([s["duration_sec"] for s in segments])) if segments else 0
