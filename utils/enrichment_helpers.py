@@ -7,7 +7,7 @@ from utils.segment_rules import (
     detect_recovery_blocks,
     detect_steady_state_blocks,
     detect_cooldown,
-    detect_swimming_blocks,  # ✅ imported, not redefined
+    detect_swimming_blocks,
 )
 
 def parse_streams(activity):
@@ -37,7 +37,7 @@ def parse_streams(activity):
 
         if len(rebuilt) >= 2:
             min_len = min(len(v) for v in rebuilt.values())
-            print(f"🧪 Trimming all streams to min length: {min_len}")
+            print(f"🧚 Trimming all streams to min length: {min_len}")
             rebuilt = {k: v[:min_len] for k, v in rebuilt.items()}
             df = pd.DataFrame(rebuilt)
             print(f"✅ Rebuilt stream shape: {len(df)} rows, columns: {list(df.columns)}")
@@ -51,11 +51,9 @@ def parse_streams(activity):
             return parse_streams_from_raw(activity)
         print(f"✅ stream_data_full used directly: {len(df)} rows, columns: {list(df.columns)}")
 
-    # 🔐 Ensure all data is numeric
     for col in df.columns:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
-    # 🧹 Drop rows with any NaNs (optional, but safe)
     df.dropna(inplace=True)
 
     window = 30
@@ -75,14 +73,9 @@ def parse_streams(activity):
     df = pd.concat([df, pd.DataFrame(delta_cols), pd.DataFrame(rolling_means), pd.DataFrame(rolling_deltas)], axis=1)
     df = df.apply(pd.to_numeric, errors="coerce")
 
-
     return df
 
-
 def merge_close_segments(segments, min_gap_sec=10):
-    """
-    Merge segments of the same type that are very close to each other (within min_gap_sec).
-    """
     merged = []
     segments = sorted(segments, key=lambda s: s["start_index"])
 
@@ -99,7 +92,6 @@ def merge_close_segments(segments, min_gap_sec=10):
 
     return merged
 
-
 def parse_streams_from_raw(activity):
     fallback_keys = [
         ("watts", "wattsStream"),
@@ -115,7 +107,7 @@ def parse_streams_from_raw(activity):
         for alias, orig in fallback_keys
         if isinstance(activity.get(orig), list) and len(activity.get(orig)) > 0
     }
-    print(f"🧪 Fallback stream keys found: {list(rebuilt.keys())}")
+    print(f"🧚 Fallback stream keys found: {list(rebuilt.keys())}")
     if len(rebuilt) >= 2:
         min_len = min(len(v) for v in rebuilt.values())
         rebuilt = {k: v[:min_len] for k, v in rebuilt.items()}
@@ -125,7 +117,6 @@ def parse_streams_from_raw(activity):
     else:
         print("❌ Not enough fallback data to rebuild streams.")
         return pd.DataFrame()
-
 
 def detect_segments(df, activity):
     if activity.get("type") == "Swim":
@@ -142,7 +133,6 @@ def detect_segments(df, activity):
     segments = merge_close_segments(segments, min_gap_sec=10)
     segments = [s for s in segments if s.get("duration_sec", 0) >= 30]
 
-
     segments.sort(key=lambda seg: df["time_sec"].iloc[seg["start_index"]] if "start_index" in seg else 0)
 
     summary = {
@@ -153,21 +143,22 @@ def detect_segments(df, activity):
     for seg in segments:
         if "start_index" in seg and seg["start_index"] > 0:
             prior_block = df.iloc[:seg["start_index"]]
-            seg["effort_before"] = {
+            effort = {
                 "duration_sec": float(prior_block["time_sec"].iloc[-1]) if not prior_block.empty else 0,
                 "distance_m": float(prior_block["distance"].iloc[-1]) if "distance" in prior_block and not prior_block.empty else 0,
-                "altitude_m": float(prior_block["altitude"].iloc[-1]) if "altitude" in prior_block and not prior_block.empty else 0,
-                "avg_hr": float(prior_block["heart_rate"].mean()) if "heart_rate" in prior_block else None,
-                "avg_speed": float(prior_block["speed"].mean()) if "speed" in prior_block else None,
-                "avg_cadence": float(prior_block["cadence"].mean()) if "cadence" in prior_block else None,
-                "avg_watts": float(prior_block["watts"].mean()) if "watts" in prior_block else None
+                "altitude_m": float(prior_block["altitude"].iloc[-1]) if "altitude" in prior_block and not prior_block.empty else 0
             }
+            for key in ["heart_rate", "speed", "cadence", "watts"]:
+                if key in prior_block:
+                    numeric = pd.to_numeric(prior_block[key], errors="coerce")
+                    if not numeric.isna().all():
+                        effort[f"avg_{key}"] = float(numeric.mean())
+            seg["effort_before"] = effort
 
         seg_df = df.iloc[seg["start_index"]:seg["end_index"] + 1]
         for col in df.columns:
             if col.startswith("delta_") or col.startswith("rolling_"):
                 continue
-
             if col in seg_df:
                 try:
                     avg_val = pd.to_numeric(seg_df[col], errors="coerce").mean()
@@ -176,8 +167,8 @@ def detect_segments(df, activity):
                 except Exception as e:
                     print(f"⚠️ Failed to compute avg for {col}: {e}")
 
-
     return {"segments": segments, "summary": summary}
+
 def extract_aggregated_features(activity):
     return {
         "distanceKm": activity.get("distanceKm", 0),
@@ -202,36 +193,24 @@ def convert_numpy_types(data):
         return data.item()
     else:
         return data
-    
+
 def trim_stream_df(df: pd.DataFrame) -> pd.DataFrame:
-    """Keep only raw streams (e.g., no delta_ or rolling_ columns)"""
     return df[[col for col in df.columns if not col.startswith("delta_") and not col.startswith("rolling_")]]
 
-
 def prepare_activity_for_storage(activity: dict, df: pd.DataFrame) -> dict:
-    """
-    Prepare the enriched activity for MongoDB storage.
-    Drops legacy fields and stores only necessary raw stream data.
-    """
     trimmed = trim_stream_df(df).round(3)
-
-    # Store only raw stream data
     activity["stream_data_full"] = trimmed.to_dict(orient="list")
-
-    # Remove raw legacy streams
     for key in [
         "wattsStream", "heartRateStream", "cadenceStream", "altitudeStream",
         "distanceStream", "timeStream", "speedStream"
     ]:
         activity.pop(key, None)
 
-    # Optional: add lightweight summary
     activity["stream_summary"] = {
         "duration_sec": float(trimmed["time_sec"].iloc[-1]) if "time_sec" in trimmed else None,
         "avg_hr": float(trimmed["heart_rate"].mean()) if "heart_rate" in trimmed else None,
         "avg_speed": float(trimmed["speed"].mean()) if "speed" in trimmed else None,
-        "avg_watts": float(trimmed["watts"].mean()) if "watts" in trimmed else None,
+        "avg_watts": float(trimmed["watts"].mean()) if "watts" in trimmed and not pd.isna(trimmed["watts"].mean()) else None,
     }
 
     return activity
-
