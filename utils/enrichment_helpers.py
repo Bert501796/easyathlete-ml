@@ -27,12 +27,13 @@ def parse_streams(activity):
             rebuilt = {k: v[:min_len] for k, v in rebuilt.items()}
             df = pd.DataFrame(rebuilt)
         else:
+            print("❌ Not enough valid fallback streams to rebuild DataFrame.")
             return pd.DataFrame()
     else:
         df = pd.DataFrame(streams)
         print(f"✅ Rebuilt stream shape: {len(df)} rows, columns: {list(df.columns)}")
 
-
+    # Continue processing
     for col in df.columns:
         if col != "time_sec":
             df[f"delta_{col}"] = df[col].diff()
@@ -49,6 +50,7 @@ def parse_streams(activity):
             df[f"rolling_{col}_mean"] = df[col].rolling(window, min_periods=1).mean()
 
     return df
+
 
 def detect_warmup(df):
     if "time_sec" not in df or df.shape[0] < 60:
