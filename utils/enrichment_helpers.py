@@ -15,28 +15,30 @@ def parse_streams(activity):
             ("time_sec", "timeStream"),
             ("speed", "speedStream")
         ]
-        rebuilt = {
-            alias: activity.get(orig)
-            for alias, orig in fallback_keys
-            if isinstance(activity.get(orig), list) and len(activity.get(orig)) > 0
-        }
-        print(f"🧪 Fallback stream keys found: {list(rebuilt.keys())}")
 
-        print("🔬 Raw fallback stream lengths:")
-        for k, v in rebuilt.items():
-            print(f"  - {k}: {len(v)}")
+        rebuilt = {}
+        for alias, orig in fallback_keys:
+            stream = activity.get(orig)
+            if isinstance(stream, list):
+                print(f"✅ Found {orig}: length {len(stream)}")
+                if len(stream) > 0:
+                    rebuilt[alias] = stream
+            else:
+                print(f"⚠️ Missing or invalid {orig}")
 
         if len(rebuilt) >= 2:
             min_len = min(len(v) for v in rebuilt.values())
-            print(f"⚠️ Minimum shared length across streams: {min_len}")
+            print(f"🧪 Trimming all streams to min length: {min_len}")
             rebuilt = {k: v[:min_len] for k, v in rebuilt.items()}
             df = pd.DataFrame(rebuilt)
+            print(f"✅ Rebuilt stream shape: {len(df)} rows, columns: {list(df.columns)}")
         else:
             print("❌ Not enough valid fallback streams to rebuild DataFrame.")
             return pd.DataFrame()
     else:
         df = pd.DataFrame(streams)
-        print(f"✅ Rebuilt stream shape: {len(df)} rows, columns: {list(df.columns)}")
+        print(f"✅ stream_data_full used directly: {len(df)} rows, columns: {list(df.columns)}")
+
 
     # Continue processing
     for col in df.columns:
