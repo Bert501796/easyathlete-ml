@@ -1,11 +1,6 @@
 import pandas as pd
 import numpy as np
 
-from .enrichment_helpers import (
-    detect_warmup, detect_intervals, detect_acceleration_blocks,
-    detect_recovery_blocks, detect_steady_state_blocks, detect_cooldown
-)
-
 def parse_streams(activity):
     print("🔍 parse_streams() was called")
     streams = activity.get("stream_data_full", {})
