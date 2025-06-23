@@ -161,9 +161,9 @@ def detect_segments(df, activity):
                 continue
             if col in seg_df:
                 try:
-                    avg_val = pd.to_numeric(seg_df[col], errors="coerce").mean()
-                    if pd.notna(avg_val):
-                        seg[f"avg_{col}"] = float(avg_val)
+                    numeric_col = pd.to_numeric(seg_df[col], errors="coerce")
+                    if not numeric_col.dropna().empty:
+                        seg[f"avg_{col}"] = float(numeric_col.mean())
                 except Exception as e:
                     print(f"⚠️ Failed to compute avg for {col}: {e}")
 
