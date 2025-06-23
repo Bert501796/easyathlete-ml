@@ -51,22 +51,24 @@ def parse_streams(activity):
             return parse_streams_from_raw(activity)
         print(f"✅ stream_data_full used directly: {len(df)} rows, columns: {list(df.columns)}")
 
-    for col in df.columns:
-        if col != "time_sec":
-            df[f"delta_{col}"] = df[col].diff()
-
     window = 30
+    delta_cols = {}
+    rolling_means = {}
+    rolling_deltas = {}
+
     for col in df.columns:
-        if col.startswith("delta_"):
-            base_col = col.replace("delta_", "")
-            if base_col in df:
-                df[f"rolling_{base_col}_trend"] = df[col].rolling(window, min_periods=1).mean()
-        elif col not in df.columns or col == "time_sec":
+        if col == "time_sec":
             continue
-        else:
-            df[f"rolling_{col}_mean"] = df[col].rolling(window, min_periods=1).mean()
+
+        delta = df[col].diff()
+        delta_cols[f"delta_{col}"] = delta
+        rolling_means[f"rolling_{col}_mean"] = df[col].rolling(window, min_periods=1).mean()
+        rolling_deltas[f"rolling_{col}_trend"] = delta.rolling(window, min_periods=1).mean()
+
+    df = pd.concat([df, pd.DataFrame(delta_cols), pd.DataFrame(rolling_means), pd.DataFrame(rolling_deltas)], axis=1)
 
     return df
+
 
 def parse_streams_from_raw(activity):
     fallback_keys = [
