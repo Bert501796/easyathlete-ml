@@ -1,5 +1,14 @@
 import pandas as pd
 import numpy as np
+from utils.segment_rules import (
+    detect_warmup,
+    detect_intervals,
+    detect_acceleration_blocks,
+    detect_recovery_blocks,
+    detect_steady_state_blocks,
+    detect_cooldown,
+    detect_swimming_blocks,  # ✅ imported, not redefined
+)
 
 def parse_streams(activity):
     print("🔍 parse_streams() was called")
@@ -20,10 +29,9 @@ def parse_streams(activity):
         rebuilt = {}
         for alias, orig in fallback_keys:
             stream = activity.get(orig)
-            if isinstance(stream, list):
+            if isinstance(stream, list) and len(stream) > 0:
                 print(f"✅ Found {orig}: length {len(stream)}")
-                if len(stream) > 0:
-                    rebuilt[alias] = stream
+                rebuilt[alias] = stream
             else:
                 print(f"⚠️ Missing or invalid {orig}")
 
@@ -86,23 +94,6 @@ def parse_streams_from_raw(activity):
         print("❌ Not enough fallback data to rebuild streams.")
         return pd.DataFrame()
 
-def detect_swimming_blocks(df):
-    if "time_sec" not in df or df.shape[0] < 30:
-        return []
-
-    duration = df["time_sec"].iloc[-1] - df["time_sec"].iloc[0]
-    avg_hr = float(df["heart_rate"].mean()) if "heart_rate" in df else None
-    avg_speed = float((df["distance"].iloc[-1] / df["time_sec"].iloc[-1])) if "distance" in df and df["time_sec"].iloc[-1] > 0 else None
-
-    return [{
-        "type": "steady_swim",
-        "start_index": 0,
-        "end_index": len(df) - 1,
-        "duration_sec": int(duration),
-        "avg_hr": avg_hr,
-        "avg_speed": avg_speed
-    }]
-
 def detect_segments(df, activity):
     if activity.get("type") == "Swim":
         return {"segments": detect_swimming_blocks(df), "summary": {"swim_mode": True}}
@@ -121,6 +112,7 @@ def detect_segments(df, activity):
         "count": len(segments),
         "avg_duration_sec": int(np.mean([s["duration_sec"] for s in segments])) if segments else 0
     }
+
     for seg in segments:
         if "start_index" in seg and seg["start_index"] > 0:
             prior_block = df.iloc[:seg["start_index"]]
@@ -134,29 +126,9 @@ def detect_segments(df, activity):
                 "avg_watts": float(prior_block["watts"].mean()) if "watts" in prior_block else None
             }
 
+        seg_df = df.iloc[seg["start_index"]:seg["end_index"] + 1]
+        for col in df.columns:
+            if not col.startswith("delta_") and not col.startswith("rolling_") and col in seg_df:
+                seg[f"avg_{col}"] = float(seg_df[col].mean())
+
     return {"segments": segments, "summary": summary}
-
-def extract_aggregated_features(activity):
-    return {
-        "distanceKm": activity.get("distanceKm", 0),
-        "movingTimeMin": activity.get("movingTimeMin", 0),
-        "paceMinPerKm": activity.get("paceMinPerKm", 0),
-        "hrEfficiency": activity.get("hrEfficiency", 0),
-        "elevationPerKm": activity.get("elevationPerKm", 0),
-        "estimatedLoad": activity.get("estimatedLoad", 0),
-        "averageHeartrate": activity.get("averageHeartrate", 0),
-        "maxHeartrate": activity.get("maxHeartrate", 0),
-    }
-
-def generate_ml_windows(df, segments):
-    return []
-
-def convert_numpy_types(data):
-    if isinstance(data, dict):
-        return {k: convert_numpy_types(v) for k, v in data.items()}
-    elif isinstance(data, list):
-        return [convert_numpy_types(v) for v in data]
-    elif isinstance(data, np.generic):
-        return data.item()
-    else:
-        return data
