@@ -20,6 +20,8 @@ def parse_streams(activity):
             for alias, orig in fallback_keys
             if isinstance(activity.get(orig), list) and len(activity.get(orig)) > 0
         }
+        print(f"🧪 Fallback stream keys found: {list(rebuilt.keys())}")
+
         if len(rebuilt) >= 2:
             min_len = min(len(v) for v in rebuilt.values())
             rebuilt = {k: v[:min_len] for k, v in rebuilt.items()}
@@ -28,6 +30,8 @@ def parse_streams(activity):
             return pd.DataFrame()
     else:
         df = pd.DataFrame(streams)
+        print(f"✅ Rebuilt stream shape: {len(df)} rows, columns: {list(df.columns)}")
+
 
     for col in df.columns:
         if col != "time_sec":
