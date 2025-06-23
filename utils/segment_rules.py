@@ -88,36 +88,39 @@ def detect_steady_state_blocks(df):
     if "rolling_speed_mean" not in df or "rolling_heart_rate_mean" not in df:
         return []
 
-    df["rolling_speed_mean"] = pd.to_numeric(df["rolling_speed_mean"], errors="coerce")
-    df["rolling_heart_rate_mean"] = pd.to_numeric(df["rolling_heart_rate_mean"], errors="coerce")
-    mean_speed = df["rolling_speed_mean"].mean()
-    mean_hr = df["rolling_heart_rate_mean"].mean()
-    if pd.isna(mean_speed) or pd.isna(mean_hr):
+    try:
+        rolling_speed = pd.to_numeric(df["rolling_speed_mean"], errors="coerce")
+        rolling_hr = pd.to_numeric(df["rolling_heart_rate_mean"], errors="coerce")
+
+        if rolling_speed.isna().all() or rolling_hr.isna().all():
+            return []
+
+        speed_mean = rolling_speed.mean()
+        hr_mean = rolling_hr.mean()
+
+        mask = (rolling_speed > speed_mean * 0.9) & (rolling_speed < speed_mean * 1.1) & \
+               (rolling_hr > hr_mean * 0.9) & (rolling_hr < hr_mean * 1.1)
+
+        steady_blocks = []
+        current_block = []
+        for i, val in enumerate(mask):
+            if val:
+                current_block.append(i)
+            elif current_block:
+                if len(current_block) > 30:
+                    steady_blocks.append({
+                        "type": "steady",
+                        "start_index": current_block[0],
+                        "end_index": current_block[-1],
+                        "duration_sec": int(df["time_sec"].iloc[current_block[-1]] - df["time_sec"].iloc[current_block[0]])
+                    })
+                current_block = []
+
+        return steady_blocks
+    except Exception as e:
+        print("⚠️ Error in detect_steady_state_blocks:", e)
         return []
 
-    mask = (
-        (df["rolling_speed_mean"] > mean_speed * 0.9) &
-        (df["rolling_speed_mean"] < mean_speed * 1.1) &
-        (df["rolling_heart_rate_mean"] > mean_hr * 0.9) &
-        (df["rolling_heart_rate_mean"] < mean_hr * 1.1)
-    )
-
-    steady_blocks = []
-    current_block = []
-    for i, val in enumerate(mask):
-        if val:
-            current_block.append(i)
-        elif current_block:
-            if len(current_block) > 30:
-                steady_blocks.append({
-                    "type": "steady",
-                    "start_index": current_block[0],
-                    "end_index": current_block[-1],
-                    "duration_sec": int(df["time_sec"].iloc[current_block[-1]] - df["time_sec"].iloc[current_block[0]])
-                })
-            current_block = []
-
-    return steady_blocks
 
 def detect_recovery_blocks(df):
     if "rolling_heart_rate_mean" not in df:
