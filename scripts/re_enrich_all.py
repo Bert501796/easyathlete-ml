@@ -20,7 +20,7 @@ collection = db["stravaactivities"]
 query = {
     "enrichmentVersion": {"$ne": 1.4},
     "type": {"$ne": "WeightTraining"},
-    "stream_data_full": {"$exists": True}
+    #"stream_data_full": {"$exists": True}
 }
 
 activity = collection.find_one(query)
