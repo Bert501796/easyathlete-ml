@@ -4,6 +4,8 @@ from bson import ObjectId
 import os
 from pymongo import MongoClient
 from dotenv import load_dotenv
+from datetime import datetime, UTC  # ✅ Use UTC from datetime
+
 
 from utils.enrichment_helpers import (
     parse_streams,
@@ -69,7 +71,8 @@ async def enrich_activity(request: EnrichmentRequest):
             "segments": convert_numpy_types(segments_result["segments"]),
             "segmentSummary": convert_numpy_types(segments_result["summary"]),
             "enriched": True,
-            "enrichmentVersion": 1.4
+            "enrichmentVersion": 1.4,
+            "updatedAt": datetime.now(UTC)  # ✅ Modern and timezone-safe
         })
 
         collection.update_one({"_id": activity["_id"]}, {"$set": activity})
