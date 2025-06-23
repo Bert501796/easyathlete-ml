@@ -141,36 +141,41 @@ def detect_segments(df, activity):
     }
 
     for seg in segments:
-        if "start_index" in seg and seg["start_index"] > 0:
-            prior_block = df.iloc[:seg["start_index"]]
-            effort = {
-                "duration_sec": float(prior_block["time_sec"].iloc[-1]) if not prior_block.empty else 0,
-                "distance_m": float(prior_block["distance"].iloc[-1]) if "distance" in prior_block and not prior_block.empty else 0,
-                "altitude_m": float(prior_block["altitude"].iloc[-1]) if "altitude" in prior_block and not prior_block.empty else 0
-            }
-            for key in ["heart_rate", "speed", "cadence", "watts"]:
-                if key in prior_block:
-                    try:
-                        numeric = pd.to_numeric(prior_block[key], errors="coerce")
-                        if isinstance(numeric, (pd.Series, np.ndarray)) and hasattr(numeric, "dropna") and not numeric.dropna().empty:
-                            mean_val = numeric.mean()
-                            if not pd.isna(mean_val):
-                                effort[f"avg_{key}"] = float(mean_val)
-                    except Exception as e:
-                        print(f"⚠️ Failed to compute avg for prior_block[{key}]: {e}")
-            seg["effort_before"] = effort
+        try:
+            # effort_before
+            if "start_index" in seg and seg["start_index"] > 0:
+                prior_block = df.iloc[:seg["start_index"]]
+                effort = {
+                    "duration_sec": float(prior_block["time_sec"].iloc[-1]) if not prior_block.empty else 0,
+                    "distance_m": float(prior_block["distance"].iloc[-1]) if "distance" in prior_block and not prior_block.empty else 0,
+                    "altitude_m": float(prior_block["altitude"].iloc[-1]) if "altitude" in prior_block and not prior_block.empty else 0,
+                }
+                for key in ["heart_rate", "speed", "cadence", "watts"]:
+                    if key in prior_block:
+                        try:
+                            numeric = pd.to_numeric(prior_block[key], errors="coerce")
+                            if isinstance(numeric, (pd.Series, np.ndarray)) and not numeric.dropna().empty:
+                                mean_val = numeric.mean()
+                                if not pd.isna(mean_val):
+                                    effort[f"avg_{key}"] = float(mean_val)
+                        except Exception as sub_e:
+                            print(f"⚠️ Failed avg calc for effort_before[{key}]: {repr(sub_e)}")
+                seg["effort_before"] = effort
 
-        seg_df = df.iloc[seg["start_index"]:seg["end_index"] + 1]
-        for col in df.columns:
-            if col.startswith("delta_") or col.startswith("rolling_"):
-                continue
-            if col in seg_df:
-                try:
-                    numeric_col = pd.to_numeric(seg_df[col], errors="coerce")
-                    if isinstance(numeric_col, (pd.Series, np.ndarray)) and hasattr(numeric_col, "dropna") and not numeric_col.dropna().empty:
-                        seg[f"avg_{col}"] = float(numeric_col.mean())
-                except Exception as e:
-                    print(f"⚠️ Failed to compute avg for {col}: {e}")
+            # segment averages
+            seg_df = df.iloc[seg["start_index"]:seg["end_index"] + 1]
+            for col in df.columns:
+                if col.startswith("delta_") or col.startswith("rolling_"):
+                    continue
+                if col in seg_df:
+                    try:
+                        numeric_col = pd.to_numeric(seg_df[col], errors="coerce")
+                        if isinstance(numeric_col, (pd.Series, np.ndarray)) and not numeric_col.dropna().empty:
+                            seg[f"avg_{col}"] = float(numeric_col.mean())
+                    except Exception as seg_e:
+                        print(f"⚠️ Failed avg calc for seg[{col}]: {repr(seg_e)}")
+        except Exception as seg_outer:
+            print(f"❌ Failed to process segment: {repr(seg_outer)}")
 
     return {"segments": segments, "summary": summary}
 
