@@ -5,7 +5,6 @@ from scipy.stats import linregress
 from datetime import datetime
 from typing import List, Dict
 
-
 def extract_segments(activities: List[Dict]) -> pd.DataFrame:
     """
     Flatten segment data from a list of activities into a DataFrame
@@ -31,19 +30,21 @@ def extract_segments(activities: List[Dict]) -> pd.DataFrame:
                 "duration_sec": seg.get("duration_sec"),
                 "elevation_gain": seg.get("elevation_gain"),
                 "distance_m": seg.get("distance_m"),
+                "altitude_m": seg.get("altitude_m"),
+                "start_index": seg.get("start_index"),
+                "end_index": seg.get("end_index"),
                 "hr_efficiency": _compute_hr_efficiency(seg),
                 "pace": _compute_pace(seg),
+                "normalized_effort": _compute_normalized_effort(seg),
             })
 
     return pd.DataFrame(segments)
-
 
 def _compute_pace(seg: Dict) -> float:
     speed = seg.get("avg_speed")
     if speed and speed > 0:
         return 1000 / speed  # min/km if speed is m/min
     return None
-
 
 def _compute_hr_efficiency(seg: Dict) -> float:
     speed = seg.get("avg_speed")
@@ -53,6 +54,12 @@ def _compute_hr_efficiency(seg: Dict) -> float:
         return pace / hr
     return None
 
+def _compute_normalized_effort(seg: Dict) -> float:
+    hr = seg.get("avg_hr")
+    dur = seg.get("duration_sec")
+    if hr and dur and dur > 0:
+        return hr * dur / 60  # heartbeats per minute of work
+    return None
 
 def compute_metric_trend(df: pd.DataFrame, metric: str, time_col: str = "activity_date") -> Dict:
     df = df.dropna(subset=[metric])
@@ -71,17 +78,20 @@ def compute_metric_trend(df: pd.DataFrame, metric: str, time_col: str = "activit
         "p_value": round(p_value, 4)
     }
 
-
 def analyze_segment_trends(activities: List[Dict]) -> List[Dict]:
     df = extract_segments(activities)
     if df.empty:
         return []
 
     trends = []
-    metrics = ["pace", "avg_hr", "hr_efficiency", "avg_watts", "avg_cadence"]
+    metrics = [
+        "pace", "avg_hr", "hr_efficiency",
+        "avg_watts", "avg_cadence", "normalized_effort"
+    ]
 
     for segment_type in df["segment_type"].dropna().unique():
         segment_df = df[df["segment_type"] == segment_type]
+        segment_df = segment_df[segment_df["duration_sec"] >= 60]  # filter short segments
         for metric in metrics:
             result = compute_metric_trend(segment_df, metric)
             if result:
