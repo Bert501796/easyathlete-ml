@@ -22,8 +22,13 @@ def parse_streams(activity):
         }
         print(f"🧪 Fallback stream keys found: {list(rebuilt.keys())}")
 
+        print("🔬 Raw fallback stream lengths:")
+        for k, v in rebuilt.items():
+            print(f"  - {k}: {len(v)}")
+
         if len(rebuilt) >= 2:
             min_len = min(len(v) for v in rebuilt.values())
+            print(f"⚠️ Minimum shared length across streams: {min_len}")
             rebuilt = {k: v[:min_len] for k, v in rebuilt.items()}
             df = pd.DataFrame(rebuilt)
         else:
