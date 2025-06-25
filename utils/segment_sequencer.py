@@ -1,36 +1,35 @@
 def infer_segment_sequence(segments, df):
     """
-    Converts overlapping raw segments into a logical training sequence with annotations.
+    Converts overlapping raw segments into a logical, non-overlapping training sequence.
+    Prioritizes the most likely 'primary' segments.
     """
-    # Step 1: Sort by start time
     segments = sorted(segments, key=lambda s: s["start_index"])
-
-    # Step 2: Init structures
     sequence = []
+    occupied = set()
     last_primary_type = None
 
     for seg in segments:
-        seg = seg.copy()  # avoid mutating original
+        seg = seg.copy()
 
-        # Assign primary if it's not nested
-        is_nested = any(
-            s["start_index"] <= seg["start_index"] <= s["end_index"] and
-            s["end_index"] >= seg["end_index"]
-            for s in sequence if s.get("primary")
-        )
-        if not is_nested:
+        # Check if overlaps any accepted primary segment
+        current_range = set(range(seg["start_index"], seg["end_index"] + 1))
+        overlap = not current_range.isdisjoint(occupied)
+
+        if not overlap:
             seg["primary"] = True
             if last_primary_type:
                 seg["after"] = last_primary_type
             last_primary_type = seg["type"]
+            occupied.update(current_range)
         else:
             seg["primary"] = False
-            # Optional: track what it's nested in
-            for s in sequence:
-                if s.get("primary") and s["start_index"] <= seg["start_index"] <= s["end_index"]:
-                    seg["nested_within"] = s["type"]
+            # Optionally annotate nesting
+            for prior in sequence:
+                if prior["primary"] and prior["start_index"] <= seg["start_index"] <= prior["end_index"]:
+                    seg["nested_within"] = prior["type"]
                     break
 
         sequence.append(seg)
 
-    return sequence
+    # Return only primary segments as the clean sequence
+    return [s for s in sequence if s["primary"]]
