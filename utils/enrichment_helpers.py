@@ -9,7 +9,6 @@ from utils.segment_rules import (
     detect_cooldown,
     detect_swimming_blocks,
 )
-from utils.segment_sequencer import infer_segment_sequence
 
 
 def parse_streams(activity):
@@ -131,8 +130,6 @@ from utils.segment_rules import (
     detect_cooldown,
     detect_swimming_blocks,
 )
-from utils.segment_sequencer import infer_segment_sequence
-
 
 def parse_streams(activity):
     print("🔍 parse_streams() was called")
@@ -368,7 +365,7 @@ def prepare_activity_for_storage(activity: dict, df: pd.DataFrame, segment_resul
     if segment_result:
         activity["segments"] = convert_numpy_types(segment_result.get("segments", []))
         activity["raw_segments"] = convert_numpy_types(segment_result.get("raw_segments", []))
-        activity["segment_summary"] = convert_numpy_types(segment_result.get("summary", {}))
+#        activity["segment_summary"] = convert_numpy_types(segment_result.get("summary", {}))
 
     return activity
 

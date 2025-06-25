@@ -5,6 +5,7 @@ import os
 from pymongo import MongoClient
 from dotenv import load_dotenv
 from datetime import datetime, UTC  # ✅ Use UTC from datetime
+from utils.segment_sequencer import infer_segment_sequence
 
 
 from utils.enrichment_helpers import (
@@ -76,6 +77,10 @@ async def enrich_activity(request: EnrichmentRequest):
         print("🔍 Detecting segments...")
         segments_result = detect_segments(df, activity)
 
+        # STEP 3.1: infer sequence
+        print("🧠 Inferring segment sequence...")
+        segment_sequence = infer_segment_sequence(segments_result["segments"], df)
+
         # STEP 4: cleanup stream and legacy fields
         print("🧹 Preparing activity for storage...")
         activity = prepare_activity_for_storage(activity, df, segments_result)
@@ -86,6 +91,7 @@ async def enrich_activity(request: EnrichmentRequest):
             "aggregatedFeatures": convert_numpy_types(aggregated),
             "segments": convert_numpy_types(segments_result["segments"]),
             "segmentSummary": convert_numpy_types(segments_result["summary"]),
+            "segmentSequence": convert_numpy_types(segment_sequence),  # ✅ new field
             "enriched": True,
             "enrichmentVersion": 1.4,
             "updatedAt": datetime.now(UTC)
