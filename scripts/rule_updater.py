@@ -32,7 +32,11 @@ def analyze_failures(results):
 
 def infer_sport_from_filename(filename):
     try:
-        return Path(filename).parent.name
+        path = Path(filename)
+        if "fit_data" in path.parts:
+            idx = path.parts.index("fit_data")
+            return path.parts[idx + 1]  # fit_data/<sport>/...
+        return path.parent.name
     except Exception:
         return "Unknown"
 
@@ -49,7 +53,8 @@ def suggest_threshold_updates(failures):
     updates = {}
 
     for sport, seg_types in failures.items():
-        updates[sport] = {}
+        if sport not in updates:
+            updates[sport] = {}
 
         for seg_type, missed_segments in seg_types.items():
             new_rule = {}
