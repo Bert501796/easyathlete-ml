@@ -332,7 +332,7 @@ def convert_numpy_types(data):
 def trim_stream_df(df: pd.DataFrame) -> pd.DataFrame:
     return df[[col for col in df.columns if not col.startswith("delta_") and not col.startswith("rolling_")]]
 
-def prepare_activity_for_storage(activity: dict, df: pd.DataFrame) -> dict:
+def prepare_activity_for_storage(activity: dict, df: pd.DataFrame, segment_result=None) -> dict:
     trimmed = trim_stream_df(df).round(3)
     activity["stream_data_full"] = trimmed.to_dict(orient="list")
     for key in [
@@ -342,29 +342,36 @@ def prepare_activity_for_storage(activity: dict, df: pd.DataFrame) -> dict:
         activity.pop(key, None)
 
     activity["stream_summary"] = {
-    "duration_sec": (
-        float(trimmed["time_sec"].iloc[-1])
-        if "time_sec" in trimmed and isinstance(trimmed["time_sec"], (pd.Series, np.ndarray)) and not trimmed["time_sec"].dropna().empty
-        else None
-    ),
-    "avg_hr": (
-        float(trimmed["heart_rate"].mean())
-        if "heart_rate" in trimmed and isinstance(trimmed["heart_rate"], (pd.Series, np.ndarray)) and not trimmed["heart_rate"].dropna().empty
-        else None
-    ),
-    "avg_speed": (
-        float(trimmed["speed"].mean())
-        if "speed" in trimmed and isinstance(trimmed["speed"], (pd.Series, np.ndarray)) and not trimmed["speed"].dropna().empty
-        else None
-    ),
-    "avg_watts": (
-        float(trimmed["watts"].mean())
-        if "watts" in trimmed and isinstance(trimmed["watts"], (pd.Series, np.ndarray)) and not trimmed["watts"].dropna().empty
-        else None
-    ),
-}
+        "duration_sec": (
+            float(trimmed["time_sec"].iloc[-1])
+            if "time_sec" in trimmed and not trimmed["time_sec"].dropna().empty
+            else None
+        ),
+        "avg_hr": (
+            float(trimmed["heart_rate"].mean())
+            if "heart_rate" in trimmed and not trimmed["heart_rate"].dropna().empty
+            else None
+        ),
+        "avg_speed": (
+            float(trimmed["speed"].mean())
+            if "speed" in trimmed and not trimmed["speed"].dropna().empty
+            else None
+        ),
+        "avg_watts": (
+            float(trimmed["watts"].mean())
+            if "watts" in trimmed and not trimmed["watts"].dropna().empty
+            else None
+        ),
+    }
+
+    # NEW: Include segment data if available
+    if segment_result:
+        activity["segments"] = convert_numpy_types(segment_result.get("segments", []))
+        activity["raw_segments"] = convert_numpy_types(segment_result.get("raw_segments", []))
+        activity["segment_summary"] = convert_numpy_types(segment_result.get("summary", {}))
 
     return activity
+
 
 def extract_aggregated_features(activity):
     return {
@@ -393,38 +400,4 @@ def convert_numpy_types(data):
 
 def trim_stream_df(df: pd.DataFrame) -> pd.DataFrame:
     return df[[col for col in df.columns if not col.startswith("delta_") and not col.startswith("rolling_")]]
-
-def prepare_activity_for_storage(activity: dict, df: pd.DataFrame) -> dict:
-    trimmed = trim_stream_df(df).round(3)
-    activity["stream_data_full"] = trimmed.to_dict(orient="list")
-    for key in [
-        "wattsStream", "heartRateStream", "cadenceStream", "altitudeStream",
-        "distanceStream", "timeStream", "speedStream"
-    ]:
-        activity.pop(key, None)
-
-    activity["stream_summary"] = {
-    "duration_sec": (
-        float(trimmed["time_sec"].iloc[-1])
-        if "time_sec" in trimmed and isinstance(trimmed["time_sec"], (pd.Series, np.ndarray)) and not trimmed["time_sec"].dropna().empty
-        else None
-    ),
-    "avg_hr": (
-        float(trimmed["heart_rate"].mean())
-        if "heart_rate" in trimmed and isinstance(trimmed["heart_rate"], (pd.Series, np.ndarray)) and not trimmed["heart_rate"].dropna().empty
-        else None
-    ),
-    "avg_speed": (
-        float(trimmed["speed"].mean())
-        if "speed" in trimmed and isinstance(trimmed["speed"], (pd.Series, np.ndarray)) and not trimmed["speed"].dropna().empty
-        else None
-    ),
-    "avg_watts": (
-        float(trimmed["watts"].mean())
-        if "watts" in trimmed and isinstance(trimmed["watts"], (pd.Series, np.ndarray)) and not trimmed["watts"].dropna().empty
-        else None
-    ),
-}
-
-    return activity
 
