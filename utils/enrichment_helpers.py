@@ -10,7 +10,6 @@ from utils.segment_rules import (
     detect_swimming_blocks,
 )
 
-
 def parse_streams(activity):
     print("🔍 parse_streams() was called")
     streams = activity.get("stream_data_full", {})
@@ -76,23 +75,6 @@ def parse_streams(activity):
 
     return df
 
-def merge_close_segments(segments, min_gap_sec=10):
-    merged = []
-    segments = sorted(segments, key=lambda s: s["start_index"])
-
-    for seg in segments:
-        if not merged:
-            merged.append(seg)
-        else:
-            last = merged[-1]
-            if seg["type"] == last["type"] and seg["start_index"] - last["end_index"] <= min_gap_sec:
-                last["end_index"] = seg["end_index"]
-                last["duration_sec"] = seg["end_index"] - last["start_index"]
-            else:
-                merged.append(seg)
-
-    return merged
-
 def parse_streams_from_raw(activity):
     fallback_keys = [
         ("watts", "wattsStream"),
@@ -119,83 +101,6 @@ def parse_streams_from_raw(activity):
         print("❌ Not enough fallback data to rebuild streams.")
         return pd.DataFrame()
 
-import pandas as pd
-import numpy as np
-from utils.segment_rules import (
-    detect_warmup,
-    detect_intervals,
-    detect_acceleration_blocks,
-    detect_recovery_blocks,
-    detect_steady_state_blocks,
-    detect_cooldown,
-    detect_swimming_blocks,
-)
-
-def parse_streams(activity):
-    print("🔍 parse_streams() was called")
-    streams = activity.get("stream_data_full", {})
-
-    if not isinstance(streams, dict):
-        print("⚠️ stream_data_full is malformed or missing, rebuilding from raw streams...")
-        fallback_keys = [
-            ("watts", "wattsStream"),
-            ("heart_rate", "heartRateStream"),
-            ("cadence", "cadenceStream"),
-            ("altitude", "altitudeStream"),
-            ("distance", "distanceStream"),
-            ("time_sec", "timeStream"),
-            ("speed", "speedStream")
-        ]
-
-        rebuilt = {}
-        for alias, orig in fallback_keys:
-            stream = activity.get(orig)
-            if isinstance(stream, list) and len(stream) > 0:
-                print(f"✅ Found {orig}: length {len(stream)}")
-                rebuilt[alias] = stream
-            else:
-                print(f"⚠️ Missing or invalid {orig}")
-
-        if len(rebuilt) >= 2:
-            min_len = min(len(v) for v in rebuilt.values())
-            print(f"💫 Trimming all streams to min length: {min_len}")
-            rebuilt = {k: v[:min_len] for k, v in rebuilt.items()}
-            df = pd.DataFrame(rebuilt)
-            print(f"✅ Rebuilt stream shape: {len(df)} rows, columns: {list(df.columns)}")
-        else:
-            print("❌ Not enough valid fallback streams to rebuild DataFrame.")
-            return pd.DataFrame()
-    else:
-        df = pd.DataFrame(streams)
-        if df.empty or df.shape[0] < 30:
-            print("⚠️ stream_data_full was present but empty or insufficient — falling back to raw streams.")
-            return parse_streams_from_raw(activity)
-        print(f"✅ stream_data_full used directly: {len(df)} rows, columns: {list(df.columns)}")
-
-    for col in df.columns:
-        df[col] = pd.to_numeric(df[col], errors="coerce")
-
-    df.dropna(inplace=True)
-
-    window = 30
-    delta_cols = {}
-    rolling_means = {}
-    rolling_deltas = {}
-
-    for col in df.columns:
-        if col == "time_sec":
-            continue
-
-        delta = df[col].diff()
-        delta_cols[f"delta_{col}"] = delta
-        rolling_means[f"rolling_{col}_mean"] = df[col].rolling(window, min_periods=1).mean()
-        rolling_deltas[f"rolling_{col}_trend"] = delta.rolling(window, min_periods=1).mean()
-
-    df = pd.concat([df, pd.DataFrame(delta_cols), pd.DataFrame(rolling_means), pd.DataFrame(rolling_deltas)], axis=1)
-    df = df.apply(pd.to_numeric, errors="coerce")
-
-    return df
-
 def merge_close_segments(segments, min_gap_sec=10):
     merged = []
     segments = sorted(segments, key=lambda s: s["start_index"])
@@ -213,43 +118,26 @@ def merge_close_segments(segments, min_gap_sec=10):
 
     return merged
 
-def parse_streams_from_raw(activity):
-    fallback_keys = [
-        ("watts", "wattsStream"),
-        ("heart_rate", "heartRateStream"),
-        ("cadence", "cadenceStream"),
-        ("altitude", "altitudeStream"),
-        ("distance", "distanceStream"),
-        ("time_sec", "timeStream"),
-        ("speed", "speedStream")
-    ]
-    rebuilt = {
-        alias: activity.get(orig)
-        for alias, orig in fallback_keys
-        if isinstance(activity.get(orig), list) and len(activity.get(orig)) > 0
-    }
-    print(f"💫 Fallback stream keys found: {list(rebuilt.keys())}")
-    if len(rebuilt) >= 2:
-        min_len = min(len(v) for v in rebuilt.values())
-        rebuilt = {k: v[:min_len] for k, v in rebuilt.items()}
-        df = pd.DataFrame(rebuilt)
-        print(f"✅ Fallback rebuilt stream shape: {len(df)} rows")
-        return df
-    else:
-        print("❌ Not enough fallback data to rebuild streams.")
-        return pd.DataFrame()
+def apply_rule(fn, df, activity_type, *args, **kwargs):
+    try:
+        return fn(df, activity_type=activity_type, *args, **kwargs)
+    except Exception as e:
+        print(f"❌ Error applying rule {fn.__name__} for sport {activity_type}: {e}")
+        return []
 
 def detect_segments(df, activity):
-    if activity.get("type") == "Swim":
+    activity_type = activity.get("type", "default")
+
+    if activity_type == "Swim":
         return {"segments": detect_swimming_blocks(df), "summary": {"swim_mode": True}}
 
     segments = []
-    segments += detect_warmup(df)
-    segments += detect_intervals(df)
-    segments += detect_acceleration_blocks(df)
-    segments += detect_recovery_blocks(df)
-    segments += detect_steady_state_blocks(df)
-    segments += detect_cooldown(df)
+    segments += apply_rule(detect_warmup, df, activity_type)
+    segments += apply_rule(detect_intervals, df, activity_type)
+    segments += apply_rule(detect_acceleration_blocks, df, activity_type)
+    segments += apply_rule(detect_recovery_blocks, df, activity_type)
+    segments += apply_rule(detect_steady_state_blocks, df, activity_type)
+    segments += apply_rule(detect_cooldown, df, activity_type)
 
     segments = merge_close_segments(segments, min_gap_sec=10)
     segments = [s for s in segments if s.get("duration_sec", 0) >= 30]
@@ -263,7 +151,6 @@ def detect_segments(df, activity):
 
     for seg in segments:
         try:
-            # effort_before
             if "start_index" in seg and seg["start_index"] > 0:
                 prior_block = df.iloc[:seg["start_index"]]
                 effort = {
@@ -283,7 +170,6 @@ def detect_segments(df, activity):
                             print(f"⚠️ Failed avg calc for effort_before[{key}]: {repr(sub_e)}")
                 seg["effort_before"] = effort
 
-            # segment averages
             seg_df = df.iloc[seg["start_index"]:seg["end_index"] + 1]
             for col in df.columns:
                 if col.startswith("delta_") or col.startswith("rolling_"):
@@ -299,7 +185,6 @@ def detect_segments(df, activity):
             print(f"❌ Failed to process segment: {repr(seg_outer)}")
 
     return {"segments": segments, "summary": summary}
-
 
 def extract_aggregated_features(activity):
     return {
@@ -361,40 +246,8 @@ def prepare_activity_for_storage(activity: dict, df: pd.DataFrame, segment_resul
         ),
     }
 
-    # NEW: Include segment data if available
     if segment_result:
         activity["segments"] = convert_numpy_types(segment_result.get("segments", []))
         activity["raw_segments"] = convert_numpy_types(segment_result.get("raw_segments", []))
-#        activity["segment_summary"] = convert_numpy_types(segment_result.get("summary", {}))
 
     return activity
-
-
-def extract_aggregated_features(activity):
-    return {
-        "distanceKm": activity.get("distanceKm", 0),
-        "movingTimeMin": activity.get("movingTimeMin", 0),
-        "paceMinPerKm": activity.get("paceMinPerKm", 0),
-        "hrEfficiency": activity.get("hrEfficiency", 0),
-        "elevationPerKm": activity.get("elevationPerKm", 0),
-        "estimatedLoad": activity.get("estimatedLoad", 0),
-        "averageHeartrate": activity.get("averageHeartrate", 0),
-        "maxHeartrate": activity.get("maxHeartrate", 0),
-    }
-
-def generate_ml_windows(df, segments):
-    return []
-
-def convert_numpy_types(data):
-    if isinstance(data, dict):
-        return {k: convert_numpy_types(v) for k, v in data.items()}
-    elif isinstance(data, list):
-        return [convert_numpy_types(v) for v in data]
-    elif isinstance(data, np.generic):
-        return data.item()
-    else:
-        return data
-
-def trim_stream_df(df: pd.DataFrame) -> pd.DataFrame:
-    return df[[col for col in df.columns if not col.startswith("delta_") and not col.startswith("rolling_")]]
-
