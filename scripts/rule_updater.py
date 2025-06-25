@@ -3,9 +3,9 @@ from collections import defaultdict
 from pathlib import Path
 import statistics
 
-from utils.segment_rules import rules_by_sport
+from utils.segment_detection_rules import rules_by_sport
 
-SEGMENT_RULES_PATH = Path("utils/segment_rules.py")
+SEGMENT_RULES_PATH = Path("utils/segment_detection_rules.py")
 ALIGNMENT_RESULTS_PATH = Path("fit_alignment_results.jsonl")
 
 

@@ -1,125 +1,133 @@
-import os
-import argparse
-from pathlib import Path
-from fitparse import FitFile
 import json
-from dotenv import load_dotenv
-from bson import ObjectId
-from datetime import datetime
-from pymongo import MongoClient
+from collections import defaultdict
+from pathlib import Path
+import statistics
 
-from utils.fit_engine.fit_parser import parse_fit_schedule
-from utils.fit_engine.fit_matcher import match_fit_file_to_activity
-from utils.fit_engine.segment_aligner import align_planned_to_detected, score_segment_accuracy
-from utils.enrichment_helpers import (
-    parse_streams,
-    detect_segments,
-    prepare_activity_for_storage,
-    extract_aggregated_features,
-    convert_numpy_types,
-)
+SEGMENT_RULES_PATH = Path("utils/segment_rules.py")
+ALIGNMENT_RESULTS_PATH = Path("fit_alignment_results.jsonl")
 
-# Load Mongo credentials
-load_dotenv()
-USER_ID = os.getenv("FIT_MATCH_USER_ID")
-MONGO_URL = os.getenv("MONGO_URL")
-DB_NAME = os.getenv("DB_NAME", "test")
-client = MongoClient(MONGO_URL)
-collection = client[DB_NAME]["stravaactivities"]
+def load_alignment_results(path):
+    with open(path, "r") as f:
+        return [json.loads(line) for line in f if line.strip()]
 
-def run_fit_alignment(fit_folder: str, output_path: str = "fit_alignment_results.jsonl"):
-    fit_files = list(Path(fit_folder).rglob("*.fit"))
-    total = len(fit_files)
-    print(f"🔍 Found {total} .fit file(s) in {fit_folder}")
-    
-    if total == 0:
-        print("❌ No .fit files found.")
-        return
+def analyze_failures(results):
+    failures = defaultdict(lambda: defaultdict(list))  # sport -> segment_type -> list of examples
 
-    results = []
-    for i, fit_path in enumerate(fit_files):
-        sport_from_folder = fit_path.parent.name
-        print(f"\n[{i+1}/{total}] 📂 Processing {fit_path.name} (sport: {sport_from_folder})")
+    for r in results:
+        sport = r.get("sport_type") or infer_sport_from_filename(r.get("file"))
+        alignment = r.get("alignment", [])
+        segments = r.get("raw_segments", [])
 
-        try:
-            fitfile = FitFile(str(fit_path))
-            planned_blocks = parse_fit_schedule(str(fit_path))
+        for align in alignment:
+            if not align.get("matched") and align.get("planned_type"):
+                matching = [s for s in segments if s.get("type") == align["planned_type"]]
+                failures[sport][align["planned_type"]].extend(matching)
 
-            sport_type = sport_from_folder
-            print(f"🏷️ Detected sport type from folder: {sport_type}")
+    return failures
 
-            if not USER_ID:
-                raise ValueError("❌ FIT_MATCH_USER_ID not set in your .env file")
+def infer_sport_from_filename(filename):
+    try:
+        path = Path(filename)
+        if "fit_data" in path.parts:
+            idx = path.parts.index("fit_data")
+            return path.parts[idx + 1]  # fit_data/<sport>/...
+        return path.parent.name
+    except Exception:
+        return "Unknown"
 
-            activity = match_fit_file_to_activity(fitfile, user_id=USER_ID, fallback_sport=sport_type)
-            if not activity:
-                print(f"❌ No activity match found for {fit_path.name}")
-                continue
+def extract_stat_bounds(values):
+    if not values:
+        return None, None
+    avg = statistics.mean(values)
+    std = statistics.stdev(values) if len(values) > 1 else 0
+    return max(0, avg - std), avg + std
 
-            # 🧪 If missing enrichment, perform enrichment inline
-            if not activity.get("segmentSequence") or not activity.get("segments"):
-                print(f"⚠️ Missing enrichment for activity {activity.get('stravaId')} → running inline enrichment...")
-                df = parse_streams(activity)
-                if df.empty:
-                    print(f"❌ Enrichment failed: no valid stream data for {activity.get('stravaId')}")
-                    continue
+def suggest_threshold_updates(failures):
+    updates = {}
 
-                activity = prepare_activity_for_storage(activity, df)
-                segments_result = detect_segments(df, activity)
+    for sport, seg_types in failures.items():
+        if sport not in updates:
+            updates[sport] = {}
 
-                aggregated = extract_aggregated_features(activity)
+        for seg_type, missed_segments in seg_types.items():
+            new_rule = {}
 
-                activity.update({
-                    "aggregatedFeatures": convert_numpy_types(aggregated),
-                    "segments": convert_numpy_types(segments_result["segments"]),
-                    "segmentSummary": convert_numpy_types(segments_result["summary"]),
-                    "segmentSequence": convert_numpy_types(segments_result["segments"]),
-                    "enriched": True,
-                    "enrichmentVersion": 1.4,
-                    "updatedAt": datetime.utcnow()
-                })
+            def collect(metric):
+                return [s.get(metric) for s in missed_segments if s.get(metric) is not None]
 
-                collection.update_one({"_id": activity["_id"]}, {"$set": activity})
-                print(f"✅ Enrichment completed for stravaId={activity.get('stravaId')}")
+            durations = collect("duration_sec")
+            hr = collect("avg_heart_rate")
+            watts = collect("avg_watts")
+            cadence = collect("avg_cadence")
+            speed = collect("avg_speed")
 
-            actual_blocks = activity.get("segmentSequence", [])
-            all_segments = activity.get("segments", [])
+            delta_hr = [abs(s.get("avg_heart_rate") - s.get("effort_before", {}).get("avg_heart_rate", 0))
+                        for s in missed_segments if s.get("avg_heart_rate") and s.get("effort_before", {}).get("avg_heart_rate")]
 
-            if not actual_blocks:
-                print(f"⚠️ No segmentSequence found even after enrichment.")
-                continue
+            delta_speed = [abs(s.get("avg_speed") - s.get("effort_before", {}).get("avg_speed", 0))
+                           for s in missed_segments if s.get("avg_speed") and s.get("effort_before", {}).get("avg_speed")]
 
-            alignment = align_planned_to_detected(planned_blocks, actual_blocks)
-            metrics = score_segment_accuracy(alignment)
+            # Duration bounds
+            if durations:
+                min_dur, max_dur = extract_stat_bounds(durations)
+                new_rule["min_duration_sec"] = int(min_dur or 0)
+                new_rule["max_duration_sec"] = int(max_dur or 0)
+                print(f"🕒 {sport}/{seg_type}: duration {int(min_dur)}–{int(max_dur)}")
 
-            entry = {
-                "file": fit_path.name,
-                "stravaId": activity.get("stravaId"),
-                "planned_blocks": planned_blocks,
-                "matched_segments": actual_blocks,
-                "raw_segments": all_segments,
-                "alignment": alignment,
-                "score": metrics,
-            }
+            # HR
+            if hr:
+                hr_min, hr_max = extract_stat_bounds(hr)
+                new_rule["hr_range"] = [int(hr_min), int(hr_max)]
+                print(f"📉 {sport}/{seg_type}: HR range = {int(hr_min)}–{int(hr_max)}")
 
-            results.append(entry)
+            # Watts
+            if watts:
+                w_min, w_max = extract_stat_bounds(watts)
+                new_rule["watts_range"] = [int(w_min), int(w_max)]
+                print(f"⚡ {sport}/{seg_type}: watts range = {int(w_min)}–{int(w_max)}")
 
-            Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-            with open(output_path, "a") as out:
-                out.write(json.dumps(entry) + "\n")
+            # Cadence
+            if cadence:
+                c_min, c_max = extract_stat_bounds(cadence)
+                new_rule["cadence_range"] = [int(c_min), int(c_max)]
+                print(f"⚙️ {sport}/{seg_type}: cadence range = {int(c_min)}–{int(c_max)}")
 
-        except Exception as e:
-            print(f"❌ Error processing {fit_path.name}: {e}")
+            # Speed
+            if speed:
+                s_min, s_max = extract_stat_bounds(speed)
+                new_rule["speed_range"] = [round(s_min, 2), round(s_max, 2)]
+                print(f"🚴 {sport}/{seg_type}: speed range = {round(s_min, 2)}–{round(s_max, 2)}")
 
-    print("\n✅ Alignment complete.")
-    print(f"📄 Results saved to: {output_path}")
-    return results
+            # Delta HR
+            if delta_hr:
+                _, max_delta_hr = extract_stat_bounds(delta_hr)
+                new_rule["max_delta_hr"] = int(max_delta_hr)
+                print(f"📉 {sport}/{seg_type}: max_delta_hr = {int(max_delta_hr)}")
 
+            # Delta Speed
+            if delta_speed:
+                _, max_delta_speed = extract_stat_bounds(delta_speed)
+                new_rule["max_delta_speed"] = int(max_delta_speed)
+                print(f"💨 {sport}/{seg_type}: max_delta_speed = {int(max_delta_speed)}")
+
+            updates[sport][seg_type] = new_rule
+
+    return updates
+
+def apply_rule_updates(updates, original_path):
+    backup_path = original_path.with_suffix(".bak.py")
+    if not backup_path.exists():
+        original_path.rename(backup_path)
+
+    with open(original_path, "w") as f:
+        f.write("rules_by_sport = ")
+        json.dump(updates, f, indent=2)
+        f.write("\n")
+
+    print(f"✅ Updated rules saved to {original_path} (backup created at {backup_path})")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Run alignment between .fit and Strava segmentSequence")
-    parser.add_argument("--folder", type=str, default="fit_data", help="Path to folder with .fit files")
-    parser.add_argument("--output", type=str, default="fit_alignment_results.jsonl", help="Output file for results")
-    args = parser.parse_args()
-
-    run_fit_alignment(args.folder, args.output)
+    results = load_alignment_results(ALIGNMENT_RESULTS_PATH)
+    failures = analyze_failures(results)
+    updates = suggest_threshold_updates(failures)
+    apply_rule_updates(updates, SEGMENT_RULES_PATH)
