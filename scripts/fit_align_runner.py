@@ -28,7 +28,7 @@ def run_fit_alignment(fit_folder: str, output_path: str = "fit_alignment_results
 
         try:
             fitfile = FitFile(str(fit_path))
-            planned_blocks = parse_fit_schedule(fit_path)
+            planned_blocks = parse_fit_schedule(str(fit_path))
 
             activity = match_fit_file_to_activity(fitfile, user_id=USER_ID or "")
             if not activity:
