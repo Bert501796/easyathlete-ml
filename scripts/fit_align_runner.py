@@ -11,10 +11,10 @@ from utils.fit_engine.segment_aligner import align_planned_to_detected, score_se
 
 # Load Mongo credentials
 load_dotenv()
-USER_ID = os.getenv("FIT_MATCH_USER_ID")  # optional: restrict matching
+USER_ID = os.getenv("FIT_MATCH_USER_ID")
 
 def run_fit_alignment(fit_folder: str, output_path: str = "fit_alignment_results.jsonl"):
-    fit_files = list(Path(fit_folder).glob("*.fit"))
+    fit_files = list(Path(fit_folder).rglob("*.fit"))
     total = len(fit_files)
     print(f"🔍 Found {total} .fit file(s) in {fit_folder}")
     
@@ -24,13 +24,26 @@ def run_fit_alignment(fit_folder: str, output_path: str = "fit_alignment_results
 
     results = []
     for i, fit_path in enumerate(fit_files):
-        print(f"\n[{i+1}/{total}] 📂 Processing {fit_path.name}")
+        sport_from_folder = fit_path.parent.name  # Extract sport from folder
+        print(f"\n[{i+1}/{total}] 📂 Processing {fit_path.name} (sport: {sport_from_folder})")
 
         try:
             fitfile = FitFile(str(fit_path))
             planned_blocks = parse_fit_schedule(str(fit_path))
 
-            activity = match_fit_file_to_activity(fitfile, user_id=USER_ID or "")
+            # ⬇️ Derive sport_type from parent folder name (e.g. VirtualRide, Run)
+            sport_type = fit_path.parent.name
+            print(f"🏷️ Detected sport type from folder: {sport_type}")
+
+            if not USER_ID:
+                raise ValueError("❌ FIT_MATCH_USER_ID not set in your .env file")
+
+            activity = match_fit_file_to_activity(
+                fitfile,
+                user_id=USER_ID,
+                fallback_sport=sport_type
+            )
+
             if not activity:
                 print(f"❌ No activity match found for {fit_path.name}")
                 continue
@@ -54,10 +67,7 @@ def run_fit_alignment(fit_folder: str, output_path: str = "fit_alignment_results
 
             results.append(entry)
 
-            # Ensure output path exists
             Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-
-            # Log to file incrementally
             with open(output_path, "a") as out:
                 out.write(json.dumps(entry) + "\n")
 
