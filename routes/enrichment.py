@@ -78,7 +78,7 @@ async def enrich_activity(request: EnrichmentRequest):
 
         # STEP 4: cleanup stream and legacy fields
         print("🧹 Preparing activity for storage...")
-        activity = prepare_activity_for_storage(activity, df, segment_result)
+        activity = prepare_activity_for_storage(activity, df, segments_result)
 
         # STEP 5: Add metadata
         print("🧬 Injecting metadata...")
