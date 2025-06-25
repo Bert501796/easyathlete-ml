@@ -27,7 +27,7 @@ collection = db["stravaactivities"]
 
 #Query only one specific activity
 query = {
-    "stravaId": 14818597899,  # ✅ or whichever activity ID you want to test
+    "stravaId": 14775988037,  # ✅ or whichever activity ID you want to test
     #"type": "Swim"
 }
 
