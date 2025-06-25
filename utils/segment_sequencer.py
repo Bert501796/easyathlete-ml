@@ -1,35 +1,55 @@
+SEGMENT_PRIORITY = {
+    "interval": 5,
+    "steady": 4,
+    "recovery": 3,
+    "acceleration": 2,
+    "warmup": 1,
+    "cooldown": 0,
+}
+
+EXPECTED_FLOW = {
+    None: ["warmup", "steady"],
+    "warmup": ["steady", "acceleration", "interval"],
+    "steady": ["interval", "acceleration", "recovery"],
+    "interval": ["recovery", "interval", "acceleration"],
+    "recovery": ["interval", "steady", "cooldown"],
+    "cooldown": [],
+}
+
 def infer_segment_sequence(segments, df):
     """
-    Converts overlapping raw segments into a logical, non-overlapping training sequence.
-    Prioritizes the most likely 'primary' segments.
+    Constructs a non-overlapping, logically ordered sequence of training segments.
+    Uses transition rules and prioritization to reflect actual workout structure.
     """
-    segments = sorted(segments, key=lambda s: s["start_index"])
+    # Sort by start_index and prioritize by strength
+    sorted_segments = sorted(
+        segments,
+        key=lambda s: (s["start_index"], -SEGMENT_PRIORITY.get(s["type"], 0))
+    )
+
     sequence = []
     occupied = set()
-    last_primary_type = None
+    last_type = None
 
-    for seg in segments:
+    for seg in sorted_segments:
         seg = seg.copy()
+        seg_range = set(range(seg["start_index"], seg["end_index"] + 1))
+        seg_type = seg["type"]
 
-        # Check if overlaps any accepted primary segment
-        current_range = set(range(seg["start_index"], seg["end_index"] + 1))
-        overlap = not current_range.isdisjoint(occupied)
+        # Skip if overlapping with previous accepted segment
+        if not seg_range.isdisjoint(occupied):
+            continue
 
-        if not overlap:
-            seg["primary"] = True
-            if last_primary_type:
-                seg["after"] = last_primary_type
-            last_primary_type = seg["type"]
-            occupied.update(current_range)
-        else:
-            seg["primary"] = False
-            # Optionally annotate nesting
-            for prior in sequence:
-                if prior["primary"] and prior["start_index"] <= seg["start_index"] <= prior["end_index"]:
-                    seg["nested_within"] = prior["type"]
-                    break
+        # Check logical transition
+        if last_type is not None and seg_type not in EXPECTED_FLOW.get(last_type, []):
+            continue
 
+        # Accept the segment
+        seg["primary"] = True
+        if last_type:
+            seg["after"] = last_type
+        last_type = seg_type
+        occupied.update(seg_range)
         sequence.append(seg)
 
-    # Return only primary segments as the clean sequence
-    return [s for s in sequence if s["primary"]]
+    return sequence
