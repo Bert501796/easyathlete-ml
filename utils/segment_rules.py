@@ -122,35 +122,64 @@ def detect_steady_state_blocks(df):
 
     return steady_blocks
 
-def detect_recovery_blocks(df):
-    print("🔍 Running detect_recovery_blocks")
-    hr = safe_series(df.get("rolling_heart_rate_mean"), "rolling_heart_rate_mean")
-    if hr is None:
+def detect_recovery_blocks(df, known_segments=None):
+    print("🔍 Running multi-metric detect_recovery_blocks")
+
+    hr = safe_series(df.get("rolling_heart_rate_mean"), "heart rate")
+    speed = safe_series(df.get("rolling_speed_mean"), "speed")
+    watts = safe_series(df.get("rolling_power_mean"), "power")
+
+    if all(v is None for v in [hr, speed, watts]):
+        print("❌ No valid streams for recovery detection.")
         return []
 
-    mean_hr = hr.mean()
-    recovery_threshold = mean_hr * 0.85
+    thresholds = {}
+    if hr is not None:
+        thresholds["hr"] = hr.mean() * 0.85
+    if speed is not None:
+        thresholds["speed"] = speed.mean() * 0.85
+    if watts is not None:
+        thresholds["watts"] = watts.mean() * 0.75  # slightly stricter for power drops
+
     recovery_blocks = []
-    in_recovery = False
+    in_block = False
     start_idx = 0
 
-    for i, val in enumerate(hr):
-        if val < recovery_threshold and not in_recovery:
-            start_idx = i
-            in_recovery = True
-        elif val >= recovery_threshold and in_recovery:
+    def is_below_threshold(i):
+        count = 0
+        if hr is not None and hr.iloc[i] < thresholds["hr"]:
+            count += 1
+        if speed is not None and speed.iloc[i] < thresholds["speed"]:
+            count += 1
+        if watts is not None and watts.iloc[i] < thresholds["watts"]:
+            count += 1
+        return count >= 2  # At least 2 out of 3 signals must indicate recovery
+
+    for i in range(len(df)):
+        if is_below_threshold(i):
+            if not in_block:
+                start_idx = i
+                in_block = True
+        elif in_block:
             end_idx = i
             duration = df["time_sec"].iloc[end_idx] - df["time_sec"].iloc[start_idx]
-            if duration >= 30:
+            if 30 <= duration <= 900:
                 recovery_blocks.append({
                     "type": "recovery",
                     "start_index": start_idx,
                     "end_index": end_idx,
                     "duration_sec": int(duration)
                 })
-            in_recovery = False
+            in_block = False
+
+    if known_segments:
+        recovery_blocks = [
+            b for b in recovery_blocks
+            if is_valid_recovery_position(b, known_segments, len(df))
+        ]
 
     return recovery_blocks
+
 
 def detect_cooldown(df):
     print("🔍 Running detect_cooldown")
@@ -203,3 +232,20 @@ def detect_swimming_blocks(df):
             print(f"⚠️ Failed to process {col}: {e}")
 
     return [segment]
+
+def is_valid_recovery_position(block, known_segments, total_len):
+    preceding_types = {"interval", "acceleration"}
+    following_types = {"cooldown"}
+
+    for seg in known_segments:
+        if seg["end_index"] < block["start_index"] and seg["type"] in preceding_types:
+            return True
+        if seg["start_index"] > block["end_index"] and seg["type"] in following_types:
+            return True
+
+    tenth = total_len // 10
+    if block["start_index"] < tenth or block["end_index"] > total_len - tenth:
+        return False
+
+    return False
+
