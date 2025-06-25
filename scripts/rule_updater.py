@@ -1,7 +1,9 @@
 import json
 from collections import defaultdict
 from pathlib import Path
-from utils.segment_rules import rules_by_sport  # must be refactored to support this
+import statistics
+
+from utils.segment_rules import rules_by_sport
 
 SEGMENT_RULES_PATH = Path("utils/segment_rules.py")
 ALIGNMENT_RESULTS_PATH = Path("fit_alignment_results.jsonl")
@@ -13,55 +15,115 @@ def load_alignment_results(path):
 
 
 def analyze_failures(results):
-    failures = defaultdict(lambda: defaultdict(list))  # sport -> segment_type -> list of durations/values
+    failures = defaultdict(lambda: defaultdict(list))  # sport -> segment_type -> list of examples
 
     for r in results:
         sport = r.get("sport_type") or infer_sport_from_filename(r.get("file"))
         alignment = r.get("alignment", [])
-        segments = r.get("matched_segments", [])
+        segments = r.get("raw_segments", [])
 
         for align in alignment:
-            if not align["matched"] and align["planned_type"]:
-                failures[sport][align["planned_type"]].append(align.get("planned_duration"))
+            if not align.get("matched") and align.get("planned_type"):
+                matching = [s for s in segments if s.get("type") == align["planned_type"]]
+                failures[sport][align["planned_type"]].extend(matching)
 
     return failures
 
 
 def infer_sport_from_filename(filename):
-    # e.g. "fit_data/VirtualRide/2025-06-04-blah.fit" -> "VirtualRide"
-    return Path(filename).parts[0] if filename else "Unknown"
+    try:
+        return Path(filename).parent.name
+    except Exception:
+        return "Unknown"
 
 
-def suggest_threshold_updates(failures, current_rules):
+def extract_stat_bounds(values):
+    if not values:
+        return None, None
+    avg = statistics.mean(values)
+    std = statistics.stdev(values) if len(values) > 1 else 0
+    return max(0, avg - std), avg + std
+
+
+def suggest_threshold_updates(failures):
     updates = {}
 
     for sport, seg_types in failures.items():
-        sport_rules = current_rules.get(sport, {})
         updates[sport] = {}
 
-        for seg_type, missed_durations in seg_types.items():
-            avg_missed = sum(missed_durations) / len(missed_durations)
-            min_duration = max(int(avg_missed * 0.8), 20)
+        for seg_type, missed_segments in seg_types.items():
+            new_rule = {}
 
-            existing = sport_rules.get(seg_type, {})
-            old_min = existing.get("min_duration_sec", 30)
+            def collect(metric):
+                return [s.get(metric) for s in missed_segments if s.get(metric) is not None]
 
-            if min_duration < old_min:
-                print(f"⬇️  Suggest lowering {sport}/{seg_type} min_duration_sec from {old_min} to {min_duration}")
-                updates[sport][seg_type] = {**existing, "min_duration_sec": min_duration}
-            else:
-                print(f"✅ {sport}/{seg_type} duration already appropriate")
+            durations = collect("duration_sec")
+            hr = collect("avg_heart_rate")
+            watts = collect("avg_watts")
+            cadence = collect("avg_cadence")
+            speed = collect("avg_speed")
+
+            delta_hr = [abs(s.get("avg_heart_rate") - s.get("effort_before", {}).get("avg_heart_rate", 0))
+                        for s in missed_segments if s.get("avg_heart_rate") and s.get("effort_before", {}).get("avg_heart_rate")]
+
+            delta_speed = [abs(s.get("avg_speed") - s.get("effort_before", {}).get("avg_speed", 0))
+                           for s in missed_segments if s.get("avg_speed") and s.get("effort_before", {}).get("avg_speed")]
+
+            # Duration bounds
+            if durations:
+                min_dur, max_dur = extract_stat_bounds(durations)
+                new_rule["min_duration_sec"] = int(min_dur or 0)
+                new_rule["max_duration_sec"] = int(max_dur or 0)
+                print(f"🕒 {sport}/{seg_type}: duration {int(min_dur)}–{int(max_dur)}")
+
+            # HR
+            if hr:
+                hr_min, hr_max = extract_stat_bounds(hr)
+                new_rule["hr_range"] = [int(hr_min), int(hr_max)]
+                print(f"📉 {sport}/{seg_type}: HR range = {int(hr_min)}–{int(hr_max)}")
+
+            # Watts
+            if watts:
+                w_min, w_max = extract_stat_bounds(watts)
+                new_rule["watts_range"] = [int(w_min), int(w_max)]
+                print(f"⚡ {sport}/{seg_type}: watts range = {int(w_min)}–{int(w_max)}")
+
+            # Cadence
+            if cadence:
+                c_min, c_max = extract_stat_bounds(cadence)
+                new_rule["cadence_range"] = [int(c_min), int(c_max)]
+                print(f"⚙️ {sport}/{seg_type}: cadence range = {int(c_min)}–{int(c_max)}")
+
+            # Speed
+            if speed:
+                s_min, s_max = extract_stat_bounds(speed)
+                new_rule["speed_range"] = [round(s_min, 2), round(s_max, 2)]
+                print(f"🚴 {sport}/{seg_type}: speed range = {round(s_min, 2)}–{round(s_max, 2)}")
+
+            # Delta HR
+            if delta_hr:
+                _, max_delta_hr = extract_stat_bounds(delta_hr)
+                new_rule["max_delta_hr"] = int(max_delta_hr)
+                print(f"📉 {sport}/{seg_type}: max_delta_hr = {int(max_delta_hr)}")
+
+            # Delta Speed
+            if delta_speed:
+                _, max_delta_speed = extract_stat_bounds(delta_speed)
+                new_rule["max_delta_speed"] = int(max_delta_speed)
+                print(f"💨 {sport}/{seg_type}: max_delta_speed = {int(max_delta_speed)}")
+
+            updates[sport][seg_type] = new_rule
 
     return updates
 
 
 def apply_rule_updates(updates, original_path):
     backup_path = original_path.with_suffix(".bak.py")
-    original_path.rename(backup_path)
+    if not backup_path.exists():
+        original_path.rename(backup_path)
 
     with open(original_path, "w") as f:
-        f.write("rules_by_sport = \
-")
+        f.write("rules_by_sport = ")
         json.dump(updates, f, indent=2)
         f.write("\n")
 
@@ -71,5 +133,5 @@ def apply_rule_updates(updates, original_path):
 if __name__ == "__main__":
     results = load_alignment_results(ALIGNMENT_RESULTS_PATH)
     failures = analyze_failures(results)
-    updates = suggest_threshold_updates(failures, rules_by_sport)
+    updates = suggest_threshold_updates(failures)
     apply_rule_updates(updates, SEGMENT_RULES_PATH)
