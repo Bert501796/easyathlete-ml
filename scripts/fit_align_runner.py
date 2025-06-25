@@ -27,7 +27,7 @@ def run_fit_alignment(fit_folder: str, output_path: str = "fit_alignment_results
         print(f"\n[{i+1}/{total}] 📂 Processing {fit_path.name}")
 
         try:
-            fitfile = FitFile(fit_path)
+            fitfile = FitFile(str(fit_path))
             planned_blocks = parse_fit_schedule(fit_path)
 
             activity = match_fit_file_to_activity(fitfile, user_id=USER_ID or "")
