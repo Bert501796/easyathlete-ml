@@ -11,7 +11,7 @@ def safe_series(data, name=""):
     except Exception as e:
         print(f"❌ Failed to coerce {name}: {e}")
         return None
-
+    
 def detect_warmup(df):
     if "time_sec" not in df or df.shape[0] < 30:
         return []
