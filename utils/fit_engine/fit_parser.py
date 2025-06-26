@@ -6,7 +6,7 @@ def parse_fit_schedule(fit_path):
     Returns a list like:
     [
         {"type": "warmup", "duration_sec": 600},
-        {"type": "interval", "duration_sec": 180, "repeat": 4, "recovery_sec": 120},
+        {"type": "sprint_interval", "duration_sec": 30, "repeat": 4, "recovery_sec": 90},
         {"type": "cooldown", "duration_sec": 300}
     ]
     """
@@ -14,6 +14,7 @@ def parse_fit_schedule(fit_path):
     steps = list(fitfile.get_messages("workout_step"))
     blocks = []
 
+    warmup_count = 0
     i = 0
     while i < len(steps):
         msg = steps[i]
@@ -21,15 +22,20 @@ def parse_fit_schedule(fit_path):
         duration_type = msg.get_value("duration_type")
         duration_value = msg.get_value("duration_value")
 
-        # Skip unsupported durations
+        # Skip unsupported steps
         if duration_type != "time" or duration_value is None:
             i += 1
             continue
 
         duration_sec = int(duration_value)
-        block_type = map_intensity_to_type(intensity)
+        block_type = map_detailed_intensity_to_type(intensity, duration_sec)
 
-        # Check for repeat blocks
+        # Convert second warmup into cooldown if misclassified
+        if block_type == "warmup":
+            warmup_count += 1
+            if warmup_count > 1:
+                block_type = "cooldown"
+
         repeat_count = msg.get_value("repeat_count")
         if repeat_count and repeat_count > 1:
             recovery_step = steps[i + 1] if i + 1 < len(steps) else None
@@ -47,7 +53,7 @@ def parse_fit_schedule(fit_path):
                 "repeat": repeat_count,
                 "recovery_sec": recovery_duration
             })
-            i += 2  # skip the recovery step too
+            i += 2  # Skip recovery step
         else:
             blocks.append({
                 "type": block_type,
@@ -57,9 +63,10 @@ def parse_fit_schedule(fit_path):
 
     return blocks
 
-def map_intensity_to_type(intensity):
+
+def map_detailed_intensity_to_type(intensity, duration_sec):
     """
-    Maps Garmin/Coachbox intensity label to EasyAthlete block type
+    Maps intensity + duration to a specific block type.
     """
     if intensity == "warmup":
         return "warmup"
@@ -68,5 +75,14 @@ def map_intensity_to_type(intensity):
     elif intensity == "rest":
         return "recovery"
     elif intensity == "active":
-        return "interval"
+        if duration_sec < 40:
+            return "sprint_interval"
+        elif duration_sec < 180:
+            return "tempo_interval"
+        elif duration_sec < 600:
+            return "steady"
+        elif duration_sec < 1200:
+            return "tempo_run"
+        else:
+            return "long_effort"
     return "unknown"

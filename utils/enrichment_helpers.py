@@ -151,25 +151,86 @@ def detect_segments(df, activity):
 
     for seg in segments:
         try:
+            # Effort BEFORE
             if "start_index" in seg and seg["start_index"] > 0:
                 prior_block = df.iloc[:seg["start_index"]]
-                effort = {
+                effort_before = {
                     "duration_sec": float(prior_block["time_sec"].iloc[-1]) if not prior_block.empty else 0,
                     "distance_m": float(prior_block["distance"].iloc[-1]) if "distance" in prior_block and not prior_block.empty else 0,
                     "altitude_m": float(prior_block["altitude"].iloc[-1]) if "altitude" in prior_block and not prior_block.empty else 0,
                 }
+
                 for key in ["heart_rate", "speed", "cadence", "watts"]:
                     if key in prior_block:
                         try:
                             numeric = pd.to_numeric(prior_block[key], errors="coerce")
-                            if isinstance(numeric, (pd.Series, np.ndarray)) and not numeric.dropna().empty:
-                                mean_val = numeric.mean()
-                                if not pd.isna(mean_val):
-                                    effort[f"avg_{key}"] = float(mean_val)
-                        except Exception as sub_e:
-                            print(f"⚠️ Failed avg calc for effort_before[{key}]: {repr(sub_e)}")
-                seg["effort_before"] = effort
+                            if not numeric.dropna().empty:
+                                effort_before[f"avg_{key}"] = float(numeric.mean())
 
+                                seg_df = df.iloc[seg["start_index"]:seg["end_index"] + 1]
+                                if key in seg_df:
+                                    seg_numeric = pd.to_numeric(seg_df[key], errors="coerce")
+                                    if not seg_numeric.dropna().empty:
+                                        seg_avg = float(seg_numeric.mean())
+                                        effort_before[f"delta_{key}"] = float(effort_before[f"avg_{key}"] - seg_avg)
+
+                                slope_col = f"rolling_{key}_trend"
+                                if slope_col in prior_block:
+                                    slope_vals = pd.to_numeric(prior_block[slope_col], errors="coerce").dropna()
+                                    if not slope_vals.empty:
+                                        effort_before[f"{key}_slope"] = float(slope_vals.iloc[-1])
+                        except Exception as sub_e:
+                            print(f"⚠️ Failed metric calc for effort_before[{key}]: {repr(sub_e)}")
+
+                if "time_sec" in df.columns and seg["start_index"] > 0:
+                    t_now = df["time_sec"].iloc[seg["start_index"]]
+                    t_prev = df["time_sec"].iloc[seg["start_index"] - 1]
+                    effort_before["time_gap_sec"] = float(t_now - t_prev) if t_now and t_prev else 0
+
+                seg["effort_before"] = effort_before
+
+            # Effort AFTER
+            if "end_index" in seg and seg["end_index"] < len(df) - 2:
+                after_start = seg["end_index"] + 1
+                end_time = df["time_sec"].iloc[after_start] + 60  # 60-second window
+                after_block = df[(df["time_sec"] > df["time_sec"].iloc[after_start]) & (df["time_sec"] <= end_time)]
+
+                effort_after = {
+                    "duration_sec": float(after_block["time_sec"].iloc[-1] - after_block["time_sec"].iloc[0]) if not after_block.empty else 0,
+                    "distance_m": float(after_block["distance"].iloc[-1] - after_block["distance"].iloc[0]) if "distance" in after_block and not after_block.empty else 0,
+                    "altitude_m": float(after_block["altitude"].iloc[-1] - after_block["altitude"].iloc[0]) if "altitude" in after_block and not after_block.empty else 0,
+                }
+
+                for key in ["heart_rate", "speed", "cadence", "watts"]:
+                    if key in after_block:
+                        try:
+                            numeric = pd.to_numeric(after_block[key], errors="coerce")
+                            if not numeric.dropna().empty:
+                                effort_after[f"avg_{key}"] = float(numeric.mean())
+
+                                seg_df = df.iloc[seg["start_index"]:seg["end_index"] + 1]
+                                if key in seg_df:
+                                    seg_numeric = pd.to_numeric(seg_df[key], errors="coerce")
+                                    if not seg_numeric.dropna().empty:
+                                        seg_avg = float(seg_numeric.mean())
+                                        effort_after[f"delta_{key}"] = float(effort_after[f"avg_{key}"] - seg_avg)
+
+                                slope_col = f"rolling_{key}_trend"
+                                if slope_col in after_block:
+                                    slope_vals = pd.to_numeric(after_block[slope_col], errors="coerce").dropna()
+                                    if not slope_vals.empty:
+                                        effort_after[f"{key}_slope"] = float(slope_vals.iloc[0])
+                        except Exception as sub_e:
+                            print(f"⚠️ Failed metric calc for effort_after[{key}]: {repr(sub_e)}")
+
+                if "time_sec" in df.columns and seg["end_index"] < len(df) - 2:
+                    t_now = df["time_sec"].iloc[seg["end_index"]]
+                    t_next = df["time_sec"].iloc[seg["end_index"] + 1]
+                    effort_after["time_gap_sec"] = float(t_next - t_now) if t_next and t_now else 0
+
+                seg["effort_after"] = effort_after
+
+            # Segment metrics
             seg_df = df.iloc[seg["start_index"]:seg["end_index"] + 1]
             for col in df.columns:
                 if col.startswith("delta_") or col.startswith("rolling_"):
@@ -184,7 +245,7 @@ def detect_segments(df, activity):
         except Exception as seg_outer:
             print(f"❌ Failed to process segment: {repr(seg_outer)}")
 
-    return {"segments": segments, "summary": summary}
+        return {"segments": segments, "summary": summary}
 
 def extract_aggregated_features(activity):
     return {

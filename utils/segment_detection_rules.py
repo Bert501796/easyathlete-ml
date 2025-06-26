@@ -1,34 +1,120 @@
+metadata = {
+  "last_updated": "2025-06-26T13:25:18.886455",
+  "score": {
+    "total_planned": 504,
+    "matched": 87,
+    "match_rate": 0.1726
+  }
+}
+
 rules_by_sport = {
-    "Run": {
-        "interval": {"min_duration_sec": 30, "max_duration_sec": 60, "min_hr": 140},
-        "tempo": {"min_duration_sec": 90, "max_duration_sec": 600, "min_hr": 135},
-        "steady": {"min_duration_sec": 300, "min_hr": 130},
-        "recovery": {"min_duration_sec": 30, "max_hr": 120},
-        "warmup": {"max_fraction": 0.15},
-        "cooldown": {"min_duration_sec": 120, "max_hr": 130}
+  "Run": {
+    "warmup": {
+      "min_duration_sec": 194,
+      "max_duration_sec": 676,
+      "hr_range": [
+        122,
+        147
+      ],
+      "watts_range": [
+        0,
+        0
+      ],
+      "cadence_range": [
+        69,
+        78
+      ],
+      "speed_range": [
+        0,
+        478.26
+      ]
     },
-    "VirtualRide": {
-        "interval": {"min_duration_sec": 45, "max_duration_sec": 75, "min_hr": 145, "min_watts": 150},
-        "tempo": {"min_duration_sec": 120, "max_duration_sec": 900, "min_hr": 140, "min_watts": 130},
-        "steady": {"min_duration_sec": 300, "min_hr": 135, "min_watts": 120},
-        "recovery": {"min_duration_sec": 30, "max_hr": 125, "max_watts": 80},
-        "warmup": {"max_fraction": 0.1},
-        "cooldown": {"min_duration_sec": 180, "max_hr": 130, "max_watts": 90}
+    "recovery": {
+      "min_duration_sec": 49,
+      "max_duration_sec": 177
     },
-    "Ride": {
-        "interval": {"min_duration_sec": 60, "max_duration_sec": 90, "min_hr": 150, "min_watts": 170},
-        "tempo": {"min_duration_sec": 150, "max_duration_sec": 1000, "min_hr": 145, "min_watts": 140},
-        "steady": {"min_duration_sec": 300, "min_hr": 140, "min_watts": 130},
-        "recovery": {"min_duration_sec": 30, "max_hr": 130, "max_watts": 90},
-        "warmup": {"max_fraction": 0.12},
-        "cooldown": {"min_duration_sec": 150, "max_hr": 135, "max_watts": 100}
+    "acceleration": {
+      "min_duration_sec": 26,
+      "max_duration_sec": 96
     },
-    "Swim": {
-        "interval": {"min_duration_sec": 40, "max_duration_sec": 60, "min_hr": 130},
-        "tempo": {"min_duration_sec": 120, "max_duration_sec": 800, "min_hr": 125},
-        "steady": {"min_duration_sec": 300, "min_hr": 120},
-        "recovery": {"min_duration_sec": 30, "max_hr": 110},
-        "warmup": {"max_fraction": 0.1},
-        "cooldown": {"min_duration_sec": 120, "max_hr": 115}
-    }
+    "interval": {
+      "min_duration_sec": 12,
+      "max_duration_sec": 238
+    },
+    "cooldown": {
+      "min_duration_sec": 186,
+      "max_duration_sec": 616
+    },
+    "long_effort": {},
+    "steady": {
+      "min_duration_sec": 0,
+      "max_duration_sec": 1027
+    },
+    "tempo_run": {},
+    "sprint_interval": {},
+    "tempo_interval": {},
+    "unknown": {}
+  },
+  "Swim": {
+    "steady_swim": {
+      "min_duration_sec": 1984,
+      "max_duration_sec": 3276,
+      "hr_range": [
+        128,
+        142
+      ],
+      "cadence_range": [
+        0,
+        0
+      ],
+      "speed_range": [
+        0.54,
+        0.82
+      ]
+    },
+    "unknown": {}
+  },
+  "VirtualRide": {
+    "warmup": {
+      "min_duration_sec": 259,
+      "max_duration_sec": 584,
+      "hr_range": [
+        101,
+        126
+      ],
+      "watts_range": [
+        87,
+        123
+      ],
+      "cadence_range": [
+        74,
+        87
+      ],
+      "speed_range": [
+        0,
+        350.86
+      ]
+    },
+    "acceleration": {
+      "min_duration_sec": 20,
+      "max_duration_sec": 98
+    },
+    "interval": {
+      "min_duration_sec": 25,
+      "max_duration_sec": 118
+    },
+    "cooldown": {
+      "min_duration_sec": 260,
+      "max_duration_sec": 584
+    },
+    "recovery": {
+      "min_duration_sec": 11,
+      "max_duration_sec": 135
+    },
+    "steady": {
+      "min_duration_sec": 11,
+      "max_duration_sec": 172
+    },
+    "tempo_interval": {}
+  }
 }

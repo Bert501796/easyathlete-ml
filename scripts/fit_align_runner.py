@@ -18,6 +18,8 @@ from utils.enrichment_helpers import (
     extract_aggregated_features,
     convert_numpy_types,
 )
+from scripts.rerun_enrichment import enrich_activity_by_id
+
 
 # Load Mongo credentials
 load_dotenv()
@@ -28,7 +30,8 @@ client = MongoClient(MONGO_URL)
 collection = client[DB_NAME]["stravaactivities"]
 
 def run_fit_alignment(fit_folder: str, output_path: str = "fit_alignment_results.jsonl"):
-    fit_files = list(Path(fit_folder).rglob("*.fit"))
+    fit_files = list(Path(fit_folder).rglob("*.fit")) #=> process all
+    #fit_files = list(Path(fit_folder).rglob("*.fit"))[:10]
     total = len(fit_files)
     print(f"🔍 Found {total} .fit file(s) in {fit_folder}")
 
@@ -56,31 +59,12 @@ def run_fit_alignment(fit_folder: str, output_path: str = "fit_alignment_results
                 print(f"❌ No activity match found for {fit_path.name}")
                 continue
 
-            # 🧪 If missing enrichment, perform enrichment inline
-            if not activity.get("segmentSequence") or not activity.get("segments"):
-                print(f"⚠️ Missing enrichment for activity {activity.get('stravaId')} → running inline enrichment...")
-                df = parse_streams(activity)
-                if df.empty:
-                    print(f"❌ Enrichment failed: no valid stream data for {activity.get('stravaId')}")
-                    continue
-
-                activity = prepare_activity_for_storage(activity, df)
-                segments_result = detect_segments(df, activity)
-
-                aggregated = extract_aggregated_features(activity)
-
-                activity.update({
-                    "aggregatedFeatures": convert_numpy_types(aggregated),
-                    "segments": convert_numpy_types(segments_result["segments"]),
-                    "segmentSummary": convert_numpy_types(segments_result["summary"]),
-                    "segmentSequence": convert_numpy_types(segments_result["segments"]),
-                    "enriched": True,
-                    "enrichmentVersion": 1.4,
-                    "updatedAt": datetime.utcnow()
-                })
-
-                collection.update_one({"_id": activity["_id"]}, {"$set": activity})
-                print(f"✅ Enrichment completed for stravaId={activity.get('stravaId')}")
+            # ✅ Force re-enrichment for all activities
+            print(f"🔁 Forcing enrichment for stravaId={activity.get('stravaId')}...")
+            activity = enrich_activity_by_id(str(activity["_id"]))
+            if not activity or not activity.get("segments"):
+                print(f"❌ Enrichment failed or returned no segments for {activity.get('stravaId')}")
+                continue
 
             actual_blocks = activity.get("segmentSequence", [])
             all_segments = activity.get("segments", [])

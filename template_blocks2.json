@@ -1,0 +1,4629 @@
+[
+  {
+    "stravaId": "10522623979",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2700,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10551630709",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1800,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10555513706",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2700,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10574384296",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2700,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10601733353",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10621488226",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2700,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10644842385",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10668140128",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3000,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10693606853",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10713850302",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "sprint_interval",
+        "duration_sec": 20,
+        "repeats": 5,
+        "rest_between_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10742613614",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 5400,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10752514646",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10778776448",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10801034272",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10832908645",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10859622219",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2400,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10880329979",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 6600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10907964008",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1500,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10931323160",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 5400,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10969832238",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2400,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2400,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2400,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10990990315",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1500,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11027514436",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11046783067",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 60,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11061011330",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 480,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11074094211",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11109624530",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11123822871",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11139400467",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11171034342",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11209315476",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11231731564",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11251229019",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11293363091",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11324263052",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11353698141",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11366938131",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1260,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11391380952",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11406282664",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11441211793",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11477189342",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11477189342",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11523705749",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1260,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11541892727",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 5700,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11568979228",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 360,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11621751308",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2100,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11642318489",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11675985829",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11699915435",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11711348159",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11711348159",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11751480838",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11806420476",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1500,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11843672825",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11872199608",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11910056992",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1800,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11925865162",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1800,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 720,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "11987804845",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12001219058",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 6000,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12012524705",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1440,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12343064019",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12356674044",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12372157049",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1440,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12404878459",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12430290374",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 360,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12474315801",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 480,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 60,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 7500,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12529744087",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 60,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 8100,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12578451498",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12603400342",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1500,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12634309360",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "sprint_interval",
+        "duration_sec": 20,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 40,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12645168492",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12693516638",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1800,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12723085209",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12758836176",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1260,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12889450508",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12924781488",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12931949072",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1920,
+        "notes": ""
+      },
+      {
+        "segment_type": "sprint_interval",
+        "duration_sec": 30,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 90,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12963496701",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1500,
+        "notes": ""
+      },
+      {
+        "segment_type": "sprint_interval",
+        "duration_sec": 20,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "12988152891",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 90,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13003378803",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "sprint_interval",
+        "duration_sec": 20,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13038705327",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 60,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13058305550",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "sprint_interval",
+        "duration_sec": 20,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13073254945",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13084263813",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13102559372",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1800,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13122312150",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13198424618",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2400,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13216700582",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13247896439",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13261091790",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13298469537",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13331614334",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13354401590",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13380111103",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13386634598",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13437875144",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13445443790",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13537455840",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 150,
+        "notes": ""
+      },
+      {
+        "segment_type": "unknown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13593306776",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2100,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13606118208",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3000,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13688277059",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13757420762",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13786576617",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1440,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13786576617",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1440,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13820478560",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13820478560",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13835285223",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13849652768",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 420,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13849652768",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 420,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13890797135",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13890797135",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13915848132",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 660,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13915848132",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 660,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13963841802",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13963841802",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13981405126",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1440,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13981405126",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1440,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14017303084",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14030608683",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14074939518",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3000,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14074939518",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3000,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14108566969",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14108566969",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14138039195",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14138039195",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14153424024",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14182353577",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14182353577",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14201429083",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14201429083",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14230381367",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14230381367",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14249090617",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1500,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14249090617",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1500,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14303519279",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14412580487",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14412580487",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14431395043",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14431395043",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14464348767",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14464348767",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14495696803",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14495696803",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2100,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14521854166",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14521854166",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14536593188",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14536593188",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 4800,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14567522074",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14567522074",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14587386382",
+    "activity_type": "Run",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14617884206",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14617884206",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14631661137",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14648230897",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 3000,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14680088999",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1260,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14702021729",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14732392525",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 2100,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14744564043",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 180,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14763132797",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 900,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 900,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14794668630",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14818597899",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1500,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_run",
+        "duration_sec": 600,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14842783017",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "long_effort",
+        "duration_sec": 1200,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "10413329242",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10538811696",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10565126909",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10581518605",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10581518605",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10609191970",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10628210668",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10675666195",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10682202908",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10703293286",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10722604661",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10749185887",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10768277778",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10795914964",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10815426796",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10842778260",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10856893153",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10890396418",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10905195483",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10938718134",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10952347251",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10988101972",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11002256506",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11037076260",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11068738861",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11164193004",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11177386664",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11189727307",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11203888499",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11280630274",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11296074354",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11320210280",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11327332069",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11347625423",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11382290051",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11390460253",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11417982936",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11472514492",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11484027823",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11499726212",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11547381706",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11553311279",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11568726907",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11581276754",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11600895481",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11621367791",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11656646744",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11670750680",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11690544904",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11733113162",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11772361498",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11789066461",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11812150910",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11852214421",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11868127288",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11899177883",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11919174352",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11949202123",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11978101238",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12034216327",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12322768300",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12382464473",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12440577921",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12562007374",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12596281144",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12711129593",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12741047064",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12977678889",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12994650145",
+    "activity_type": "Swim",
+    "planned_segments": [
+      {
+        "segment_type": "unknown",
+        "duration_sec": 60,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13044718549",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13056821013",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13092778192",
+    "activity_type": "Swim",
+    "planned_segments": [
+      {
+        "segment_type": "unknown",
+        "duration_sec": 15,
+        "notes": ""
+      },
+      {
+        "segment_type": "unknown",
+        "duration_sec": 20,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13128648381",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13146787802",
+    "activity_type": "Swim",
+    "planned_segments": [
+      {
+        "segment_type": "unknown",
+        "duration_sec": 15,
+        "notes": ""
+      },
+      {
+        "segment_type": "unknown",
+        "duration_sec": 20,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13172393766",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13198278084",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13243628635",
+    "activity_type": "Swim",
+    "planned_segments": [
+      {
+        "segment_type": "unknown",
+        "duration_sec": 15,
+        "notes": ""
+      },
+      {
+        "segment_type": "unknown",
+        "duration_sec": 20,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13278413681",
+    "activity_type": "Swim",
+    "planned_segments": [
+      {
+        "segment_type": "unknown",
+        "duration_sec": 15,
+        "notes": ""
+      },
+      {
+        "segment_type": "unknown",
+        "duration_sec": 10,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13323651291",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13345950879",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13368081587",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13407975575",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13430858368",
+    "activity_type": "Swim",
+    "planned_segments": [
+      {
+        "segment_type": "unknown",
+        "duration_sec": 15,
+        "notes": ""
+      },
+      {
+        "segment_type": "unknown",
+        "duration_sec": 20,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "13464705399",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13482876301",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13580113301",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13607805776",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13624305280",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13670100245",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13686043711",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13795450572",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13860862022",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13886489161",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13925517972",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13944492849",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13991629538",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14047461213",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14065251596",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14124161383",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14143122616",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14191608378",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14220190523",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14271354901",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14288216198",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14301030893",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14422538208",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14548953792",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14576800266",
+    "activity_type": "Swim",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10825521389",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10875128755",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10893620647",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10916183946",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10925645263",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10945818728",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10960579171",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "10966861919",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11057576477",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11082530356",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11091418874",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11091418874",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11091418874",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11159755179",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11179236748",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11201299003",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11282113218",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11282113218",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11282113218",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11282113218",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11301417679",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11317701936",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11341507136",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11353409849",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11363627416",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11382804654",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11406058982",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11418688705",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11426794658",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11465548492",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11491662285",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11535154939",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11548994493",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11590845372",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11629988488",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11675597014",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11699579027",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11860334090",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11896566043",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "11972586594",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12049551391",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12071420618",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12109873525",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12157010724",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12160483914",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12335466622",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12368899503",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12394268066",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12419659763",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12453147900",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12494953335",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12551015645",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12593364151",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12616643502",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12655326915",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12719678750",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12746460951",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12857052654",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12876689656",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12912006645",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12931539564",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12946803931",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12963708617",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "12988590733",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13002979596",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13023679203",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13040384480",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13048023764",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13066064813",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13102325447",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13116543437",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13130117853",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13137109684",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13150692748",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13188421421",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13196178836",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13211101393",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13228967685",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13258433677",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13274488281",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13293203374",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13310748034",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13318967226",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13362832631",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13373531989",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13413071507",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13422506638",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13457683127",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13474313831",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13487540274",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13490710691",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13575915577",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13575915577",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13593376771",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13619312935",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13631275298",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13658973489",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13667259815",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13681891107",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13748237185",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13765935961",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13794284130",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13806858913",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13865618675",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13873850368",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13902502786",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13924747934",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13942926651",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "13986438759",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14045545617",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14071196398",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14130907361",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14144587825",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14194485122",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14216417809",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14229782522",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14255443564",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14269640492",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14405672638",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14425688841",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14459767488",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14481675166",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14508922275",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14553423574",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14591912304",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14666741106",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14697992645",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  },
+  {
+    "stravaId": "14697992645",
+    "activity_type": "VirtualRide",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 60,
+        "notes": ""
+      },
+      {
+        "segment_type": "tempo_interval",
+        "duration_sec": 120,
+        "notes": ""
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 1560,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "stravaId": "14758636721",
+    "activity_type": "VirtualRide",
+    "planned_segments": []
+  }
+]

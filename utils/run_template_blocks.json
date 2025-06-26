@@ -1,0 +1,74 @@
+[
+  {
+    "activity_id": "strava_1234567890",
+    "activity_type": "Run",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": "Gradual warm-up on flat terrain"
+      },
+      {
+        "segment_type": "interval",
+        "duration_sec": 120,
+        "repeats": 4,
+        "rest_between_sec": 90,
+        "notes": "4x sprint intervals"
+      },
+      {
+        "segment_type": "steady",
+        "duration_sec": 900,
+        "notes": "Z2 steady-state running"
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": "Slow jog back to start"
+      }
+    ]
+  },
+  {
+    "activity_id": "strava_1122334455",
+    "activity_type": "Swim",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 600,
+        "notes": "Technique drills"
+      },
+      {
+        "segment_type": "main_set",
+        "duration_sec": 1800,
+        "notes": "Endurance set"
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 300,
+        "notes": "Easy strokes"
+      }
+    ]
+  },
+  {
+    "activity_id": "strava_9988776655",
+    "activity_type": "Ride",
+    "planned_segments": [
+      {
+        "segment_type": "warmup",
+        "duration_sec": 900,
+        "notes": "Flat zone 1"
+      },
+      {
+        "segment_type": "interval",
+        "duration_sec": 300,
+        "repeats": 5,
+        "rest_between_sec": 180,
+        "notes": "5x hill sprints"
+      },
+      {
+        "segment_type": "cooldown",
+        "duration_sec": 600,
+        "notes": "Spin down"
+      }
+    ]
+  }
+]
