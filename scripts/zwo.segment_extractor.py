@@ -2,10 +2,11 @@ import os
 import argparse
 import json
 from pathlib import Path
-from xml.etree import ElementTree as ET
 from dotenv import load_dotenv
 from pymongo import MongoClient
-from utils.fit_engine.fit_matcher import match_fit_file_to_activity
+from utils.fit_engine.zwo_matcher import match_zwo_file_to_activity
+from utils.fit_engine.zwo_parser import parse_zwo_schedule
+from pathlib import Path  # ✅ Ensure Path is defined in this file
 
 # Load Mongo credentials
 load_dotenv()
@@ -15,61 +16,37 @@ DB_NAME = os.getenv("DB_NAME", "test")
 client = MongoClient(MONGO_URL)
 collection = client[DB_NAME]["stravaactivities"]
 
-
-def parse_zwo_segments(file_path):
-    tree = ET.parse(file_path)
-    root = tree.getroot()
-    workout = root.find("workout")
-    segments = []
-
-    for elem in workout:
-        duration = float(elem.attrib.get("Duration", 0))
-        power_low = elem.attrib.get("PowerLow")
-        power_high = elem.attrib.get("PowerHigh")
-        power = elem.attrib.get("Power")
-        cadence = elem.attrib.get("Cadence")
-
-        segment = {
-            "segment_type": elem.tag,
-            "duration_sec": duration,
-            "powerLow": float(power_low) if power_low else None,
-            "powerHigh": float(power_high) if power_high else None,
-            "power": float(power) if power else None,
-            "cadence": int(cadence) if cadence else None,
-            "notes": ""
-        }
-        segments.append(segment)
-
-    return segments
-
-
 def analyze_zwo_folder(folder_path: str, output_path: str):
     folder = Path(folder_path)
-    #all_zwo_files = list(folder.rglob("*.zwo")) #analyze entire folder
-    all_zwo_files = [Path("fit_data/VirtualRide/ZWO files/2025-06-14-caerobic-intervals2.zwo")] #analyze one activity
-
+    # all_zwo_files = list(folder.rglob("*.zwo"))  # analyze entire folder
+    all_zwo_files = [Path("fit_data/VirtualRide/ZWO files/2025-06-14-caerobic-intervals2.zwo")]  # analyze one activity
 
     print(f"🔍 Found {len(all_zwo_files)} .zwo files to analyze.")
     output = []
 
     for zwo_path in all_zwo_files:
-        print(f"\n📂 Analyzing {zwo_path.name}...")
+        print(f"\n📂 Analyzing {zwo_path.name} at {zwo_path.resolve()}...")
 
         try:
-            planned_segments = parse_zwo_segments(str(zwo_path))
+            print("📑 Parsing ZWO schedule...")
+            planned_segments = parse_zwo_schedule(str(zwo_path))
+            print(f"✅ Parsed {len(planned_segments)} planned segments.")
+
             activity_type = zwo_path.parent.name
+            print(f"📌 Detected activity type: {activity_type}")
 
             if not USER_ID:
                 raise ValueError("❌ FIT_MATCH_USER_ID not set in your .env file")
 
-            activity = match_fit_file_to_activity(zwo_path, user_id=USER_ID, fallback_sport=activity_type)
+            print("🔍 Attempting to match with Strava activity...")
+            activity = match_zwo_file_to_activity(str(zwo_path), user_id=USER_ID, fallback_sport=activity_type)
+
             if not activity:
                 print(f"❌ No matching activity found for {zwo_path.name}")
                 continue
 
             strava_id_clean = str(int(float(activity["stravaId"])))
-            mongo_doc = collection.find_one({"stravaId": activity["stravaId"]})
-            start_date_local = mongo_doc.get("startDate").isoformat() if mongo_doc and mongo_doc.get("startDate") else None
+            start_date_local = activity.get("startDate").isoformat() if activity.get("startDate") else None
 
             formatted = {
                 "stravaId": strava_id_clean,
@@ -77,6 +54,7 @@ def analyze_zwo_folder(folder_path: str, output_path: str):
                 "start_date_local": start_date_local,
                 "planned_segments": planned_segments
             }
+            print(f"✅ Match found. Strava ID: {strava_id_clean}, Start: {start_date_local}")
             output.append(formatted)
 
         except Exception as e:
