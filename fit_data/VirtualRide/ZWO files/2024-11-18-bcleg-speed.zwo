@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<workout_file>
+ <author>Coachbox</author>
+ <name>2024-11-18-bcleg-speed.zwo</name>
+ <sportType>bike</sportType>
+ <ftpOverride>185</ftpOverride>
+ <workout>
+  <Warmup Duration="1200.0" PowerHigh="0.94595" PowerLow="0.54054"></Warmup>
+  <SteadyState Duration="180.0" PowerHigh="0.85000" PowerLow="0.75000" Cadence="90.00000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.85000" PowerLow="0.75000" Cadence="100.00000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.85000" PowerLow="0.75000" Cadence="110.00000"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="0.85000" PowerLow="0.75000" Cadence="115.00000"></SteadyState>
+  <SteadyState Duration="20.0" PowerHigh="0.85000" PowerLow="0.75000" Cadence="120.00000"></SteadyState>
+  <SteadyState Duration="15.0" PowerHigh="0.85000" PowerLow="0.75000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="15.0" PowerHigh="0.85000" PowerLow="0.75000"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="0.85000" PowerLow="0.75000" Cadence="115.00000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.85000" PowerLow="0.75000" Cadence="110.00000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.85000" PowerLow="0.75000" Cadence="100.00000"></SteadyState>
+  <SteadyState Duration="600.0" PowerHigh="0.74595" PowerLow="0.63784"></SteadyState>
+ </workout>
+</workout_file>

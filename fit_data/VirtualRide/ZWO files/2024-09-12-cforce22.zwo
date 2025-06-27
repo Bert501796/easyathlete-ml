@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<workout_file>
+ <author>Coachbox</author>
+ <name>2024-09-12-cforce22.zwo</name>
+ <sportType>bike</sportType>
+ <ftpOverride>185</ftpOverride>
+ <workout>
+  <SteadyState Duration="600.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="600.0" PowerHigh="0.74595" PowerLow="0.63784"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="1.77297" PowerLow="1.44865"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="1.77297" PowerLow="1.44865"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="1.77297" PowerLow="1.44865"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="1.77297" PowerLow="1.44865"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="1.77297" PowerLow="1.44865"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="1.77297" PowerLow="1.44865"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="1.77297" PowerLow="1.44865"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="1.77297" PowerLow="1.44865"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="1680.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+ </workout>
+</workout_file>

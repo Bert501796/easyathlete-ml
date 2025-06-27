@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<workout_file>
+ <author>Coachbox</author>
+ <name>2025-06-12-ccruise-interval14.zwo</name>
+ <sportType>bike</sportType>
+ <ftpOverride>230</ftpOverride>
+ <workout>
+  <SteadyState Duration="600.0" PowerHigh="0.49565" PowerLow="0.38696"></SteadyState>
+  <SteadyState Duration="600.0" PowerHigh="0.70870" PowerLow="0.60870"></SteadyState>
+  <SteadyState Duration="420.0" PowerHigh="1.07391" PowerLow="0.93043"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.49565" PowerLow="0.38696"></SteadyState>
+  <SteadyState Duration="420.0" PowerHigh="1.07391" PowerLow="0.93043"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.49565" PowerLow="0.38696"></SteadyState>
+  <SteadyState Duration="420.0" PowerHigh="1.07391" PowerLow="0.93043"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.49565" PowerLow="0.38696"></SteadyState>
+  <SteadyState Duration="420.0" PowerHigh="1.07391" PowerLow="0.93043"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.49565" PowerLow="0.38696"></SteadyState>
+  <SteadyState Duration="1500.0" PowerHigh="0.80000" PowerLow="0.75652"></SteadyState>
+  <SteadyState Duration="300.0" PowerHigh="0.49565" PowerLow="0.38696"></SteadyState>
+ </workout>
+</workout_file>

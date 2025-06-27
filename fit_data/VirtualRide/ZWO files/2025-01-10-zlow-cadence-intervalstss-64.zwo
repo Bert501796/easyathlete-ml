@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<workout_file>
+ <author>Coachbox</author>
+ <name>2025-01-10-zlow-cadence-intervalstss-64.zwo</name>
+ <sportType>bike</sportType>
+ <ftpOverride>185</ftpOverride>
+ <workout>
+  <Ramp Duration="300.0" PowerHigh="0.70000" PowerLow="0.30000"></Ramp>
+  <SteadyState Duration="30.0" PowerHigh="1.07000" PowerLow="1.03000" Cadence="105.00000"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="0.57000" PowerLow="0.53000" Cadence="105.00000"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="1.07000" PowerLow="1.03000" Cadence="105.00000"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="0.57000" PowerLow="0.53000" Cadence="105.00000"></SteadyState>
+  <SteadyState Duration="480.0" PowerHigh="0.87000" PowerLow="0.83000" Cadence="70.00000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.57000" PowerLow="0.53000" Cadence="90.00000"></SteadyState>
+  <SteadyState Duration="480.0" PowerHigh="0.87000" PowerLow="0.83000" Cadence="70.00000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.57000" PowerLow="0.53000" Cadence="90.00000"></SteadyState>
+  <SteadyState Duration="360.0" PowerHigh="0.90000" PowerLow="0.86000" Cadence="70.00000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.57000" PowerLow="0.53000" Cadence="90.00000"></SteadyState>
+  <SteadyState Duration="360.0" PowerHigh="0.90000" PowerLow="0.86000" Cadence="70.00000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.57000" PowerLow="0.53000" Cadence="90.00000"></SteadyState>
+  <SteadyState Duration="240.0" PowerHigh="0.92000" PowerLow="0.88000" Cadence="70.00000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.57000" PowerLow="0.53000" Cadence="90.00000"></SteadyState>
+  <SteadyState Duration="240.0" PowerHigh="0.92000" PowerLow="0.88000" Cadence="70.00000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.57000" PowerLow="0.53000" Cadence="90.00000"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="1.07000" PowerLow="1.03000" Cadence="105.00000"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="0.57000" PowerLow="0.53000" Cadence="105.00000"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="1.07000" PowerLow="1.03000" Cadence="105.00000"></SteadyState>
+  <SteadyState Duration="30.0" PowerHigh="0.57000" PowerLow="0.53000" Cadence="105.00000"></SteadyState>
+  <SteadyState Duration="180.0" Power="0.40000"></SteadyState>
+ </workout>
+</workout_file>

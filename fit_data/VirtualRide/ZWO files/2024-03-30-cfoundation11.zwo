@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<workout_file>
+ <author>Coachbox</author>
+ <name>2024-03-30-cfoundation11.zwo</name>
+ <sportType>bike</sportType>
+ <ftpOverride>192</ftpOverride>
+ <workout>
+  <SteadyState Duration="1800.0" PowerHigh="0.54688" PowerLow="0.00000" CadenceHigh="100.00000" CadenceLow="90.00000"></SteadyState>
+  <SteadyState Duration="3000.0" PowerHigh="0.77604" PowerLow="0.65104" CadenceHigh="100.00000" CadenceLow="90.00000"></SteadyState>
+  <SteadyState Duration="600.0" PowerHigh="0.54688" PowerLow="0.00000" CadenceHigh="100.00000" CadenceLow="90.00000"></SteadyState>
+ </workout>
+</workout_file>

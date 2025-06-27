@@ -206,7 +206,7 @@
             "abbreviation": "LACTSHUT-L"
         }
         }
-      },
+        },
         {
         "timestamp": "2024-09-28T00:00:00Z",
         "data": {
@@ -276,75 +276,213 @@
         }
       }
             ],
-      "Ride": {
-        "timestamp": "2025-06-26T00:00:00Z",
+      "Ride": [
+        {
+        "timestamp": "2025-01-24T00:00:00Z",
         "data": {
           "Z1": {
-            "watts": [0, 140],
-            "heart_rate_bpm": [90, 120],
-            "speed_kph": [18, 23],
+            "watts": [89, 114],
+            "heart_rate_bpm": [],
+            "speed_kph": [],
             "name": "Recovery",
             "abbreviation": "REC"
           },
           "Z2": {
-            "watts": [141, 180],
-            "heart_rate_bpm": [121, 135],
-            "speed_kph": [24, 28],
+            "watts": [140, 163],
+            "heart_rate_bpm": [],
+            "speed_kph": [],
             "name": "Base",
             "abbreviation": "BASE"
           },
           "Z3": {
-            "watts": [181, 220],
-            "heart_rate_bpm": [136, 145],
-            "speed_kph": [29, 32],
+            "watts": [184, 207],
+            "heart_rate_bpm": [],
+            "speed_kph": [],
             "name": "Medio",
             "abbreviation": "MEDIO"
           },
           "Z4": {
-            "watts": [221, 260],
-            "heart_rate_bpm": [146, 155],
-            "speed_kph": [33, 36],
+            "watts": [140, 161],
+            "heart_rate_bpm": [],
+            "speed_kph": [],
             "name": "FatMax",
             "abbreviation": "FATMAX"
           },
           "Z5": {
-            "watts": [261, 300],
-            "heart_rate_bpm": [156, 165],
-            "speed_kph": [37, 40],
+            "watts": [214, 247],
+            "heart_rate_bpm": [],
+            "speed_kph": [],
             "name": "Anaerobic Threshold",
             "abbreviation": "ANT"
           },
           "Z6": {
-            "watts": [301, 340],
-            "heart_rate_bpm": [166, 175],
-            "speed_kph": [41, 44],
+            "watts": [305, 337],
+            "heart_rate_bpm": [],
+            "speed_kph": [],
             "name": "Aerobic Maximum",
             "abbreviation": "AEROMAX"
           },
           "Z7": {
-            "watts": [341, 380],
-            "heart_rate_bpm": [176, 185],
-            "speed_kph": [45, 48],
+            "watts": [327, 396],
+            "heart_rate_bpm": [],
+            "speed_kph": [],
             "name": "High Anaerobic",
             "abbreviation": "HIGHANA"
           },
           "Z8": {
-            "watts": [381, 420],
-            "heart_rate_bpm": [186, 195],
-            "speed_kph": [49, 52],
+            "watts": [255, 257],
+            "heart_rate_bpm": [],
+            "speed_kph": [],
             "name": "Lactate Shuttle-H",
             "abbreviation": "LACTSHUT-H"
           },
           "Z9": {
-            "watts": [421, 500],
-            "heart_rate_bpm": [196, 205],
-            "speed_kph": [53, 60],
+            "watts": [150, 152],
+            "heart_rate_bpm": [],
+            "speed_kph": [],
             "name": "Lactate Shuttle-L",
             "abbreviation": "LACTSHUT-L"
           }
         }
-      },
-      "Swim": {
+        },
+        {
+        "timestamp": "2025-03-01T00:00:00Z",
+        "data": {
+          "Z1": {
+            "watts": [0,105],
+            "heart_rate_bpm": [0,125],
+            "speed_kph": [],
+            "name": "Recovery",
+            "abbreviation": "REC"
+          },
+          "Z2": {
+            "watts": [125,149],
+            "heart_rate_bpm": [136,154],
+            "speed_kph": [],
+            "name": "Base",
+            "abbreviation": "BASE"
+          },
+          "Z3": {
+            "watts": [150,165],
+            "heart_rate_bpm": [155,165],
+            "speed_kph": [],
+            "name": "Medio",
+            "abbreviation": "MEDIO"
+          },
+          "Z4": {
+            "watts": [106,124],
+            "heart_rate_bpm": [126,154],
+            "speed_kph": [],
+            "name": "FatMax",
+            "abbreviation": "FATMAX"
+          },
+          "Z5": {
+            "watts": [191,197],
+            "heart_rate_bpm": [171,181],
+            "speed_kph": [],
+            "name": "Anaerobic Threshold",
+            "abbreviation": "ANT"
+          },
+          "Z6": {
+            "watts": [178,190],
+            "heart_rate_bpm": [170,180],
+            "speed_kph": [],
+            "name": "Aerobic Maximum",
+            "abbreviation": "AEROMAX"
+          },
+          "Z7": {
+            "watts": [216,230],
+            "heart_rate_bpm": [190,200],
+            "speed_kph": [],
+            "name": "High Anaerobic",
+            "abbreviation": "HIGHANA"
+          },
+          "Z8": {
+            "watts": [198,215],
+            "heart_rate_bpm": [182,188],
+            "speed_kph": [],
+            "name": "Lactate Shuttle-H",
+            "abbreviation": "LACTSHUT-H"
+          },
+          "Z9": {
+            "watts": [166,177],
+            "heart_rate_bpm": [166,170],
+            "speed_kph": [],
+            "name": "Lactate Shuttle-L",
+            "abbreviation": "LACTSHUT-L"
+          }
+        }
+        },
+        {
+        "timestamp": "2024-05-26T00:00:00Z",
+        "data": {
+          "Z1": {
+            "watts": [76,97],
+            "heart_rate_bpm": [60,110],
+            "speed_kph": [],
+            "name": "Recovery",
+            "abbreviation": "REC"
+          },
+          "Z2": {
+            "watts": [118,138],
+            "heart_rate_bpm": [119,137],
+            "speed_kph": [],
+            "name": "Base",
+            "abbreviation": "BASE"
+          },
+          "Z3": {
+            "watts": [148,166],
+            "heart_rate_bpm": [138,144],
+            "speed_kph": [],
+            "name": "Medio",
+            "abbreviation": "MEDIO"
+          },
+          "Z4": {
+            "watts": [111,128],
+            "heart_rate_bpm": [111,118],
+            "speed_kph": [],
+            "name": "FatMax",
+            "abbreviation": "FATMAX"
+          },
+          "Z5": {
+            "watts": [172,198],
+            "heart_rate_bpm": [157,160],
+            "speed_kph": [],
+            "name": "Anaerobic Threshold",
+            "abbreviation": "ANT"
+          },
+          "Z6": {
+            "watts": [255,282],
+            "heart_rate_bpm": [170,180],
+            "speed_kph": [],
+            "name": "Aerobic Maximum",
+            "abbreviation": "AEROMAX"
+          },
+          "Z7": {
+            "watts": [268,328],
+            "heart_rate_bpm": [171,185],
+            "speed_kph": [],
+            "name": "High Anaerobic",
+            "abbreviation": "HIGHANA"
+          },
+          "Z8": {
+            "watts": [205,207],
+            "heart_rate_bpm": [161,170],
+            "speed_kph": [],
+            "name": "Lactate Shuttle-H",
+            "abbreviation": "LACTSHUT-H"
+          },
+          "Z9": {
+            "watts": [119,121],
+            "heart_rate_bpm": [145,151],
+            "speed_kph": [],
+            "name": "Lactate Shuttle-L",
+            "abbreviation": "LACTSHUT-L"
+          }
+        }
+        }
+    ],
+      "Swim": [{
         "timestamp": "2025-06-26T00:00:00Z",
         "data": {
           "Z1": {
@@ -378,7 +516,7 @@
             "abbreviation": "VO2"
           }
         }
-      }
+      }]
     }
   }
 ]

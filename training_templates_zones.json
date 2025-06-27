@@ -1660,8 +1660,6 @@
         "rest_zone": "REC",
         "rest_between_sec": 40,
         "repeats": 6,
-
-        "duration_sec": 20,
         "notes": ""
       },
       {
@@ -2225,54 +2223,78 @@
     "stravaId": "13354401590",
     "activity_type": "Run",
     "start_date_local": "2025-01-14T17:06:43",
-    "activity_name":"",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "13380111103",
-    "activity_type": "Run",
-    "start_date_local": "2025-01-17T15:39:42",
-    "activity_name":"",
-    "planned_segments": []
+    "activity_name":"R-Cruise Intervals-1",
+    "planned_segments": [
+      {
+        "zone": "REC",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "zone": "BASE",
+        "duration_sec": 1260,
+        "notes": ""
+      },
+      {
+        "zone": "TEMPO",
+        "duration_sec": 300,
+        "repeats": 3,
+        "rest_between_sec": 180,
+        "rest_zone": "BASE",
+        "notes": ""
+      },
+      {
+        "zone": "BASE",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "zone": "REC",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
   },
   {
     "stravaId": "13386634598",
     "activity_type": "Run",
     "start_date_local": "2025-01-18T10:30:26",
-    "activity_name":"",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "13437875144",
-    "activity_type": "Run",
-    "start_date_local": "2025-01-24T07:42:20",
-    "activity_name":"",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "13445443790",
-    "activity_type": "Run",
-    "start_date_local": "2025-01-25T07:53:04",
-    "planned_segments": []
+    "activity_name":"R-Foundation-12",
+    "planned_segments": [
+      {
+        "zone": "BASE",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "zone": "TEMPO",
+        "duration_sec": 4800,
+        "notes": ""
+      },
+      {
+        "zone": "REC",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
   },
   {
     "stravaId": "13537455840",
     "activity_type": "Run",
     "start_date_local": "2025-02-04T13:45:09",
+    "activity_name":"R-Anaerobic Intervals-4",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "BASE",
         "duration_sec": 900,
         "notes": ""
       },
       {
-        "zone": "tempo_interval",
+        "zone": "ANT",
+        "repeats": 4,
+        "rest_zone": "REC",
+        "rest_between_sec": 300,
         "duration_sec": 150,
-        "notes": ""
-      },
-      {
-        "zone": "unknown",
-        "duration_sec": 300,
         "notes": ""
       }
     ]
@@ -2281,19 +2303,20 @@
     "stravaId": "13593306776",
     "activity_type": "Run",
     "start_date_local": "2025-02-10T19:22:27",
+    "activity_name":"R-Foundation-6",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 2100,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -2303,19 +2326,20 @@
     "stravaId": "13606118208",
     "activity_type": "Run",
     "start_date_local": "2025-02-12T07:25:47",
+    "activity_name":"R-Foundation-9",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 3000,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -2325,41 +2349,43 @@
     "stravaId": "13688277059",
     "activity_type": "Run",
     "start_date_local": "2025-02-21T15:51:03",
-    "planned_segments": []
+    "activity_name":"R-Foundation-9",
+    "planned_segments": [
+      {
+        "zone": "REC",
+        "duration_sec": 300,
+        "notes": ""
+      },
+      {
+        "zone": "BASE",
+        "duration_sec": 3000,
+        "notes": ""
+      },
+      {
+        "zone": "REC",
+        "duration_sec": 300,
+        "notes": ""
+      }
+    ]
   },
   {
     "stravaId": "13757420762",
     "activity_type": "Run",
     "start_date_local": "2025-03-01T07:51:35",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "13786576617",
-    "activity_type": "Run",
-    "start_date_local": "2025-03-04T13:16:46",
+    "activity_name":"R-Foundation-17",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
-        "duration_sec": 300,
+        "zone": "BASE",
+        "duration_sec": 5400,
         "notes": ""
       },
       {
-        "zone": "long_effort",
-        "duration_sec": 1440,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -2369,29 +2395,30 @@
     "stravaId": "13786576617",
     "activity_type": "Run",
     "start_date_local": "2025-03-04T13:16:46",
+    "activity_name":"R-Tempo-4",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "TEMPO",
         "duration_sec": 1440,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -2401,84 +2428,20 @@
     "stravaId": "13820478560",
     "activity_type": "Run",
     "start_date_local": "2025-03-08T07:37:49",
+    "activity_name":"R-Foundation-12",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 4800,
         "notes": ""
       },
       {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "13820478560",
-    "activity_type": "Run",
-    "start_date_local": "2025-03-08T07:37:49",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "long_effort",
-        "duration_sec": 4800,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "13835285223",
-    "activity_type": "Run",
-    "start_date_local": "2025-03-09T14:01:17",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "13849652768",
-    "activity_type": "Run",
-    "start_date_local": "2025-03-11T07:34:37",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 600,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 420,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_interval",
-        "duration_sec": 120,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -2488,34 +2451,33 @@
     "stravaId": "13849652768",
     "activity_type": "Run",
     "start_date_local": "2025-03-11T07:34:37",
+    "activity_name": "R-Cruise Intervals-12",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "BASE",
         "duration_sec": 600,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "ANT",
         "duration_sec": 420,
+        "rest_zone": "REC",
+        "rest_between_sec": 120,
+        "repeats": 4,
         "notes": ""
       },
       {
-        "zone": "tempo_interval",
-        "duration_sec": 120,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -2525,25 +2487,20 @@
     "stravaId": "13890797135",
     "activity_type": "Run",
     "start_date_local": "2025-03-15T15:48:31",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "13890797135",
-    "activity_type": "Run",
-    "start_date_local": "2025-03-15T15:48:31",
+    "activity_name":"R-Foundation-3",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 1200,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -2553,51 +2510,23 @@
     "stravaId": "13915848132",
     "activity_type": "Run",
     "start_date_local": "2025-03-18T11:30:15",
+    "activity_name":"R-Aerobic Intervals-1",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 600,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "BASE",
         "duration_sec": 600,
+        "rest_between_sec": 180,
+        "rest_zone": "TEMPO",
+        "repeats": 3, 
         "notes": ""
       },
       {
-        "zone": "cooldown",
-        "duration_sec": 180,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 660,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "13915848132",
-    "activity_type": "Run",
-    "start_date_local": "2025-03-18T11:30:15",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 600,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
-        "duration_sec": 600,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
-        "duration_sec": 180,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
+        "zone": "REC",
         "duration_sec": 660,
         "notes": ""
       }
@@ -2607,25 +2536,20 @@
     "stravaId": "13963841802",
     "activity_type": "Run",
     "start_date_local": "2025-03-23T12:14:14",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "13963841802",
-    "activity_type": "Run",
-    "start_date_local": "2025-03-23T12:14:14",
+    "activity_name":"R-Foundation-3",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 1200,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -2635,96 +2559,44 @@
     "stravaId": "13981405126",
     "activity_type": "Run",
     "start_date_local": "2025-03-25T11:01:05",
+    "activity_name":"R-Tempo-4",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "TEMPO",
         "duration_sec": 1440,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
     ]
-  },
-  {
-    "stravaId": "13981405126",
-    "activity_type": "Run",
-    "start_date_local": "2025-03-25T11:01:05",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "long_effort",
-        "duration_sec": 1440,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "14017303084",
-    "activity_type": "Run",
-    "start_date_local": "2025-03-29T08:37:50",
-    "planned_segments": []
   },
   {
     "stravaId": "14030608683",
     "activity_type": "Run",
     "start_date_local": "2025-03-30T11:42:58",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "14074939518",
-    "activity_type": "Run",
-    "start_date_local": "2025-04-04T05:29:00",
+    "activity_name":"R-HALF-MARATHON",
     "planned_segments": [
       {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "long_effort",
-        "duration_sec": 3000,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
-        "duration_sec": 300,
+        "zone": "TEMPO",
+        "duration_sec": 5700,
         "notes": ""
       }
     ]
@@ -2733,19 +2605,20 @@
     "stravaId": "14074939518",
     "activity_type": "Run",
     "start_date_local": "2025-04-04T05:29:00",
+    "activity_name":"R-Foundation-9",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 3000,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -2755,61 +2628,30 @@
     "stravaId": "14108566969",
     "activity_type": "Run",
     "start_date_local": "2025-04-07T16:23:34",
+    "activity_name":"R-Tempo-12",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "BASE",
         "duration_sec": 900,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "TEMPO",
         "duration_sec": 600,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 1200,
         "notes": ""
       },
       {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "14108566969",
-    "activity_type": "Run",
-    "start_date_local": "2025-04-07T16:23:34",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 900,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 600,
-        "notes": ""
-      },
-      {
-        "zone": "long_effort",
-        "duration_sec": 1200,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -2819,71 +2661,33 @@
     "stravaId": "14138039195",
     "activity_type": "Run",
     "start_date_local": "2025-04-10T15:25:28",
+    "activity_name":"R-Cruise Intervals-1",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
-        "duration_sec": 1200,
+        "zone": "BASE",
+        "duration_sec": 600,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "ANT",
+        "duration_sec": 420,
+        "rest_zone": "BASE",
+        "rest_between_sec": 120,
+        "repeats": 4,
+        "notes": ""
+      },
+      {
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
-        "duration_sec": 180,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "14138039195",
-    "activity_type": "Run",
-    "start_date_local": "2025-04-10T15:25:28",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "long_effort",
-        "duration_sec": 1200,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 180,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -2893,41 +2697,11 @@
     "stravaId": "14153424024",
     "activity_type": "Run",
     "start_date_local": "2025-04-12T08:11:34",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "14182353577",
-    "activity_type": "Run",
-    "start_date_local": "2025-04-15T09:02:21",
+    "activity_name":"R-HALF-MARATHON",
     "planned_segments": [
       {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 180,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
-        "duration_sec": 300,
+        "zone": "TEMPO",
+        "duration_sec": 5700,
         "notes": ""
       }
     ]
@@ -2936,34 +2710,33 @@
     "stravaId": "14182353577",
     "activity_type": "Run",
     "start_date_local": "2025-04-15T09:02:21",
+    "activity_name":"R-Cruise Intervals-2",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "TEMPO",
+        "duration_sec": 300,
+        "rest_between_sec": 180,
+        "rest_zone":"BASE",
+        "repeats": 4,
+        "notes": ""
+      },
+      {
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
-        "duration_sec": 180,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -2973,51 +2746,23 @@
     "stravaId": "14201429083",
     "activity_type": "Run",
     "start_date_local": "2025-04-17T05:32:42",
+    "activity_name":"R-Aerobic Intervals-6",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 600,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "TEMPO",
         "duration_sec": 900,
+        "rest_between_sec": 300,
+        "rest_zone": "REC",
+        "repeats": 4,
         "notes": ""
       },
       {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 900,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "14201429083",
-    "activity_type": "Run",
-    "start_date_local": "2025-04-17T05:32:42",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 600,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
-        "duration_sec": 900,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
+        "zone": "REC",
         "duration_sec": 900,
         "notes": ""
       }
@@ -3027,27 +2772,22 @@
     "stravaId": "14230381367",
     "activity_type": "Run",
     "start_date_local": "2025-04-20T08:45:22",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "14230381367",
-    "activity_type": "Run",
-    "start_date_local": "2025-04-20T08:45:22",
+    "activity_name":"R-Foundation-3",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "TEMPO",
         "duration_sec": 1200,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "BASE",
         "duration_sec": 300,
-        "notes": ""
+        "notes": "R-Foundation-3"
       }
     ]
   },
@@ -3055,77 +2795,45 @@
     "stravaId": "14249090617",
     "activity_type": "Run",
     "start_date_local": "2025-04-22T06:27:15",
+    "activity_name":"R-Fast Finish-4",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 1500,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "TEMPO",
         "duration_sec": 600,
         "notes": ""
       }
     ]
   },
   {
-    "stravaId": "14249090617",
+    "stravaId": "14412580487",
     "activity_type": "Run",
-    "start_date_local": "2025-04-22T06:27:15",
+    "start_date_local": "2025-05-08T05:54:01",
+    "activity_name":"R-Foundation-10",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
-        "duration_sec": 1500,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 600,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "14303519279",
-    "activity_type": "Run",
-    "start_date_local": "2025-04-27T09:57:51",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "14412580487",
-    "activity_type": "Run",
-    "start_date_local": "2025-05-08T05:54:01",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "14412580487",
-    "activity_type": "Run",
-    "start_date_local": "2025-05-08T05:54:01",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 3600,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
-        "notes": ""
+        "notes": "R-Foundation-3"
       }
     ]
   },
@@ -3133,61 +2841,30 @@
     "stravaId": "14431395043",
     "activity_type": "Run",
     "start_date_local": "2025-05-10T04:42:30",
+    "activity_name":"R-Tempo-12",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "BASE",
         "duration_sec": 900,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "TEMPO",
         "duration_sec": 600,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "BASE",
         "duration_sec": 900,
         "notes": ""
       },
       {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "14431395043",
-    "activity_type": "Run",
-    "start_date_local": "2025-05-10T04:42:30",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 900,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 600,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 900,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -3197,71 +2874,33 @@
     "stravaId": "14464348767",
     "activity_type": "Run",
     "start_date_local": "2025-05-13T07:21:28",
+    "activity_name":"R-Cruise Intervals-2",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "TEMPO",
+        "duration_sec": 300,
+        "rest_between_sec": 180,
+        "rest_zone":"BASE",
+        "repeats": 4,
+        "notes": ""
+      },
+      {
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
-        "duration_sec": 180,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "14464348767",
-    "activity_type": "Run",
-    "start_date_local": "2025-05-13T07:21:28",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 180,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -3271,15 +2910,10 @@
     "stravaId": "14495696803",
     "activity_type": "Run",
     "start_date_local": "2025-05-16T06:25:55",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "14495696803",
-    "activity_type": "Run",
-    "start_date_local": "2025-05-16T06:25:55",
+    "activity_name":"R-Recovery-4",
     "planned_segments": [
       {
-        "zone": "long_effort",
+        "zone": "REC",
         "duration_sec": 2100,
         "notes": ""
       }
@@ -3289,69 +2923,44 @@
     "stravaId": "14521854166",
     "activity_type": "Run",
     "start_date_local": "2025-05-18T12:33:28",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "14521854166",
-    "activity_type": "Run",
-    "start_date_local": "2025-05-18T12:33:28",
+    "activity_name":"R-Foundation-11",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "FATMAX",
         "duration_sec": 4200,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
+
     ]
   },
   {
     "stravaId": "14536593188",
     "activity_type": "Run",
     "start_date_local": "2025-05-20T06:04:26",
+    "activity_name":"R-Foundation-12",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 4800,
         "notes": ""
       },
       {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "14536593188",
-    "activity_type": "Run",
-    "start_date_local": "2025-05-20T06:04:26",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "long_effort",
-        "duration_sec": 4800,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -3361,99 +2970,30 @@
     "stravaId": "14567522074",
     "activity_type": "Run",
     "start_date_local": "2025-05-23T06:27:11",
+    "activity_name":"R-Tempo-13",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "BASE",
         "duration_sec": 600,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "TEMPO",
         "duration_sec": 1200,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "BASE",
         "duration_sec": 600,
         "notes": ""
       },
       {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "14567522074",
-    "activity_type": "Run",
-    "start_date_local": "2025-05-23T06:27:11",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 600,
-        "notes": ""
-      },
-      {
-        "zone": "long_effort",
-        "duration_sec": 1200,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 600,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "14587386382",
-    "activity_type": "Run",
-    "start_date_local": "2025-05-25T08:02:09",
-    "planned_segments": []
-  },
-  {
-    "stravaId": "14617884206",
-    "activity_type": "Run",
-    "start_date_local": "2025-05-28T06:22:08",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 900,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
-        "duration_sec": 600,
-        "notes": ""
-      },
-      {
-        "zone": "long_effort",
-        "duration_sec": 1200,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -3463,29 +3003,30 @@
     "stravaId": "14617884206",
     "activity_type": "Run",
     "start_date_local": "2025-05-28T06:22:08",
+    "activity_name":"R-Tempo-12",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "BASE",
         "duration_sec": 900,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "TEMPO",
         "duration_sec": 600,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 1200,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -3495,19 +3036,20 @@
     "stravaId": "14631661137",
     "activity_type": "Run",
     "start_date_local": "2025-05-29T13:39:34",
+    "activity_name":"R-Foundation-3",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 1200,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -3517,19 +3059,20 @@
     "stravaId": "14648230897",
     "activity_type": "Run",
     "start_date_local": "2025-05-31T06:26:27",
+    "activity_name":"R-Foundation-9",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 3000,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -3539,34 +3082,33 @@
     "stravaId": "14680088999",
     "activity_type": "Run",
     "start_date_local": "2025-06-03T06:24:40",
+    "activity_name":"R-Cruise Intervals-1",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 1260,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "ANT",
+        "duration_sec": 300,
+        "rest_zone": "BASE",
+        "rest_between_sec": 180,
+        "repeats": 3,
+        "notes": ""
+      },
+      {
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
-        "duration_sec": 180,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -3576,24 +3118,23 @@
     "stravaId": "14702021729",
     "activity_type": "Run",
     "start_date_local": "2025-06-05T06:24:58",
+    "activity_name":"R-Aerobic Intervals-6",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 600,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "TEMPO",
         "duration_sec": 900,
+        "rest_between_sec": 300,
+        "rest_zone": "BASE",
+        "repeats": 4,
         "notes": ""
       },
       {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
+        "zone": "REC",
         "duration_sec": 900,
         "notes": ""
       }
@@ -3603,19 +3144,20 @@
     "stravaId": "14732392525",
     "activity_type": "Run",
     "start_date_local": "2025-06-08T09:32:53",
+    "activity_name":"R-Foundation-6",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 2100,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -3625,34 +3167,33 @@
     "stravaId": "14744564043",
     "activity_type": "Run",
     "start_date_local": "2025-06-09T13:15:55",
+    "activity_name":"R-Cruise Intervals-2",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
+        "zone": "TEMPO",
+        "duration_sec": 300,
+        "rest_between_sec": 180,
+        "rest_zone":"BASE",
+        "repeats": 4,
+        "notes": ""
+      },
+      {
+        "zone": "BASE",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "steady",
-        "duration_sec": 180,
-        "notes": ""
-      },
-      {
-        "zone": "steady",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -3662,24 +3203,23 @@
     "stravaId": "14763132797",
     "activity_type": "Run",
     "start_date_local": "2025-06-11T06:29:34",
+    "activity_name":"R-Aerobic Intervals-6",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "BASE",
         "duration_sec": 600,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "TEMPO",
         "duration_sec": 900,
+        "rest_between_sec": 300,
+        "rest_zone": "REC",
+        "repeats": 4,
         "notes": ""
       },
       {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "tempo_run",
+        "zone": "REC",
         "duration_sec": 900,
         "notes": ""
       }
@@ -3689,19 +3229,20 @@
     "stravaId": "14794668630",
     "activity_type": "Run",
     "start_date_local": "2025-06-14T09:30:35",
+    "activity_name":"R-Foundation-3",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "FATMAX",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 1200,
         "notes": ""
       },
       {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -3711,46 +3252,25 @@
     "stravaId": "14818597899",
     "activity_type": "Run",
     "start_date_local": "2025-06-16T12:56:13",
+    "activity_name":"R-Fast Finish-4",
     "planned_segments": [
       {
-        "zone": "warmup",
+        "zone": "FATMAX",
         "duration_sec": 300,
         "notes": ""
       },
       {
-        "zone": "long_effort",
+        "zone": "BASE",
         "duration_sec": 1500,
         "notes": ""
       },
       {
-        "zone": "tempo_run",
+        "zone": "TEMPO",
         "duration_sec": 600,
         "notes": ""
       },
       {
-        "zone": "cooldown",
-        "duration_sec": 300,
-        "notes": ""
-      }
-    ]
-  },
-  {
-    "stravaId": "14842783017",
-    "activity_type": "Run",
-    "start_date_local": "2025-06-18T19:18:08",
-    "planned_segments": [
-      {
-        "zone": "warmup",
-        "duration_sec": 300,
-        "notes": ""
-      },
-      {
-        "zone": "long_effort",
-        "duration_sec": 1200,
-        "notes": ""
-      },
-      {
-        "zone": "cooldown",
+        "zone": "REC",
         "duration_sec": 300,
         "notes": ""
       }
@@ -3760,6 +3280,7 @@
     "stravaId": "10413329242",
     "activity_type": "Swim",
     "start_date_local": "2023-12-21T06:43:01",
+    "activity_name":"",
     "planned_segments": []
   },
   {

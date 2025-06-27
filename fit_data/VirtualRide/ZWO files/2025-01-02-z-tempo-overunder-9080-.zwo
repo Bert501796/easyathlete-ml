@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<workout_file>
+ <author>Coachbox</author>
+ <name>2025-01-02-z-tempo-overunder-9080-.zwo</name>
+ <sportType>bike</sportType>
+ <ftpOverride>185</ftpOverride>
+ <workout>
+  <Warmup Duration="300.0" PowerHigh="0.55000" PowerLow="0.35000"></Warmup>
+  <SteadyState Duration="30.0" Power="1.00000"></SteadyState>
+  <SteadyState Duration="30.0" Power="0.55000"></SteadyState>
+  <SteadyState Duration="30.0" Power="1.00000"></SteadyState>
+  <SteadyState Duration="30.0" Power="0.55000"></SteadyState>
+  <SteadyState Duration="30.0" Power="1.00000"></SteadyState>
+  <SteadyState Duration="30.0" Power="0.55000"></SteadyState>
+  <SteadyState Duration="30.0" Power="1.00000"></SteadyState>
+  <SteadyState Duration="30.0" Power="0.55000"></SteadyState>
+  <SteadyState Duration="30.0" Power="1.00000"></SteadyState>
+  <SteadyState Duration="30.0" Power="0.55000"></SteadyState>
+  <SteadyState Duration="120.0" Power="0.90000"></SteadyState>
+  <SteadyState Duration="120.0" Power="0.80000"></SteadyState>
+  <SteadyState Duration="120.0" Power="0.90000"></SteadyState>
+  <SteadyState Duration="120.0" Power="0.80000"></SteadyState>
+  <SteadyState Duration="120.0" Power="0.90000"></SteadyState>
+  <SteadyState Duration="120.0" Power="0.80000"></SteadyState>
+  <SteadyState Duration="120.0" Power="0.90000"></SteadyState>
+  <SteadyState Duration="120.0" Power="0.80000"></SteadyState>
+  <SteadyState Duration="120.0" Power="0.90000"></SteadyState>
+  <SteadyState Duration="120.0" Power="0.80000"></SteadyState>
+  <SteadyState Duration="300.0" Power="0.55000"></SteadyState>
+ </workout>
+</workout_file>

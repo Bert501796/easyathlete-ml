@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<workout_file>
+ <author>Coachbox</author>
+ <name>2024-03-16-cfast-finish27.zwo</name>
+ <sportType>bike</sportType>
+ <ftpOverride>192</ftpOverride>
+ <workout>
+  <SteadyState Duration="300.0" PowerHigh="0.54688" PowerLow="0.00000"></SteadyState>
+  <SteadyState Duration="2700.0" PowerHigh="0.77604" PowerLow="0.65104"></SteadyState>
+  <SteadyState Duration="600.0" PowerHigh="0.92188" PowerLow="0.78125"></SteadyState>
+ </workout>
+</workout_file>

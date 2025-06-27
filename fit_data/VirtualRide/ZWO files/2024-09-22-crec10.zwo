@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<workout_file>
+ <author>Coachbox</author>
+ <name>2024-09-22-crec10.zwo</name>
+ <sportType>bike</sportType>
+ <ftpOverride>185</ftpOverride>
+ <workout>
+  <SteadyState Duration="4500.0" PowerHigh="0.74595" PowerLow="0.63784"></SteadyState>
+ </workout>
+</workout_file>

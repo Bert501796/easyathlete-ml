@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<workout_file>
+ <author>Coachbox</author>
+ <name>2025-01-09-inscyd-power-3--6.zwo</name>
+ <sportType>bike</sportType>
+ <ftpOverride>185</ftpOverride>
+ <workout>
+  <SteadyState Duration="300.0" PowerHigh="0.74595" PowerLow="0.63784"></SteadyState>
+  <Warmup Duration="300.0" PowerHigh="0.89730" PowerLow="0.80000"></Warmup>
+  <SteadyState Duration="8.0" PowerHigh="1.52432" PowerLow="1.37838"></SteadyState>
+  <SteadyState Duration="600.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="1.75000" PowerLow="1.50000"></SteadyState>
+  <SteadyState Duration="900.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="360.0" PowerHigh="1.60000" PowerLow="1.40000"></SteadyState>
+  <SteadyState Duration="1200.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+  <SteadyState Duration="300.0" PowerHigh="0.52432" PowerLow="0.41081"></SteadyState>
+ </workout>
+</workout_file>

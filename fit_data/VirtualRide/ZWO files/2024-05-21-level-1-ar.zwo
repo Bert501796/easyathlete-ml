@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<workout_file>
+ <author>Coachbox</author>
+ <name>2024-05-21-level-1-ar.zwo</name>
+ <sportType>bike</sportType>
+ <ftpOverride>192</ftpOverride>
+ <workout>
+  <SteadyState Duration="1800.0" PowerHigh="0.54688" PowerLow="0.00000" CadenceHigh="80.00000" CadenceLow="70.00000"></SteadyState>
+ </workout>
+</workout_file>

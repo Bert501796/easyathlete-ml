@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<workout_file>
+ <author>Coachbox</author>
+ <name>2024-12-26-zcruise-intervalstss-82.zwo</name>
+ <sportType>bike</sportType>
+ <ftpOverride>185</ftpOverride>
+ <workout>
+  <Warmup Duration="300.0" PowerHigh="0.60000" PowerLow="0.45000"></Warmup>
+  <SteadyState Duration="60.0" PowerHigh="0.62000" PowerLow="0.58000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.67000" PowerLow="0.63000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.82000" PowerLow="0.78000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="1.12000" PowerLow="1.08000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.50000" PowerLow="0.48000"></SteadyState>
+  <SteadyState Duration="240.0" PowerHigh="0.92000" PowerLow="0.88000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.50000" PowerLow="0.48000"></SteadyState>
+  <SteadyState Duration="540.0" PowerHigh="1.07000" PowerLow="1.03000"></SteadyState>
+  <SteadyState Duration="150.0" PowerHigh="0.50000" PowerLow="0.48000"></SteadyState>
+  <SteadyState Duration="540.0" PowerHigh="1.02000" PowerLow="0.98000"></SteadyState>
+  <SteadyState Duration="150.0" PowerHigh="0.50000" PowerLow="0.48000"></SteadyState>
+  <SteadyState Duration="540.0" PowerHigh="0.96000" PowerLow="0.92000"></SteadyState>
+  <SteadyState Duration="150.0" PowerHigh="0.50000" PowerLow="0.48000"></SteadyState>
+  <SteadyState Duration="240.0" PowerHigh="0.92000" PowerLow="0.88000"></SteadyState>
+  <SteadyState Duration="300.0" Power="0.60000"></SteadyState>
+ </workout>
+</workout_file>
