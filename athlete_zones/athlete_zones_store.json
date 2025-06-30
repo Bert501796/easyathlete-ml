@@ -206,6 +206,68 @@
       ],
       "Ride": [
         {
+          "timestamp": "2025-03-07T00:00:00Z",
+          "zone_type": "8020",
+          "data": {
+            "Z8020-1": {
+              "heart_rate_bpm": [
+                112,
+                126
+              ],
+              "name": "80/20 Zone 1",
+              "abbreviation": "8020-1"
+            },
+            "Z8020-2": {
+              "heart_rate_bpm": [
+                127,
+                140
+              ],
+              "name": "80/20 Zone 2",
+              "abbreviation": "8020-2"
+            },
+            "Z8020-X": {
+              "heart_rate_bpm": [
+                141,
+                148
+              ],
+              "name": "80/20 Zone X",
+              "abbreviation": "8020-X"
+            },
+            "Z8020-3": {
+              "heart_rate_bpm": [
+                149,
+                156
+              ],
+              "name": "80/20 Zone 3",
+              "abbreviation": "8020-3"
+            },
+            "Z8020-Y": {
+              "heart_rate_bpm": [
+                157,
+                159
+              ],
+              "name": "80/20 Zone Y",
+              "abbreviation": "8020-Y"
+            },
+            "Z8020-4": {
+              "heart_rate_bpm": [
+                160,
+                164
+              ],
+              "name": "80/20 Zone 4",
+              "abbreviation": "8020-4"
+            },
+            "Z8020-5": {
+              "heart_rate_bpm": [
+                165,
+                200
+              ],
+              "name": "80/20 Zone 5",
+              "abbreviation": "8020-5"
+            }
+          }
+        },
+        {
           "timestamp": "2025-01-24T00:00:00Z",
           "zone_type": "fatmax-lactate",
           "data": {
@@ -284,64 +346,224 @@
           }
         },
         {
-          "timestamp": "2025-03-07T00:00:00Z",
-          "zone_type": "8020",
+          "timestamp": "2024-05-26T00:00:00Z",
+          "zone_type": "fatmax-lactate",
           "data": {
-            "Z8020-1": {
-              "heart_rate_bpm": [
-                112,
-                126
+            "Z1": {
+              "watts": [
+                76,
+                97
               ],
-              "name": "80/20 Zone 1",
-              "abbreviation": "8020-1"
+              "name": "Recovery",
+              "abbreviation": "REC"
             },
-            "Z8020-2": {
+            "Z2": {
+              "watts": [
+                118,
+                138
+              ],
+              "name": "Base",
+              "abbreviation": "BASE"
+            },
+            "Z3": {
+              "watts": [
+                148,
+                166
+              ],
+              "name": "Medio",
+              "abbreviation": "MEDIO"
+            },
+            "Z4": {
+              "watts": [
+                111,
+                128
+              ],
+              "name": "FatMax",
+              "abbreviation": "FATMAX"
+            },
+            "Z5": {
+              "watts": [
+                172,
+                198
+              ],
+              "name": "Anaerobic Threshold",
+              "abbreviation": "ANT"
+            },
+            "Z6": {
+              "watts": [
+                255,
+                282
+              ],
+              "name": "Aerobic Maximum",
+              "abbreviation": "AEROMAX"
+            },
+            "Z7": {
+              "watts": [
+                268,
+                328
+              ],
+              "name": "High Anaerobic",
+              "abbreviation": "HIGHANA"
+            },
+            "Z8": {
+              "watts": [
+                205,
+                207
+              ],
+              "name": "Lactate Shuttle-H",
+              "abbreviation": "LACTSHUT-H"
+            },
+            "Z9": {
+              "watts": [
+                119,
+                121
+              ],
+              "name": "Lactate Shuttle-L",
+              "abbreviation": "LACTSHUT-L"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-05-26T00:00:00Z",
+          "zone_type": "coggan",
+          "data": {
+            "REC": {
               "heart_rate_bpm": [
-                127,
+                60,
+                110
+              ],
+              "watts": [],
+              "name": "Active Recovery",
+              "abbreviation": "REC"
+            },
+            "ED-1": {
+              "heart_rate_bpm": [
+                111,
+                124
+              ],
+              "watts": [],
+              "name": "Extensive Endurance Low",
+              "abbreviation": "ED-1"
+            },
+            "ED-2": {
+              "heart_rate_bpm": [
+                125,
+                137
+              ],
+              "watts": [],
+              "name": "Extensive Endurance High",
+              "abbreviation": "ED-2"
+            },
+            "ID": {
+              "heart_rate_bpm": [
+                138,
+                151
+              ],
+              "watts": [],
+              "name": "Intensive Endurance",
+              "abbreviation": "ID"
+            },
+            "ANT": {
+              "heart_rate_bpm": [
+                152,
+                160
+              ],
+              "watts": [],
+              "name": "Threshold",
+              "abbreviation": "ANT"
+            },
+            "VO2": {
+              "heart_rate_bpm": [
+                161,
+                195
+              ],
+              "watts": [],
+              "name": "VO2 Max",
+              "abbreviation": "VO2"
+            },
+            "ANC": {
+              "heart_rate_bpm": [],
+              "watts": [231,346],
+              "name": "Aneaerobic Capacity",
+              "abbreviation": "ANC"
+            },
+            "SP": {
+              "heart_rate_bpm": [],
+              "watts": [347,1152],
+              "name": "Neuromuscular Power",
+              "abbreviation": "SP"
+            }
+          }
+        },
+        {
+          "timestamp": "2024-03-01T00:00:00Z",
+          "zone_type": "coggan",
+          "data": {
+            "REC": {
+              "heart_rate_bpm": [
+                0,
+                125
+              ],
+              "watts": [0,105],
+              "name": "Active Recovery",
+              "abbreviation": "REC"
+            },
+            "ED-1": {
+              "heart_rate_bpm": [
+                126,
                 140
               ],
-              "name": "80/20 Zone 2",
-              "abbreviation": "8020-2"
+              "watts": [106,124],
+              "name": "Extensive Endurance Low",
+              "abbreviation": "ED-1"
             },
-            "Z8020-X": {
+            "ED-2": {
               "heart_rate_bpm": [
                 141,
-                148
+                154
               ],
-              "name": "80/20 Zone X",
-              "abbreviation": "8020-X"
+              "watts": [125,149],
+              "name": "Extensive Endurance High",
+              "abbreviation": "ED-2"
             },
-            "Z8020-3": {
+            "ID": {
               "heart_rate_bpm": [
-                149,
-                156
+                155,
+                170
               ],
-              "name": "80/20 Zone 3",
-              "abbreviation": "8020-3"
+              "watts": [150,177],
+              "name": "Intensive Endurance",
+              "abbreviation": "ID"
             },
-            "Z8020-Y": {
+            "ANT": {
               "heart_rate_bpm": [
-                157,
-                159
+                170,
+                181
               ],
-              "name": "80/20 Zone Y",
-              "abbreviation": "8020-Y"
+              "watts": [178,197],
+              "name": "Threshold",
+              "abbreviation": "ANT"
             },
-            "Z8020-4": {
+            "VO2": {
               "heart_rate_bpm": [
-                160,
-                164
-              ],
-              "name": "80/20 Zone 4",
-              "abbreviation": "8020-4"
-            },
-            "Z8020-5": {
-              "heart_rate_bpm": [
-                165,
+                182,
                 200
               ],
-              "name": "80/20 Zone 5",
-              "abbreviation": "8020-5"
+              "watts": [198,230],
+              "name": "VO2 Max",
+              "abbreviation": "VO2"
+            },
+            "ANC": {
+              "heart_rate_bpm": [],
+              "watts": [231,346],
+              "name": "Aneaerobic Capacity",
+              "abbreviation": "ANC"
+            },
+            "SP": {
+              "heart_rate_bpm": [],
+              "watts": [347,1152],
+              "name": "Neuromuscular Power",
+              "abbreviation": "SP"
             }
           }
         }
