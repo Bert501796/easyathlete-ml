@@ -38,9 +38,11 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
             duration_min = seg.get("duration_sec", 0) / 60
             distance_km = seg.get("avg_distance", 0) / 1000
             zone_score = seg.get("zone_match_score")  # optional
+            segment_type = seg.get("type") or "unknown"
 
             segment_rows.append({
                 "week": week,
+                "segment_type": segment_type,
                 "hr": hr_avg,
                 "watts": watts_avg,
                 "pace": pace,
@@ -59,34 +61,38 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
         print("⚠️ No segment rows found after filtering. Returning empty trends.")
         return {"debug": "no_rows"}
 
-    df_by_week = df.groupby("week")
-    print(f"📊 KPI groups by week: {df_by_week.size().to_dict()}")
+    df_by_type_week = df.groupby(["segment_type", "week"])
+    print(f"📊 KPI groups by segment type and week: {df_by_type_week.size().to_dict()}")
 
-    trends = defaultdict(list)
+    trends = []
 
-    for week, group in df_by_week:
-        # Heart Rate Efficiency (bpm/km)
+    for (segment_type, week), group in df_by_type_week:
         if (group["distance_km"] > 0).any():
-            trends["hr_efficiency"].append({
+            trends.append({
+                "segment_type": segment_type,
+                "metric": "hr_efficiency",
                 "week": week,
                 "value": (group["hr"] / group["distance_km"]).mean()
             })
 
-        # Pacing Consistency (std of pace)
-        trends["pace_consistency"].append({
+        trends.append({
+            "segment_type": segment_type,
+            "metric": "pace_consistency",
             "week": week,
             "value": group["pace"].std()
         })
 
-        # Zone Compliance
         if (group["zone_score"] > 0).any():
-            trends["zone_compliance"].append({
+            trends.append({
+                "segment_type": segment_type,
+                "metric": "zone_compliance",
                 "week": week,
                 "value": group["zone_score"].mean()
             })
 
-        # Effort Matching Score — reuse zone_match_score for now
-        trends["effort_matching"].append({
+        trends.append({
+            "segment_type": segment_type,
+            "metric": "effort_matching",
             "week": week,
             "value": group["zone_score"].mean()
         })
