@@ -14,19 +14,15 @@ def load_athlete_zones():
     return {}
 
 def resolve_athlete_zones(user_id: str, sport: str, activity_date: str, zone_type: str = None):
-    """
-    Returns the most recent set of zones (by timestamp) for the sport type,
-    optionally filtered by zone_type, at or before the given activity date.
-    """
     athlete_data = load_athlete_zones().get(user_id)
     default = default_zones.get(sport, [{}])[0]["data"]
 
     if not athlete_data:
-        return default
+        return {"zones": default, "ftp": None}
 
     sport_zones = athlete_data.get("zones", {}).get(sport)
     if not isinstance(sport_zones, list):
-        return default
+        return {"zones": default, "ftp": None}
 
     activity_dt = datetime.fromisoformat(activity_date.replace("Z", ""))
 
@@ -43,9 +39,13 @@ def resolve_athlete_zones(user_id: str, sport: str, activity_date: str, zone_typ
 
     for entry in sorted_entries:
         if datetime.fromisoformat(entry["timestamp"].replace("Z", "")) <= activity_dt:
-            return entry.get("data", {})
+            return {
+                "zones": entry.get("data", {}),
+                "ftp": entry.get("ftp")
+            }
 
-    return default
+    return {"zones": default, "ftp": None}
+
 
 def get_zones_for_athlete(user_id: str, sport: str, zone_type: str = None):
     """

@@ -74,8 +74,9 @@ def analyze_zwo_folder(folder_path: str, output_path: str):
 
             for zone_type in zone_types_to_try:
                 match_count = 0
-                ftp = estimate_ftp_from_zones(USER_ID, start_date_local, zone_type)
-                zones = resolve_athlete_zones(USER_ID, "Ride", start_date_local, zone_type)
+                resolved = resolve_athlete_zones(USER_ID, "Ride", start_date_local, zone_type)
+                zones = resolved.get("zones", {})
+                ftp = resolved.get("ftp")
 
                 if not ftp or not zones:
                     continue
