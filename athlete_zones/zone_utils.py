@@ -15,7 +15,8 @@ def load_athlete_zones():
 
 def resolve_athlete_zones(user_id: str, sport: str, activity_date: str, zone_type: str = None):
     athlete_data = load_athlete_zones().get(user_id)
-    default = default_zones.get(sport, [{}])[0]["data"]
+    default_entry = default_zones.get(sport, [{}])[0]
+    default = default_entry.get("data", {})
 
     if not athlete_data:
         return {"zones": default, "ftp": None}

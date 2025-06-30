@@ -54,7 +54,9 @@ def parse_streams(activity):
     for col in df.columns:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
-    df.dropna(inplace=True)
+    before = len(df)
+    df = df.dropna(subset=["time_sec", "watts"])
+    print(f"ℹ️ Dropped {before - len(df)} rows due to missing time/watts")
 
     window = 30
     delta_cols = {}

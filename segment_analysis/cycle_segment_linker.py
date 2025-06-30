@@ -1,3 +1,7 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 import json
 import os
 from datetime import datetime
@@ -123,7 +127,12 @@ def run_segment_linking(strava_id):
 
     df = parse_streams(activity)
     activity_date = activity.get("startDate") or activity.get("start_date_local")
-    athlete_zones = resolve_athlete_zones(user_id=activity["userId"], sport=activity["type"], activity_date=activity_date)
+    if isinstance(activity_date, datetime):
+        activity_date_str = activity_date.isoformat()
+    else:
+        activity_date_str = activity_date.replace("Z", "") if activity_date else None
+
+    athlete_zones = resolve_athlete_zones(user_id=activity["userId"], sport=activity["type"], activity_date=activity_date_str)
 
     print("\n📊 Planned Segment Timeline:")
     enriched_segments = []
@@ -131,7 +140,7 @@ def run_segment_linking(strava_id):
         metrics = extract_metrics(df, seg["start"], seg["end"])
         enriched = {**seg, **metrics}
         enriched_segments.append(enriched)
-        print(f"{seg['type'].capitalize():<10} | {seg['zone']:<8} | {seg['start']:>5} → {seg['end']:>5} sec | avg_watts: {metrics['avg_watts'] if metrics['avg_watts'] is not None else 'n/a'}")
+        print(f"{seg['type'].capitalize():<10} | {seg['zone']:<8} | {seg['start']:>5} → {seg['end']:>5} sec | avg_watts: {metrics.get('avg_watts', 'n/a')}")
 
     # Save to MongoDB
     collection.update_one(
