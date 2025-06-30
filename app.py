@@ -14,7 +14,7 @@ def analyze(stravaId: int = Query(...)):
 # ✅ Include routers
 app.include_router(enrichment.router)
 app.include_router(prediction.router)
-app.include_router(segment_analysis.router)  # 👈 Add this
+app.include_router(segment_analysis.router)
 
 
 if __name__ == "__main__":

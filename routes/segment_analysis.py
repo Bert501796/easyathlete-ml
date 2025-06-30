@@ -4,9 +4,8 @@ from typing import Optional
 import os
 from pymongo import MongoClient
 from dotenv import load_dotenv
-from utils.segment_trends import analyze_segment_trends
+from utils.segment_trends import compute_kpi_trends
 import math
-
 
 load_dotenv()
 
@@ -15,6 +14,8 @@ router = APIRouter()
 class TrendAnalysisRequest(BaseModel):
     user_id: str
     activity_type: Optional[str] = None
+    start_date: Optional[str] = None
+    end_date: Optional[str] = None
 
 # Connect to MongoDB
 client = MongoClient(os.getenv("MONGO_URL"))
@@ -44,5 +45,10 @@ async def analyze_trends(request: TrendAnalysisRequest):
     if not activities:
         raise HTTPException(status_code=404, detail="No activities with segments found for this user.")
 
-    trends = analyze_segment_trends(activities)
+    trends = compute_kpi_trends(
+        activities,
+        start_date=request.start_date,
+        end_date=request.end_date,
+        activity_type=request.activity_type
+    )
     return {"user_id": request.user_id, "trends": clean_nan_values(trends)}
