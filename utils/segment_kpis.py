@@ -24,6 +24,8 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
             continue
 
         week = date.strftime("%Y-W%U")
+        activity_id = activity.get("stravaId") or activity.get("_id")
+
         for seg in activity.get("segments", []):
             total_segments += 1
 
@@ -39,6 +41,8 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
             distance_km = seg.get("avg_distance", 0) / 1000
             zone_score = seg.get("zone_match_score")  # optional
             segment_type = seg.get("type") or "unknown"
+            start_index = seg.get("start_index")
+            end_index = seg.get("end_index")
 
             segment_rows.append({
                 "week": week,
@@ -49,7 +53,10 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
                 "distance_km": distance_km,
                 "duration_min": duration_min,
                 "zone_score": zone_score,
-                "activity_type": activity.get("type")
+                "activity_type": activity.get("type"),
+                "activity_id": activity_id,
+                "start_index": start_index,
+                "end_index": end_index
             })
             valid_segments += 1
 
@@ -96,14 +103,35 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
             "week": week,
             "value": group["zone_score"].mean()
         })
-        # Segment Completion Delta — placeholder
-        # High-Intensity Improvement — placeholder
-        # Training Load Efficiency — placeholder
+
+        # Segment Completion Delta (duration consistency)
+        trends.append({
+            "segment_type": segment_type,
+            "metric": "completion_delta",
+            "week": week,
+            "value": group["duration_min"].std()
+        })
+
+        # High-Intensity Improvement (avg watts for short segments)
+        high_intensity = group[group["duration_min"] < 5]  # short high-intensity intervals
+        if not high_intensity.empty:
+            trends.append({
+                "segment_type": segment_type,
+                "metric": "high_intensity_watts",
+                "week": week,
+                "value": high_intensity["watts"].mean()
+            })
+
+        # Training Load Efficiency (watts per minute)
+        if (group["duration_min"] > 0).any():
+            trends.append({
+                "segment_type": segment_type,
+                "metric": "load_efficiency",
+                "week": week,
+                "value": (group["watts"] / group["duration_min"]).mean()
+            })
+
     if not trends:
         print("⚠️ No KPI trends calculated from grouped data.")
 
     return trends
-
-
-
- 
