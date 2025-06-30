@@ -11,7 +11,9 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
         if activity_type and activity.get("type") != activity_type:
             continue
 
-        date = parser.parse(activity.get("startDate"))
+        start_date_raw = activity.get("startDate")
+        date = start_date_raw if isinstance(start_date_raw, datetime) else parser.parse(start_date_raw)
+
 
         if start_date and date < parser.parse(start_date):
             continue
