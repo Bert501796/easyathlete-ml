@@ -22,10 +22,10 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
 
         week = date.strftime("%Y-W%U")
         for seg in activity.get("segments", []):
-            if not seg.get("planned_segment"):
+            if not seg.get("planned_segment_analysis"):
                 continue
 
-            ps = seg["planned_segment"]
+            ps = seg["planned_segment_analysis"]
             effort = seg.get("effort", {})
 
             duration_min = (effort.get("duration") or 0) / 60
