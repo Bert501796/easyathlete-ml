@@ -7,6 +7,9 @@ from typing import List, Optional
 
 def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None, end_date: Optional[str] = None, activity_type: Optional[str] = None):
     segment_rows = []
+    total_segments = 0
+    valid_ps_segments = 0
+
     for activity in activities:
         if activity_type and activity.get("type") != activity_type:
             continue
@@ -21,9 +24,12 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
 
         week = date.strftime("%Y-W%U")
         for seg in activity.get("segments", []):
+            total_segments += 1
             ps_list = seg.get("planned_segment_analysis")
             if not ps_list or not isinstance(ps_list, list):
                 continue
+
+            valid_ps_segments += 1
 
             for ps in ps_list:
                 hr_avg = ps.get("avg_hr")
@@ -44,7 +50,8 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
                     "activity_type": activity.get("type")
                 })
 
-    print(f"✅ Processing {len(segment_rows)} segment rows across {len(activities)} activities.")
+    print(f"✅ Processed {len(segment_rows)} segment rows from {len(activities)} activities.")
+    print(f"🔎 Total segments scanned: {total_segments}, with planned_segment_analysis: {valid_ps_segments}")
 
     df = pd.DataFrame(segment_rows)
     if df.empty:
@@ -76,16 +83,15 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
                 "week": week,
                 "value": group["zone_score"].mean()
             })
-        # Segment Completion Delta — placeholder
-        # High-Intensity Improvement — placeholder
-        # Training Load Efficiency — placeholder
 
         # Effort Matching Score — reuse zone_match_score for now
         trends["effort_matching"].append({
             "week": week,
             "value": group["zone_score"].mean()
         })
-
+        # Segment Completion Delta — placeholder
+        # High-Intensity Improvement — placeholder
+        # Training Load Efficiency — placeholder
     if not trends:
         print("⚠️ No KPI trends calculated from grouped data.")
 
