@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<workout_file>
+ <author>Coachbox</author>
+ <name>2025-02-19-zaerobic-builds--43051.zwo</name>
+ <sportType>bike</sportType>
+ <ftpOverride>230</ftpOverride>
+ <workout>
+  <Warmup Duration="600.0" PowerHigh="0.65000" PowerLow="0.45000"></Warmup>
+  <SteadyState Duration="60.0" PowerHigh="0.75000" PowerLow="0.70000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.85000" PowerLow="0.80000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.90000" PowerLow="0.85000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.65000" PowerLow="0.60000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.75000" PowerLow="0.70000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.85000" PowerLow="0.80000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.90000" PowerLow="0.85000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.65000" PowerLow="0.60000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.65000" PowerLow="0.60000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.75000" PowerLow="0.70000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.85000" PowerLow="0.80000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.90000" PowerLow="0.85000"></SteadyState>
+  <SteadyState Duration="60.0" PowerHigh="0.65000" PowerLow="0.60000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.65000" PowerLow="0.60000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.75000" PowerLow="0.70000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.85000" PowerLow="0.80000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.95000" PowerLow="0.90000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.65000" PowerLow="0.60000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.75000" PowerLow="0.70000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.85000" PowerLow="0.80000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.95000" PowerLow="0.90000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.65000" PowerLow="0.60000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.75000" PowerLow="0.70000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.85000" PowerLow="0.80000"></SteadyState>
+  <SteadyState Duration="180.0" PowerHigh="0.95000" PowerLow="0.90000"></SteadyState>
+  <SteadyState Duration="240.0" PowerHigh="0.85000" PowerLow="0.80000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.75000" PowerLow="0.70000"></SteadyState>
+  <SteadyState Duration="240.0" PowerHigh="0.85000" PowerLow="0.80000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.75000" PowerLow="0.70000"></SteadyState>
+  <SteadyState Duration="240.0" PowerHigh="0.85000" PowerLow="0.80000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.75000" PowerLow="0.70000"></SteadyState>
+  <SteadyState Duration="240.0" PowerHigh="0.85000" PowerLow="0.80000"></SteadyState>
+  <SteadyState Duration="120.0" PowerHigh="0.75000" PowerLow="0.70000"></SteadyState>
+  <SteadyState Duration="600.0" PowerHigh="0.55000" PowerLow="0.45000"></SteadyState>
+ </workout>
+</workout_file>
