@@ -9,6 +9,7 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
     segment_rows = []
     total_segments = 0
     valid_ps_segments = 0
+    logged_example = False
 
     for activity in activities:
         if activity_type and activity.get("type") != activity_type:
@@ -25,6 +26,12 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
         week = date.strftime("%Y-W%U")
         for seg in activity.get("segments", []):
             total_segments += 1
+
+            if not logged_example:
+                print("🔎 Example segment keys:", seg.keys())
+                print("🔎 Example segment content:", seg)
+                logged_example = True
+
             ps_list = seg.get("planned_segment_analysis")
             if not ps_list or not isinstance(ps_list, list):
                 continue
