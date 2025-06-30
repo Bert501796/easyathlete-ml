@@ -14,7 +14,6 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
         start_date_raw = activity.get("startDate")
         date = start_date_raw if isinstance(start_date_raw, datetime) else parser.parse(start_date_raw)
 
-
         if start_date and date < parser.parse(start_date):
             continue
         if end_date and date > parser.parse(end_date):
@@ -22,10 +21,10 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
 
         week = date.strftime("%Y-W%U")
         for seg in activity.get("segments", []):
-            if not seg.get("planned_segment_analysis"):
+            ps_list = seg.get("planned_segment_analysis")
+            if not ps_list or not isinstance(ps_list, list):
                 continue
 
-            ps = seg["planned_segment_analysis"]
             effort = seg.get("effort", {})
 
             duration_min = (effort.get("duration") or 0) / 60
@@ -35,16 +34,17 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
             pace = (effort.get("pace", {}).get("avg") or 0)
             zone_score = seg.get("zone_match_score")
 
-            segment_rows.append({
-                "week": week,
-                "hr": hr_avg,
-                "watts": watts_avg,
-                "pace": pace,
-                "distance_km": distance_km,
-                "duration_min": duration_min,
-                "zone_score": zone_score,
-                "activity_type": activity.get("type")
-            })
+            for ps in ps_list:
+                segment_rows.append({
+                    "week": week,
+                    "hr": hr_avg,
+                    "watts": watts_avg,
+                    "pace": pace,
+                    "distance_km": distance_km,
+                    "duration_min": duration_min,
+                    "zone_score": zone_score,
+                    "activity_type": activity.get("type")
+                })
 
     df = pd.DataFrame(segment_rows)
     if df.empty:
