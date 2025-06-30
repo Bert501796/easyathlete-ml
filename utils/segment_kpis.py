@@ -46,11 +46,16 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
                     "activity_type": activity.get("type")
                 })
 
+    print(f"✅ Processing {len(segment_rows)} segment rows across {len(activities)} activities.")
+
     df = pd.DataFrame(segment_rows)
     if df.empty:
-        return {}
+        print("⚠️ No segment rows found after filtering. Returning empty trends.")
+        return {"debug": "no_rows"}
 
     df_by_week = df.groupby("week")
+    print(f"📊 KPI groups by week: {df_by_week.size().to_dict()}")
+
     trends = defaultdict(list)
 
     for week, group in df_by_week:
@@ -86,5 +91,8 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
             "week": week,
             "value": group["zone_score"].mean()
         })
+
+    if not trends:
+        print("⚠️ No KPI trends calculated from grouped data.")
 
     return trends
