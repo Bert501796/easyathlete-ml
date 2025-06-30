@@ -61,6 +61,11 @@ def expand_planned_segments(planned):
 
 # Extract metrics per segment
 def extract_metrics(df, start, end):
+    stream_max = df["time_sec"].max()
+    if start >= stream_max:
+        print(f"⚠️ Segment {start}-{end} is beyond stream range (max {stream_max})")
+        return {"duration": end - start, "segment_data_points": 0}
+
     segment_df = df[(df["time_sec"] >= start) & (df["time_sec"] < end)]
 
     if "speed" in df.columns:
