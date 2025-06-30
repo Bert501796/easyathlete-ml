@@ -8,7 +8,7 @@ from typing import List, Optional
 def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None, end_date: Optional[str] = None, activity_type: Optional[str] = None):
     segment_rows = []
     total_segments = 0
-    valid_ps_segments = 0
+    valid_segments = 0
     logged_example = False
 
     for activity in activities:
@@ -32,33 +32,27 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
                 print("🔎 Example segment content:", seg)
                 logged_example = True
 
-            ps_list = seg.get("planned_segment_analysis")
-            if not ps_list or not isinstance(ps_list, list):
-                continue
+            hr_avg = seg.get("avg_heart_rate")
+            pace = seg.get("avg_speed")  # assumed to be speed in m/min
+            watts_avg = seg.get("avg_watts")
+            duration_min = seg.get("duration_sec", 0) / 60
+            distance_km = seg.get("avg_distance", 0) / 1000
+            zone_score = seg.get("zone_match_score")  # optional
 
-            valid_ps_segments += 1
-
-            for ps in ps_list:
-                hr_avg = ps.get("avg_hr")
-                pace = ps.get("avg_pace")
-                watts_avg = ps.get("avg_watts")
-                duration_min = ps.get("duration", 0) / 60
-                distance_km = ps.get("distance_covered", 0) / 1000
-                zone_score = seg.get("zone_match_score")  # fallback for effort matching
-
-                segment_rows.append({
-                    "week": week,
-                    "hr": hr_avg,
-                    "watts": watts_avg,
-                    "pace": pace,
-                    "distance_km": distance_km,
-                    "duration_min": duration_min,
-                    "zone_score": zone_score,
-                    "activity_type": activity.get("type")
-                })
+            segment_rows.append({
+                "week": week,
+                "hr": hr_avg,
+                "watts": watts_avg,
+                "pace": pace,
+                "distance_km": distance_km,
+                "duration_min": duration_min,
+                "zone_score": zone_score,
+                "activity_type": activity.get("type")
+            })
+            valid_segments += 1
 
     print(f"✅ Processed {len(segment_rows)} segment rows from {len(activities)} activities.")
-    print(f"🔎 Total segments scanned: {total_segments}, with planned_segment_analysis: {valid_ps_segments}")
+    print(f"🔎 Total segments scanned: {total_segments}, valid segments used: {valid_segments}")
 
     df = pd.DataFrame(segment_rows)
     if df.empty:
