@@ -1,3 +1,5 @@
+#Script used to parse an example fit file. 
+
 # from fitparse import FitFile
 
 # fit = FitFile("fit_data/VirtualRide/2024-08-03-09-52-58.fit")

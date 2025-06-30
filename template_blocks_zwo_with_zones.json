@@ -287,7 +287,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 103\u2013120% FTP",
-        "zone": "V",
+        "zone": "VO2",
         "watts": []
       },
       {
@@ -351,7 +351,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -362,7 +362,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -373,7 +373,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -393,7 +393,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -404,7 +404,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -415,7 +415,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -435,7 +435,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -446,7 +446,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -457,7 +457,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 78\u201392% FTP",
-        "zone": "",
+        "zone": "ID",
         "watts": []
       },
       {
@@ -468,7 +468,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -479,7 +479,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -499,7 +499,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -510,7 +510,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -521,7 +521,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -532,7 +532,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -543,7 +543,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -554,7 +554,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -565,7 +565,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -576,7 +576,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -587,7 +587,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -598,7 +598,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -609,7 +609,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -620,7 +620,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -640,7 +640,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -651,7 +651,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -662,7 +662,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -673,7 +673,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -684,7 +684,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -695,7 +695,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -706,7 +706,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -717,7 +717,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -728,7 +728,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -739,7 +739,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -750,7 +750,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -761,7 +761,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -781,7 +781,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -792,7 +792,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -803,7 +803,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -814,7 +814,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -825,7 +825,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -836,7 +836,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -847,7 +847,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -858,7 +858,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -869,7 +869,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -880,7 +880,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -891,7 +891,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -902,7 +902,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -922,7 +922,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -933,7 +933,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 78\u201392% FTP",
-        "zone": "",
+        "zone": "ID",
         "watts": []
       },
       {
@@ -944,7 +944,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -955,7 +955,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 78\u201392% FTP",
-        "zone": "",
+        "zone": "ID",
         "watts": []
       },
       {
@@ -966,7 +966,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -977,7 +977,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 78\u201392% FTP",
-        "zone": "",
+        "zone": "ID",
         "watts": []
       },
       {
@@ -988,7 +988,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -999,7 +999,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 78\u201392% FTP",
-        "zone": "",
+        "zone": "ID",
         "watts": []
       },
       {
@@ -1010,7 +1010,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -1021,7 +1021,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -1041,7 +1041,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1052,7 +1052,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -1063,7 +1063,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1074,7 +1074,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1085,7 +1085,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1096,7 +1096,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1107,7 +1107,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1118,7 +1118,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1129,7 +1129,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1140,7 +1140,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1151,7 +1151,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1162,7 +1162,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -1182,7 +1182,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -1193,7 +1193,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -1204,7 +1204,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 78\u201392% FTP",
-        "zone": "",
+        "zone": "ID",
         "watts": []
       },
       {
@@ -1215,7 +1215,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -1226,7 +1226,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -1246,7 +1246,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -1257,7 +1257,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 78\u201392% FTP",
-        "zone": "",
+        "zone": "ID",
         "watts": []
       },
       {
@@ -1268,7 +1268,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1279,7 +1279,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 78\u201392% FTP",
-        "zone": "",
+        "zone": "ID",
         "watts": []
       },
       {
@@ -1290,7 +1290,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1301,7 +1301,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -1321,7 +1321,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1332,7 +1332,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -1343,7 +1343,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1354,7 +1354,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1365,7 +1365,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1376,7 +1376,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1387,7 +1387,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1398,7 +1398,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1409,7 +1409,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -1420,7 +1420,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -1440,7 +1440,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1451,7 +1451,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -1462,7 +1462,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -1482,7 +1482,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -1493,7 +1493,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -1504,7 +1504,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1515,7 +1515,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1526,7 +1526,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1537,7 +1537,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1548,7 +1548,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1559,7 +1559,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1570,7 +1570,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1581,7 +1581,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1592,7 +1592,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -1603,7 +1603,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -1623,7 +1623,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -1634,7 +1634,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -1645,7 +1645,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1656,7 +1656,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -1667,7 +1667,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1678,7 +1678,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -1689,7 +1689,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1700,7 +1700,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -1711,7 +1711,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013103% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1722,7 +1722,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -1733,7 +1733,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -1744,7 +1744,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -1764,7 +1764,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       },
       {
@@ -1775,7 +1775,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 65\u201378% FTP",
-        "zone": "",
+        "zone": "ED-2",
         "watts": []
       },
       {
@@ -1786,7 +1786,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 55\u201365% FTP",
-        "zone": "",
+        "zone": "ED-1",
         "watts": []
       }
     ]
@@ -1806,7 +1806,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 0\u201355% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -1826,7 +1826,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1837,7 +1837,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -1848,7 +1848,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1859,7 +1859,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1870,7 +1870,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1881,7 +1881,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1892,7 +1892,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -1903,7 +1903,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1914,7 +1914,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -1925,7 +1925,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -1945,7 +1945,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1956,7 +1956,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -1967,7 +1967,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -1987,7 +1987,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -1998,7 +1998,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -2009,7 +2009,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -2029,7 +2029,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2040,7 +2040,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -2051,7 +2051,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2062,7 +2062,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2073,7 +2073,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2084,7 +2084,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2095,7 +2095,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2106,7 +2106,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2117,7 +2117,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2128,7 +2128,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2139,7 +2139,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2150,7 +2150,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -2170,7 +2170,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2181,7 +2181,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -2192,7 +2192,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -2212,7 +2212,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2223,7 +2223,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -2234,7 +2234,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -2254,7 +2254,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2265,7 +2265,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -2276,7 +2276,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2287,7 +2287,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2298,7 +2298,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2309,7 +2309,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2320,7 +2320,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2331,7 +2331,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2342,7 +2342,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2353,7 +2353,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2364,7 +2364,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2375,7 +2375,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -2395,7 +2395,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2406,7 +2406,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -2417,7 +2417,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2428,7 +2428,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2439,7 +2439,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2450,7 +2450,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2461,7 +2461,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2472,7 +2472,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2483,7 +2483,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -2494,7 +2494,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -2514,7 +2514,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2525,7 +2525,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -2536,7 +2536,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -2556,7 +2556,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2567,7 +2567,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -2578,7 +2578,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -2598,7 +2598,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2609,7 +2609,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2620,7 +2620,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2631,7 +2631,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2642,7 +2642,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2653,7 +2653,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2664,7 +2664,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2675,7 +2675,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -2695,7 +2695,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2706,7 +2706,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -2717,7 +2717,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2728,7 +2728,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2739,7 +2739,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2750,7 +2750,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2761,7 +2761,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2772,7 +2772,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2783,7 +2783,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -2794,7 +2794,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2805,7 +2805,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -2816,7 +2816,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -2836,7 +2836,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2847,7 +2847,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -2858,7 +2858,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -2869,7 +2869,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2880,7 +2880,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -2891,7 +2891,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2902,7 +2902,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -2913,7 +2913,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2924,7 +2924,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -2935,7 +2935,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2946,7 +2946,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -2957,7 +2957,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2968,7 +2968,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -2979,7 +2979,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -2990,7 +2990,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -3001,7 +3001,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3012,7 +3012,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -3023,7 +3023,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3034,7 +3034,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -3054,7 +3054,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3065,7 +3065,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3076,7 +3076,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -3096,7 +3096,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3107,7 +3107,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3118,7 +3118,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -3138,7 +3138,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       }
     ]
@@ -3158,7 +3158,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3169,7 +3169,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3180,7 +3180,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -3200,7 +3200,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -3220,7 +3220,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3231,7 +3231,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3242,7 +3242,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -3253,7 +3253,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3264,7 +3264,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -3275,7 +3275,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3286,7 +3286,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -3297,7 +3297,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3308,7 +3308,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -3319,7 +3319,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3330,7 +3330,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3341,7 +3341,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -3361,7 +3361,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3372,7 +3372,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3383,7 +3383,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -3403,7 +3403,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3414,7 +3414,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3425,7 +3425,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -3445,7 +3445,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3456,7 +3456,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3467,7 +3467,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -3487,7 +3487,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3498,7 +3498,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3509,7 +3509,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -3529,7 +3529,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3540,7 +3540,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -3551,7 +3551,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3562,7 +3562,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -3573,7 +3573,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3584,7 +3584,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -3595,7 +3595,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3606,7 +3606,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -3617,7 +3617,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3628,7 +3628,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -3639,7 +3639,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3650,7 +3650,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -3661,7 +3661,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3672,7 +3672,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -3683,7 +3683,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3694,7 +3694,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -3705,7 +3705,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3716,7 +3716,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       }
     ]
@@ -3736,7 +3736,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3747,7 +3747,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -3758,7 +3758,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3769,7 +3769,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -3780,7 +3780,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3791,7 +3791,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -3802,7 +3802,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3813,7 +3813,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -3824,7 +3824,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3835,7 +3835,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -3846,7 +3846,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3857,7 +3857,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       }
     ]
@@ -3877,7 +3877,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3888,7 +3888,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3899,7 +3899,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -3919,7 +3919,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3930,7 +3930,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3941,7 +3941,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -3961,7 +3961,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -3972,7 +3972,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -3983,7 +3983,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -4003,7 +4003,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4014,7 +4014,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4025,7 +4025,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       }
     ]
@@ -4045,7 +4045,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4056,7 +4056,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4067,7 +4067,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4078,7 +4078,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4089,7 +4089,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4100,7 +4100,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4111,7 +4111,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4122,7 +4122,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4133,7 +4133,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4144,7 +4144,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4155,7 +4155,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4166,7 +4166,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4177,7 +4177,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4188,7 +4188,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4199,7 +4199,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4210,7 +4210,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4221,7 +4221,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4232,7 +4232,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4243,7 +4243,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4254,7 +4254,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4265,7 +4265,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4276,7 +4276,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4287,7 +4287,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4298,7 +4298,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4309,7 +4309,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4320,7 +4320,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4331,7 +4331,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4342,7 +4342,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -4362,7 +4362,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4373,7 +4373,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4384,7 +4384,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -4395,7 +4395,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4406,7 +4406,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -4426,7 +4426,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4437,7 +4437,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4448,7 +4448,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4459,7 +4459,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4470,7 +4470,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4481,7 +4481,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4492,7 +4492,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4503,7 +4503,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4514,7 +4514,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4525,7 +4525,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -4545,7 +4545,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4556,7 +4556,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4567,7 +4567,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -4587,7 +4587,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4598,7 +4598,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4609,7 +4609,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -4620,7 +4620,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4631,7 +4631,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -4642,7 +4642,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4653,7 +4653,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -4664,7 +4664,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4675,7 +4675,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -4686,7 +4686,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4697,7 +4697,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4708,7 +4708,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -4728,7 +4728,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4739,7 +4739,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4750,7 +4750,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4761,7 +4761,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4772,7 +4772,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4783,7 +4783,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4794,7 +4794,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4805,7 +4805,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4816,7 +4816,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4827,7 +4827,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4838,7 +4838,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4849,7 +4849,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4860,7 +4860,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4871,7 +4871,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4882,7 +4882,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4893,7 +4893,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4904,7 +4904,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4915,7 +4915,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4926,7 +4926,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4937,7 +4937,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -4957,7 +4957,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -4968,7 +4968,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -4979,7 +4979,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -4990,7 +4990,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5001,7 +5001,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -5012,7 +5012,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5023,7 +5023,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 145\u2013177% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -5034,7 +5034,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5045,7 +5045,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5056,7 +5056,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -5076,7 +5076,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5087,7 +5087,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5098,7 +5098,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5109,7 +5109,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5120,7 +5120,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5131,7 +5131,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5142,7 +5142,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5153,7 +5153,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5164,7 +5164,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5175,7 +5175,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5186,7 +5186,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5197,7 +5197,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -5217,7 +5217,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5228,7 +5228,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 64\u201375% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5239,7 +5239,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 41\u201352% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -5259,7 +5259,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5270,7 +5270,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 76\u201380% FTP",
-        "zone": "",
+        "zone": "ZONE_2",
         "watts": []
       },
       {
@@ -5281,7 +5281,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -5292,7 +5292,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -5312,7 +5312,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5323,7 +5323,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5334,7 +5334,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5345,7 +5345,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5356,7 +5356,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5367,7 +5367,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5378,7 +5378,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5389,7 +5389,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5400,7 +5400,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5411,7 +5411,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5422,7 +5422,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5433,7 +5433,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5444,7 +5444,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5455,7 +5455,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -5466,7 +5466,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5477,7 +5477,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -5488,7 +5488,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5499,7 +5499,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -5510,7 +5510,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5521,7 +5521,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -5532,7 +5532,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5543,7 +5543,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -5563,7 +5563,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5574,7 +5574,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -5585,7 +5585,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       },
       {
@@ -5596,7 +5596,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5607,7 +5607,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       },
       {
@@ -5618,7 +5618,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5629,7 +5629,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       },
       {
@@ -5640,7 +5640,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5651,7 +5651,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       },
       {
@@ -5662,7 +5662,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5673,7 +5673,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -5684,7 +5684,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -5704,7 +5704,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5715,7 +5715,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5726,7 +5726,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -5746,7 +5746,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5757,7 +5757,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5768,7 +5768,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5779,7 +5779,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5790,7 +5790,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5801,7 +5801,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5812,7 +5812,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5823,7 +5823,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5834,7 +5834,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -5845,7 +5845,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5856,7 +5856,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5867,7 +5867,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -5887,7 +5887,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5898,7 +5898,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5909,7 +5909,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -5929,7 +5929,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -5940,7 +5940,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5951,7 +5951,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -5962,7 +5962,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -5973,7 +5973,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -5993,7 +5993,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6004,7 +6004,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -6015,7 +6015,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6026,7 +6026,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -6037,7 +6037,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6048,7 +6048,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -6059,7 +6059,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6070,7 +6070,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -6081,7 +6081,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6092,7 +6092,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -6103,7 +6103,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6114,7 +6114,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -6134,7 +6134,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6145,7 +6145,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6156,7 +6156,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -6176,7 +6176,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6187,7 +6187,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6198,7 +6198,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -6209,7 +6209,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6220,7 +6220,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -6240,7 +6240,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6251,7 +6251,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6262,7 +6262,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -6273,7 +6273,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6284,7 +6284,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -6295,7 +6295,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6306,7 +6306,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -6317,7 +6317,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6328,7 +6328,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -6339,7 +6339,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6350,7 +6350,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6361,7 +6361,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -6381,7 +6381,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6392,7 +6392,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6403,7 +6403,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6414,7 +6414,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6425,7 +6425,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6436,7 +6436,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6447,7 +6447,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6458,7 +6458,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6469,7 +6469,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6480,7 +6480,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -6500,7 +6500,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6511,7 +6511,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6522,7 +6522,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -6542,7 +6542,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6553,7 +6553,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6564,7 +6564,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -6575,7 +6575,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6586,7 +6586,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -6597,7 +6597,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6608,7 +6608,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -6619,7 +6619,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6630,7 +6630,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -6641,7 +6641,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6652,7 +6652,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6663,7 +6663,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -6683,7 +6683,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6694,7 +6694,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6705,7 +6705,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -6725,7 +6725,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6736,7 +6736,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6747,7 +6747,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -6767,7 +6767,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6778,7 +6778,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6789,7 +6789,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -6800,7 +6800,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -6811,7 +6811,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -6831,7 +6831,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6842,7 +6842,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       },
       {
@@ -6853,7 +6853,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 76\u201380% FTP",
-        "zone": "",
+        "zone": "ZONE_2",
         "watts": []
       },
       {
@@ -6864,7 +6864,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       },
       {
@@ -6875,7 +6875,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 76\u201380% FTP",
-        "zone": "",
+        "zone": "ZONE_2",
         "watts": []
       },
       {
@@ -6886,7 +6886,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       },
       {
@@ -6897,7 +6897,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 76\u201380% FTP",
-        "zone": "",
+        "zone": "ZONE_2",
         "watts": []
       },
       {
@@ -6908,7 +6908,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       },
       {
@@ -6919,7 +6919,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 76\u201380% FTP",
-        "zone": "",
+        "zone": "ZONE_2",
         "watts": []
       },
       {
@@ -6930,7 +6930,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       },
       {
@@ -6941,7 +6941,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 76\u201380% FTP",
-        "zone": "",
+        "zone": "ZONE_2",
         "watts": []
       },
       {
@@ -6952,7 +6952,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -6972,7 +6972,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -6983,7 +6983,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       },
       {
@@ -6994,7 +6994,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7005,7 +7005,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7016,7 +7016,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7027,7 +7027,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7038,7 +7038,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7049,7 +7049,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7060,7 +7060,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7071,7 +7071,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7082,7 +7082,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7093,7 +7093,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7104,7 +7104,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7115,7 +7115,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7126,7 +7126,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7137,7 +7137,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7148,7 +7148,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7159,7 +7159,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7170,7 +7170,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -7190,7 +7190,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       }
     ]
@@ -7210,7 +7210,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7221,7 +7221,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7232,7 +7232,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7243,7 +7243,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7254,7 +7254,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7265,7 +7265,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7276,7 +7276,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7287,7 +7287,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7298,7 +7298,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7309,7 +7309,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7320,7 +7320,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7331,7 +7331,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -7351,7 +7351,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7362,7 +7362,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7373,7 +7373,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7384,7 +7384,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7395,7 +7395,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7406,7 +7406,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7417,7 +7417,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7428,7 +7428,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -7448,7 +7448,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7459,7 +7459,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7470,7 +7470,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -7490,7 +7490,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7501,7 +7501,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7512,7 +7512,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       }
     ]
@@ -7532,7 +7532,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7543,7 +7543,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7554,7 +7554,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -7574,7 +7574,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7585,7 +7585,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7596,7 +7596,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -7607,7 +7607,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7618,7 +7618,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -7638,7 +7638,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       }
     ]
@@ -7658,7 +7658,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7669,7 +7669,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7680,7 +7680,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7691,7 +7691,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7702,7 +7702,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7713,7 +7713,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7724,7 +7724,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7735,7 +7735,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7746,7 +7746,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7757,7 +7757,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7768,7 +7768,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201370% FTP",
-        "zone": "",
+        "zone": "FATMAX",
         "watts": []
       },
       {
@@ -7779,7 +7779,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -7799,7 +7799,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7810,7 +7810,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7821,7 +7821,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       },
       {
@@ -7832,7 +7832,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7843,7 +7843,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -7863,7 +7863,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7874,7 +7874,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -7885,7 +7885,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7896,7 +7896,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7907,7 +7907,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7918,7 +7918,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7929,7 +7929,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7940,7 +7940,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7951,7 +7951,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -7962,7 +7962,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7973,7 +7973,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -7984,7 +7984,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -8004,7 +8004,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8015,7 +8015,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8026,7 +8026,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8037,7 +8037,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8048,7 +8048,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8059,7 +8059,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8070,7 +8070,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8081,7 +8081,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8092,7 +8092,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8103,7 +8103,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8114,7 +8114,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8125,7 +8125,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -8145,7 +8145,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8156,7 +8156,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8167,7 +8167,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8178,7 +8178,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8189,7 +8189,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8200,7 +8200,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8211,7 +8211,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8222,7 +8222,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8233,7 +8233,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8244,7 +8244,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8255,7 +8255,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8266,7 +8266,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8277,7 +8277,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8288,7 +8288,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8299,7 +8299,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8310,7 +8310,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8321,7 +8321,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8332,7 +8332,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8343,7 +8343,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -8363,7 +8363,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       }
     ]
@@ -8383,7 +8383,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8394,7 +8394,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8405,7 +8405,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8416,7 +8416,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8427,7 +8427,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8438,7 +8438,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8449,7 +8449,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8460,7 +8460,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8471,7 +8471,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8482,7 +8482,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8493,7 +8493,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 76\u201380% FTP",
-        "zone": "",
+        "zone": "ZONE_2",
         "watts": []
       },
       {
@@ -8504,7 +8504,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -8524,7 +8524,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8535,7 +8535,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8546,7 +8546,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -8566,7 +8566,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8577,7 +8577,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8588,7 +8588,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 80\u201390% FTP",
-        "zone": "",
+        "zone": "MEDIO",
         "watts": []
       }
     ]
@@ -8608,7 +8608,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8619,7 +8619,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8630,7 +8630,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8641,7 +8641,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8652,7 +8652,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8663,7 +8663,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8674,7 +8674,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 93\u2013107% FTP",
-        "zone": "",
+        "zone": "ANT",
         "watts": []
       },
       {
@@ -8685,7 +8685,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8696,7 +8696,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8707,7 +8707,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]
@@ -8727,7 +8727,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8738,7 +8738,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 61\u201371% FTP",
-        "zone": "",
+        "zone": "BASE",
         "watts": []
       },
       {
@@ -8749,7 +8749,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 142\u2013172% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -8760,7 +8760,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8771,7 +8771,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 142\u2013172% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -8782,7 +8782,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8793,7 +8793,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 142\u2013172% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -8804,7 +8804,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8815,7 +8815,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 142\u2013172% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -8826,7 +8826,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8837,7 +8837,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 142\u2013172% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -8848,7 +8848,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8859,7 +8859,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 142\u2013172% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -8870,7 +8870,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8881,7 +8881,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 142\u2013172% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -8892,7 +8892,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8903,7 +8903,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 142\u2013172% FTP",
-        "zone": "",
+        "zone": "HIGHANA",
         "watts": []
       },
       {
@@ -8914,7 +8914,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       },
       {
@@ -8925,7 +8925,7 @@
         "power": null,
         "cadence": null,
         "notes": "@ 39\u201350% FTP",
-        "zone": "",
+        "zone": "REC",
         "watts": []
       }
     ]

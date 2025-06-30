@@ -1,3 +1,5 @@
+#script to analyze a fit file to check if ftp level is stored
+
 import json
 from fitparse import FitFile
 from pathlib import Path

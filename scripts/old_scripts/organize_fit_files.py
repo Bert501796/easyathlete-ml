@@ -1,3 +1,5 @@
+#Script used to sort different fit files in different folders
+
 import os
 from pathlib import Path
 from fitparse import FitFile

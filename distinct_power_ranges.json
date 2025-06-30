@@ -1,0 +1,217 @@
+[
+  {
+    "powerLow": 0.0,
+    "powerHigh": 0.54688,
+    "zone": "REC"
+  },
+  {
+    "powerLow": 0.38696,
+    "powerHigh": 0.49565,
+    "zone": "REC"
+  },
+  {
+    "powerLow": 0.4,
+    "powerHigh": 0.65,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.41081,
+    "powerHigh": 0.52432,
+    "zone": "REC"
+  },
+  {
+    "powerLow": 0.45,
+    "powerHigh": 0.55,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.45,
+    "powerHigh": 0.6,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.45,
+    "powerHigh": 0.65,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.48,
+    "powerHigh": 0.5,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.5,
+    "powerHigh": 0.55,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.5,
+    "powerHigh": 0.7,
+    "zone": "BASE"
+  },
+  {
+    "powerLow": 0.55,
+    "powerHigh": 0.6,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.55208,
+    "powerHigh": 0.64583,
+    "zone": "ED-1"
+  },
+  {
+    "powerLow": 0.58,
+    "powerHigh": 0.62,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.6,
+    "powerHigh": 0.65,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.6087,
+    "powerHigh": 0.7,
+    "zone": "FATMAX"
+  },
+  {
+    "powerLow": 0.6087,
+    "powerHigh": 0.7087,
+    "zone": "BASE"
+  },
+  {
+    "powerLow": 0.63,
+    "powerHigh": 0.67,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.63784,
+    "powerHigh": 0.74595,
+    "zone": "BASE"
+  },
+  {
+    "powerLow": 0.65104,
+    "powerHigh": 0.77604,
+    "zone": "ED-2"
+  },
+  {
+    "powerLow": 0.7,
+    "powerHigh": 0.75,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.75652,
+    "powerHigh": 0.8,
+    "zone": "ZONE_2"
+  },
+  {
+    "powerLow": 0.78,
+    "powerHigh": 0.82,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.78125,
+    "powerHigh": 0.92188,
+    "zone": "ID"
+  },
+  {
+    "powerLow": 0.8,
+    "powerHigh": 0.85,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.8,
+    "powerHigh": 0.8973,
+    "zone": "MEDIO"
+  },
+  {
+    "powerLow": 0.8,
+    "powerHigh": 0.9,
+    "zone": "MEDIO"
+  },
+  {
+    "powerLow": 0.85,
+    "powerHigh": 0.9,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.88,
+    "powerHigh": 0.92,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.9,
+    "powerHigh": 0.95,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.92,
+    "powerHigh": 0.96,
+    "zone": ""
+  },
+  {
+    "powerLow": 0.92708,
+    "powerHigh": 1.02604,
+    "zone": "ANT"
+  },
+  {
+    "powerLow": 0.92973,
+    "powerHigh": 1.07027,
+    "zone": "ANT"
+  },
+  {
+    "powerLow": 0.93043,
+    "powerHigh": 1.07391,
+    "zone": "ANT"
+  },
+  {
+    "powerLow": 0.98,
+    "powerHigh": 1.02,
+    "zone": ""
+  },
+  {
+    "powerLow": 1.03,
+    "powerHigh": 1.07,
+    "zone": ""
+  },
+  {
+    "powerLow": 1.03125,
+    "powerHigh": 1.19792,
+    "zone": "VO2"
+  },
+  {
+    "powerLow": 1.08,
+    "powerHigh": 1.12,
+    "zone": ""
+  },
+  {
+    "powerLow": 1.37838,
+    "powerHigh": 1.52432,
+    "zone": ""
+  },
+  {
+    "powerLow": 1.4,
+    "powerHigh": 1.6,
+    "zone": ""
+  },
+  {
+    "powerLow": 1.42174,
+    "powerHigh": 1.72174,
+    "zone": "HIGHANA"
+  },
+  {
+    "powerLow": 1.44865,
+    "powerHigh": 1.77297,
+    "zone": "HIGHANA"
+  },
+  {
+    "powerLow": 1.5,
+    "powerHigh": 1.75,
+    "zone": ""
+  },
+  {
+  "powerLow": null,
+  "powerHigh": null,
+  "zone": "REST"
+}
+]

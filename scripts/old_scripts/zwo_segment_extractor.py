@@ -1,3 +1,5 @@
+#script used to extract and match zwo activities and stravaId. Export in template_blocks_zwo.json
+
 import os
 import sys
 import argparse
