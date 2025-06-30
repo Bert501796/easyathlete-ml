@@ -25,16 +25,14 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
             if not ps_list or not isinstance(ps_list, list):
                 continue
 
-            effort = seg.get("effort", {})
-
-            duration_min = (effort.get("duration") or 0) / 60
-            distance_km = (effort.get("distance") or 0) / 1000
-            hr_avg = effort.get("hr", {}).get("avg")
-            watts_avg = effort.get("watts", {}).get("avg")
-            pace = (effort.get("pace", {}).get("avg") or 0)
-            zone_score = seg.get("zone_match_score")
-
             for ps in ps_list:
+                hr_avg = ps.get("avg_hr")
+                pace = ps.get("avg_pace")
+                watts_avg = ps.get("avg_watts")
+                duration_min = ps.get("duration", 0) / 60
+                distance_km = ps.get("distance_covered", 0) / 1000
+                zone_score = seg.get("zone_match_score")  # fallback for effort matching
+
                 segment_rows.append({
                     "week": week,
                     "hr": hr_avg,
@@ -72,18 +70,14 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
             "value": group["pace"].std()
         })
 
-        # Recovery Slope — not applicable here yet
-
         # Zone Compliance
         if (group["zone_score"] > 0).any():
             trends["zone_compliance"].append({
                 "week": week,
                 "value": group["zone_score"].mean()
             })
-
         # Segment Completion Delta — placeholder
         # High-Intensity Improvement — placeholder
-
         # Training Load Efficiency — placeholder
 
         # Effort Matching Score — reuse zone_match_score for now
@@ -96,3 +90,7 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
         print("⚠️ No KPI trends calculated from grouped data.")
 
     return trends
+
+
+
+ 
