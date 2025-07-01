@@ -51,4 +51,6 @@ async def analyze_trends(request: TrendAnalysisRequest):
         end_date=request.end_date,
         activity_type=request.activity_type
     )
+
+    # ✅ FINAL FIX: align with frontend expectation
     return {"version": "v1", "data": clean_nan_values(trends)}
