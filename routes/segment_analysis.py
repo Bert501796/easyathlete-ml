@@ -51,4 +51,4 @@ async def analyze_trends(request: TrendAnalysisRequest):
         end_date=request.end_date,
         activity_type=request.activity_type
     )
-    return {"user_id": request.user_id, "trends": clean_nan_values(trends)}
+    return {"version": "v1", "data": clean_nan_values(trends)}
