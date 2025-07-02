@@ -5,7 +5,6 @@ from dateutil import parser
 import numpy as np
 from typing import List, Optional
 
-
 def calculate_pace_consistency(paces: List[float]) -> Optional[float]:
     if not paces or len(paces) < 2:
         return None
@@ -13,7 +12,6 @@ def calculate_pace_consistency(paces: List[float]) -> Optional[float]:
     if len(paces) < 2:
         return None
     return 1 - (np.std(paces) / np.mean(paces))  # normalized consistency score
-
 
 def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optional[str] = None, end_date: Optional[str] = None, activity_type: Optional[str] = None):
 
@@ -126,31 +124,30 @@ def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optiona
 
         for metric, value in metrics.items():
             all_trends.append({
-                "segment_type": "all",
                 "metric": metric,
                 "week": week,
                 "date": rep_date,
                 "value": value,
                 "sessions": session_map[week]
             })
-            metric_values[("all", metric)].append((week, value))
+            metric_values[metric].append((week, value))
 
     # Segment count
     segment_counts = df.groupby("week").size().reset_index(name='count')
     for _, row in segment_counts.iterrows():
+        rep_date = sorted([s["date"] for s in session_map[row["week"]]])[-1]
         all_trends.append({
-            "segment_type": "all",
             "metric": "segment_frequency",
             "week": row["week"],
             "date": rep_date,
             "value": row["count"],
             "sessions": session_map[row["week"]]
         })
-        metric_values[("all", "segment_frequency")].append((row["week"], row["count"]))
+        metric_values["segment_frequency"].append((row["week"], row["count"]))
 
     # Normalize
     normalized_trends = []
-    for (segment_type, metric), week_values in metric_values.items():
+    for metric, week_values in metric_values.items():
         filtered = [(week, v) for week, v in week_values if v is not None]
         if not filtered:
             continue  # skip this metric if all values are None
@@ -167,7 +164,6 @@ def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optiona
         for week, norm in zip(weeks, norm_values):
             rep_date = sorted([s["date"] for s in session_map[week]])[-1]
             normalized_trends.append({
-                "segment_type": "all",
                 "metric": metric + "_norm",
                 "week": week,
                 "date": rep_date,
@@ -186,15 +182,13 @@ def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optiona
     for row in normalized_trends:
         metric = row["metric"]
         if metric in weights:
-            fitness_index[(row["segment_type"], row["week"])]["sum"] += row["value"] * weights[metric]
-            fitness_index[(row["segment_type"], row["week"])]["weight"] += weights[metric]
+            fitness_index[row["week"]]["sum"] += row["value"] * weights[metric]
+            fitness_index[row["week"]]["weight"] += weights[metric]
 
-
-    for (segment_type, week), val in fitness_index.items():
+    for week, val in fitness_index.items():
         score = val["sum"] / val["weight"]
         rep_date = sorted([s["date"] for s in session_map[week]])[-1]
         normalized_trends.append({
-            "segment_type": segment_type,
             "metric": "fitness_index",
             "week": week,
             "date": rep_date,
