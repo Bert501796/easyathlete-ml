@@ -5,6 +5,15 @@ from dateutil import parser
 import numpy as np
 from typing import List, Optional
 
+def calculate_pace_consistency(paces: List[float]) -> Optional[float]:
+    if not paces or len(paces) < 2:
+        return None
+    paces = [p for p in paces if p > 0]  # remove invalid values
+    if len(paces) < 2:
+        return None
+    return 1 - (np.std(paces) / np.mean(paces))  # normalized consistency score
+
+
 def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optional[str] = None, end_date: Optional[str] = None, activity_type: Optional[str] = None):
 
     segment_rows = []
@@ -89,7 +98,7 @@ def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optiona
             hr_eff = (group["hr"] / group["distance_km"]).mean()
             metrics["hr_efficiency"] = hr_eff
 
-        metrics["pace_consistency"] = group["pace"].std()
+        metrics["pace_consistency"] = calculate_pace_consistency(group["pace"].dropna().tolist())
 
         if (group["zone_score"] > 0).any():
             metrics["zone_compliance"] = group["zone_score"].mean()
