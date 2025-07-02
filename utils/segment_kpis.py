@@ -4,6 +4,7 @@ from datetime import datetime
 from dateutil import parser
 import numpy as np
 from typing import List, Optional
+#added
 
 def calculate_pace_consistency(paces: List[float]) -> Optional[float]:
     if not paces or len(paces) < 2:
