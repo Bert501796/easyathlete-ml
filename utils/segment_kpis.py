@@ -5,9 +5,10 @@ from dateutil import parser
 import numpy as np
 from typing import List, Optional
 
+def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optional[str] = None, end_date: Optional[str] = None, activity_type: Optional[str] = None):
 
-def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None, end_date: Optional[str] = None, activity_type: Optional[str] = None):
     segment_rows = []
+    session_map = defaultdict(list)
     total_segments = 0
     valid_segments = 0
     logged_example = False
@@ -27,6 +28,14 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
         week = date.strftime("%Y-W%U")
         activity_id = activity.get("stravaId") or activity.get("_id")
 
+        # Store metadata for plotting
+        session_map[week].append({
+            "activity_id": activity_id,
+            "activity_type": activity.get("type"),
+            "activity_name": activity.get("name"),
+            "date": date.isoformat(),
+        })
+
         for seg in activity.get("segments", []):
             total_segments += 1
 
@@ -41,8 +50,6 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
             duration_min = seg.get("duration_sec", 0) / 60
             distance_km = seg.get("avg_distance", 0) / 1000
             zone_score = seg.get("zone_match_score")
-            start_index = seg.get("start_index")
-            end_index = seg.get("end_index")
             hr_recovery = seg.get("hr_recovery_60s")
             hr_drift = seg.get("hr_drift_ratio")
 
@@ -56,8 +63,6 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
                 "zone_score": zone_score,
                 "activity_type": activity.get("type"),
                 "activity_id": activity_id,
-                "start_index": start_index,
-                "end_index": end_index,
                 "hr_recovery_60s": hr_recovery,
                 "hr_drift_ratio": hr_drift,
             })
@@ -69,7 +74,7 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
     df = pd.DataFrame(segment_rows)
     if df.empty:
         print("⚠️ No segment rows found after filtering. Returning empty trends.")
-        return {"debug": "no_rows"}
+        return []
 
     df_by_week = df.groupby("week")
     print(f"📊 KPI groups by week: {df_by_week.size().to_dict()}")
@@ -110,20 +115,24 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
                 "segment_type": "all",
                 "metric": metric,
                 "week": week,
-                "value": value
+                "value": value,
+                "sessions": session_map[week]
             })
             metric_values[("all", metric)].append((week, value))
 
+    # Segment count
     segment_counts = df.groupby("week").size().reset_index(name='count')
     for _, row in segment_counts.iterrows():
         all_trends.append({
             "segment_type": "all",
             "metric": "segment_frequency",
             "week": row["week"],
-            "value": row["count"]
+            "value": row["count"],
+            "sessions": session_map[row["week"]]
         })
         metric_values[("all", "segment_frequency")].append((row["week"], row["count"]))
 
+    # Normalize
     normalized_trends = []
     for (segment_type, metric), week_values in metric_values.items():
         values = np.array([v for _, v in week_values])
@@ -138,9 +147,11 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
                 "segment_type": "all",
                 "metric": metric + "_norm",
                 "week": week,
-                "value": norm
+                "value": norm,
+                "sessions": session_map[week]
             })
 
+    # Fitness index (composite)
     fitness_index = defaultdict(lambda: defaultdict(float))
     weights = {
         "hr_efficiency_norm": 0.4,
@@ -160,7 +171,8 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
             "segment_type": segment_type,
             "metric": "fitness_index",
             "week": week,
-            "value": score
+            "value": score,
+            "sessions": session_map[week]
         })
 
     return normalized_trends
