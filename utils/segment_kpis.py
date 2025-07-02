@@ -41,7 +41,6 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
             duration_min = seg.get("duration_sec", 0) / 60
             distance_km = seg.get("avg_distance", 0) / 1000
             zone_score = seg.get("zone_match_score")
-            segment_type = seg.get("type") or "unknown"
             start_index = seg.get("start_index")
             end_index = seg.get("end_index")
             hr_recovery = seg.get("hr_recovery_60s")
@@ -49,7 +48,6 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
 
             segment_rows.append({
                 "week": week,
-                "segment_type": segment_type,
                 "hr": hr_avg,
                 "watts": watts_avg,
                 "pace": pace,
@@ -73,15 +71,13 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
         print("⚠️ No segment rows found after filtering. Returning empty trends.")
         return {"debug": "no_rows"}
 
-    df_by_type_week = df.groupby(["segment_type", "week"])
-    print(f"📊 KPI groups by segment type and week: {df_by_type_week.size().to_dict()}")
+    df_by_week = df.groupby("week")
+    print(f"📊 KPI groups by week: {df_by_week.size().to_dict()}")
 
     all_trends = []
-
-    # Collect raw values for normalization
     metric_values = defaultdict(list)
 
-    for (segment_type, week), group in df_by_type_week:
+    for week, group in df_by_week:
         metrics = {}
 
         if (group["distance_km"] > 0).any():
@@ -111,43 +107,40 @@ def compute_kpi_trends(activities: List[dict], start_date: Optional[str] = None,
 
         for metric, value in metrics.items():
             all_trends.append({
-                "segment_type": segment_type,
+                "segment_type": "all",
                 "metric": metric,
                 "week": week,
                 "value": value
             })
-            metric_values[(segment_type, metric)].append((week, value))
+            metric_values[("all", metric)].append((week, value))
 
-    # Add segment frequency count
-    segment_counts = df.groupby(["segment_type", "week"]).size().reset_index(name='count')
+    segment_counts = df.groupby("week").size().reset_index(name='count')
     for _, row in segment_counts.iterrows():
         all_trends.append({
-            "segment_type": row["segment_type"],
+            "segment_type": "all",
             "metric": "segment_frequency",
             "week": row["week"],
             "value": row["count"]
         })
-        metric_values[(row["segment_type"], "segment_frequency")].append((row["week"], row["count"]))
+        metric_values[("all", "segment_frequency")].append((row["week"], row["count"]))
 
-    # Normalize values
     normalized_trends = []
     for (segment_type, metric), week_values in metric_values.items():
         values = np.array([v for _, v in week_values])
         if len(set(values)) == 1:
-            norm_values = [0.5 for _ in values]  # constant baseline
+            norm_values = [0.5 for _ in values]
         else:
             min_v, max_v = values.min(), values.max()
             norm_values = [(v - min_v) / (max_v - min_v) for v in values]
 
         for (week, _), norm in zip(week_values, norm_values):
             normalized_trends.append({
-                "segment_type": segment_type,
+                "segment_type": "all",
                 "metric": metric + "_norm",
                 "week": week,
                 "value": norm
             })
 
-    # Create combined fitness index (weighted average)
     fitness_index = defaultdict(lambda: defaultdict(float))
     weights = {
         "hr_efficiency_norm": 0.4,
