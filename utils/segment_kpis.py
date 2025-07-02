@@ -145,14 +145,20 @@ def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optiona
     # Normalize
     normalized_trends = []
     for (segment_type, metric), week_values in metric_values.items():
-        values = np.array([v for _, v in week_values])
+        filtered = [(week, v) for week, v in week_values if v is not None]
+        if not filtered:
+            continue  # skip this metric if all values are None
+
+        weeks, values = zip(*filtered)
+        values = np.array(values)
+
         if len(set(values)) == 1:
             norm_values = [0.5 for _ in values]
         else:
             min_v, max_v = values.min(), values.max()
             norm_values = [(v - min_v) / (max_v - min_v) for v in values]
 
-        for (week, _), norm in zip(week_values, norm_values):
+        for week, norm in zip(weeks, norm_values):
             normalized_trends.append({
                 "segment_type": "all",
                 "metric": metric + "_norm",

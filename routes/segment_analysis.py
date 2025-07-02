@@ -41,7 +41,7 @@ async def analyze_trends(request: TrendAnalysisRequest):
     if request.activity_type:
         query["type"] = request.activity_type
 
-    activities = list(collection.find(query))
+    activities = list(collection.find(query, max_time_ms=5000))
 
     if not activities:
         raise HTTPException(status_code=404, detail="No activities with segments found for this user.")
