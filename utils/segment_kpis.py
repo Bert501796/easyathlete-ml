@@ -4,7 +4,7 @@ from datetime import datetime
 from dateutil import parser
 import numpy as np
 from typing import List, Optional
-#added
+
 
 def calculate_pace_consistency(paces: List[float]) -> Optional[float]:
     if not paces or len(paces) < 2:
@@ -36,6 +36,7 @@ def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optiona
             continue
 
         week = date.strftime("%Y-W%U")
+        iso_date = date.strftime("%Y-%m-%d")
         activity_id = activity.get("stravaId") or activity.get("_id")
 
         # Store metadata for plotting
@@ -65,6 +66,7 @@ def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optiona
 
             segment_rows.append({
                 "week": week,
+                "date": iso_date,
                 "hr": hr_avg,
                 "watts": watts_avg,
                 "pace": pace,
@@ -94,6 +96,8 @@ def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optiona
 
     for week, group in df_by_week:
         metrics = {}
+        dates = group["date"].tolist()
+        rep_date = sorted(dates)[-1] if dates else week  # use most recent date of the week
 
         if (group["distance_km"] > 0).any():
             hr_eff = (group["hr"] / group["distance_km"]).mean()
@@ -125,6 +129,7 @@ def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optiona
                 "segment_type": "all",
                 "metric": metric,
                 "week": week,
+                "date": rep_date,
                 "value": value,
                 "sessions": session_map[week]
             })
@@ -137,6 +142,7 @@ def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optiona
             "segment_type": "all",
             "metric": "segment_frequency",
             "week": row["week"],
+            "date": rep_date,
             "value": row["count"],
             "sessions": session_map[row["week"]]
         })
@@ -159,10 +165,12 @@ def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optiona
             norm_values = [(v - min_v) / (max_v - min_v) for v in values]
 
         for week, norm in zip(weeks, norm_values):
+            rep_date = sorted([s["date"] for s in session_map[week]])[-1]
             normalized_trends.append({
                 "segment_type": "all",
                 "metric": metric + "_norm",
                 "week": week,
+                "date": rep_date,
                 "value": norm,
                 "sessions": session_map[week]
             })
@@ -181,12 +189,15 @@ def compute_kpi_trends_with_sessions(activities: List[dict], start_date: Optiona
             fitness_index[(row["segment_type"], row["week"])]["sum"] += row["value"] * weights[metric]
             fitness_index[(row["segment_type"], row["week"])]["weight"] += weights[metric]
 
+
     for (segment_type, week), val in fitness_index.items():
         score = val["sum"] / val["weight"]
+        rep_date = sorted([s["date"] for s in session_map[week]])[-1]
         normalized_trends.append({
             "segment_type": segment_type,
             "metric": "fitness_index",
             "week": week,
+            "date": rep_date,
             "value": score,
             "sessions": session_map[week]
         })
