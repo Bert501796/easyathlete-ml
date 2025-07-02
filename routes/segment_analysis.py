@@ -4,7 +4,8 @@ from typing import Optional
 import os
 from pymongo import MongoClient
 from dotenv import load_dotenv
-from utils.segment_kpis import compute_kpi_trends
+from utils.segment_kpis import compute_kpi_trends_with_sessions as compute_kpi_trends
+
 import math
 
 load_dotenv()
